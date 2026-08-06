@@ -5,73 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Work — Miomir Labs</title>
   <meta name="description" content="What Miomir Labs does: records and ledgers, identity and access, settlement systems, and applied research.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&amp;family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&amp;display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            bone: '#F9F7F2',
-            'surface': '#fff8f7',
-            'surface-container-lowest': '#ffffff',
-            'surface-container-low': '#fdf1f0',
-            'surface-container': '#f7ebea',
-            'surface-container-high': '#f1e6e4',
-            'surface-container-highest': '#ebe0df',
-            'surface-dim': '#e2d8d6',
-            'ink-black': '#111111',
-            oxblood: '#2D0A0A',
-            'technical-gray': '#8C8C8C',
-            'on-surface-variant': '#514342',
-            'hairline-stroke': 'rgba(45, 10, 10, 0.15)'
-          },
-          spacing: {
-            'unit': '4px',
-            'gutter': '24px',
-            'margin-narrow': '48px',
-            'margin-wide': '120px',
-            'section-break': '80px'
-          },
-          fontFamily: {
-            'display-xl': ['Bodoni Moda', 'Georgia', 'serif'],
-            'headline-lg': ['Bodoni Moda', 'Georgia', 'serif'],
-            'headline-lg-mobile': ['Bodoni Moda', 'Georgia', 'serif'],
-            'body-md': ['Hanken Grotesk', 'system-ui', 'sans-serif'],
-            'body-lg': ['Hanken Grotesk', 'system-ui', 'sans-serif'],
-            'label-technical': ['JetBrains Mono', 'ui-monospace', 'monospace'],
-            'index-marker': ['JetBrains Mono', 'ui-monospace', 'monospace']
-          },
-          fontSize: {
-            'display-xl': ['72px', { lineHeight: '80px', letterSpacing: '-0.02em', fontWeight: '700' }],
-            'headline-lg': ['48px', { lineHeight: '56px', fontWeight: '600' }],
-            'headline-lg-mobile': ['32px', { lineHeight: '40px', fontWeight: '600' }],
-            'body-md': ['16px', { lineHeight: '24px', fontWeight: '400' }],
-            'body-lg': ['18px', { lineHeight: '28px', fontWeight: '400' }],
-            'label-technical': ['12px', { lineHeight: '16px', letterSpacing: '0.05em', fontWeight: '500' }],
-            'index-marker': ['10px', { lineHeight: '12px', fontWeight: '700' }]
-          }
-        }
-      }
-    }
-  </script>
-  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/fonts/fonts.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body class="bg-bone text-ink-black font-body-md">
-
-  <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
-    <defs>
-      <symbol id="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path d="M3 6h18M3 12h18M3 18h18"/></symbol>
-      <symbol id="icon-person" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 4-6 8-6s8 2 8 6"/></symbol>
-      <symbol id="icon-arrow-forward" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path d="M5 12h14M12 5l7 7-7 7"/></symbol>
-      <symbol id="icon-ledger" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M7 9h4M7 13h4M15 9h2M15 13h2"/></symbol>
-      <symbol id="icon-solutions" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path d="M3 21h18L12 3 3 21z"/><path d="M9 21l3-9 3 9"/></symbol>
-      <symbol id="icon-enterprise" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></symbol>
-      <symbol id="icon-contact" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 7l9 6 9-6"/></symbol>
-    </defs>
-  </svg>
 
   <header class="fixed top-0 w-full z-50 bg-bone/90 backdrop-blur-md border-b border-hairline-stroke pt-safe">
     <div class="h-16 flex items-center justify-between px-gutter">
@@ -82,75 +19,82 @@
           <span class="font-label-technical text-technical-gray -mt-1 uppercase">Lagos, Nigeria</span>
         </div>
       </a>
-      <div class="flex items-center gap-4">
-        <button class="w-10 h-10 flex items-center justify-center text-technical-gray hover:text-ink-black transition-colors" aria-label="Open menu">
-          <svg class="w-6 h-6"><use href="#icon-menu"/></svg>
-        </button>
-        <div class="w-8 h-8 rounded-full border border-hairline-stroke bg-surface-container flex items-center justify-center">
-          <svg class="w-[18px] h-[18px]"><use href="#icon-person"/></svg>
-        </div>
-      </div>
+      <nav class="hidden md:flex items-center gap-8" aria-label="Primary">
+        <a href="index.html" class="font-label-technical text-technical-gray hover:text-ink-black transition-colors uppercase">Home</a>
+        <a href="work.html" class="font-label-technical text-ink-black uppercase">Work</a>
+        <a href="enterprise.html" class="font-label-technical text-technical-gray hover:text-ink-black transition-colors uppercase">Enterprise</a>
+        <a href="contact.html" class="font-label-technical text-technical-gray hover:text-ink-black transition-colors uppercase">Contact</a>
+      </nav>
+      <button class="md:hidden w-10 h-10 flex items-center justify-center text-technical-gray hover:text-ink-black transition-colors" aria-label="Open menu" aria-expanded="false" id="menuBtn">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
     </div>
+    <nav id="mobileNav" class="hidden md:hidden flex-col border-t border-hairline-stroke bg-bone px-gutter py-4 gap-4" aria-label="Primary mobile">
+      <a href="index.html" class="font-label-technical text-technical-gray uppercase">Home</a>
+      <a href="work.html" class="font-label-technical text-ink-black uppercase">Work</a>
+      <a href="enterprise.html" class="font-label-technical text-technical-gray uppercase">Enterprise</a>
+      <a href="contact.html" class="font-label-technical text-technical-gray uppercase">Contact</a>
+    </nav>
   </header>
 
-  <main class="relative w-full pt-16 pb-32 bg-bone">
-    <div class="flex flex-col w-full gap-section-break">
+  <main class="relative w-full pt-16 bg-bone">
 
-      <!-- Header -->
-      <section class="flex flex-col w-full px-gutter pt-10 gap-6">
+    <!-- Header -->
+    <section class="px-gutter pt-10 pb-12 border-b border-hairline-stroke">
+      <div class="max-w-[1280px] mx-auto flex flex-col gap-6">
         <div class="flex flex-col gap-3">
-          <span class="font-label-technical text-label-technical text-technical-gray uppercase tracking-widest">Work</span>
+          <span class="font-label-technical text-technical-gray uppercase tracking-widest">Work</span>
           <h1 class="font-headline-lg-mobile text-headline-lg-mobile text-oxblood">What we do</h1>
         </div>
-        <p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+        <p class="font-body-md text-on-surface-variant max-w-md">
           We design, build, and maintain systems that hold important state.
         </p>
-      </section>
+      </div>
+    </section>
 
-      <!-- Work areas -->
-      <section class="flex flex-col w-full">
-        <div class="w-full h-[1px] bg-hairline-stroke"></div>
+    <!-- Work areas -->
+    <section class="flex flex-col w-full">
+      <article class="group relative flex flex-col w-full py-8 px-gutter border-b border-hairline-stroke hover:bg-surface-container-low transition-colors">
+        <div class="flex flex-col gap-3 max-w-[1280px] mx-auto w-full">
+          <h3 class="font-headline-lg-mobile text-[24px] font-semibold text-ink-black group-hover:text-oxblood transition-colors">Records and ledgers</h3>
+          <p class="font-body-md text-on-surface-variant max-w-2xl">
+            Transaction logs, registries, and audit trails. We build software that keeps an accurate history and makes it searchable.
+          </p>
+        </div>
+      </article>
 
-        <article class="group relative flex flex-col w-full py-8 px-gutter border-b border-hairline-stroke hover:bg-surface-container-low transition-colors">
-          <div class="flex flex-col gap-3">
-            <h3 class="font-headline-lg-mobile text-[24px] font-semibold text-ink-black group-hover:text-oxblood transition-colors">Records and ledgers</h3>
-            <p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
-              Transaction logs, registries, and audit trails. We build software that keeps an accurate history and makes it searchable.
-            </p>
-          </div>
-        </article>
+      <article class="group relative flex flex-col w-full py-8 px-gutter border-b border-hairline-stroke hover:bg-surface-container-low transition-colors">
+        <div class="flex flex-col gap-3 max-w-[1280px] mx-auto w-full">
+          <h3 class="font-headline-lg-mobile text-[24px] font-semibold text-ink-black group-hover:text-oxblood transition-colors">Identity and access</h3>
+          <p class="font-body-md text-on-surface-variant max-w-2xl">
+            Authentication, authorization, and credential flows for staff, customers, and devices.
+          </p>
+        </div>
+      </article>
 
-        <article class="group relative flex flex-col w-full py-8 px-gutter border-b border-hairline-stroke hover:bg-surface-container-low transition-colors">
-          <div class="flex flex-col gap-3">
-            <h3 class="font-headline-lg-mobile text-[24px] font-semibold text-ink-black group-hover:text-oxblood transition-colors">Identity and access</h3>
-            <p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
-              Authentication, authorization, and credential flows for staff, customers, and devices.
-            </p>
-          </div>
-        </article>
+      <article class="group relative flex flex-col w-full py-8 px-gutter border-b border-hairline-stroke hover:bg-surface-container-low transition-colors">
+        <div class="flex flex-col gap-3 max-w-[1280px] mx-auto w-full">
+          <h3 class="font-headline-lg-mobile text-[24px] font-semibold text-ink-black group-hover:text-oxblood transition-colors">Settlement systems</h3>
+          <p class="font-body-md text-on-surface-variant max-w-2xl">
+            Payment reconciliation, reporting, and the glue between banks, processors, and internal accounts.
+          </p>
+        </div>
+      </article>
 
-        <article class="group relative flex flex-col w-full py-8 px-gutter border-b border-hairline-stroke hover:bg-surface-container-low transition-colors">
-          <div class="flex flex-col gap-3">
-            <h3 class="font-headline-lg-mobile text-[24px] font-semibold text-ink-black group-hover:text-oxblood transition-colors">Settlement systems</h3>
-            <p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
-              Payment reconciliation, reporting, and the glue between banks, processors, and internal accounts.
-            </p>
-          </div>
-        </article>
+      <article class="group relative flex flex-col w-full py-8 px-gutter border-b border-hairline-stroke hover:bg-surface-container-low transition-colors">
+        <div class="flex flex-col gap-3 max-w-[1280px] mx-auto w-full">
+          <h3 class="font-headline-lg-mobile text-[24px] font-semibold text-ink-black group-hover:text-oxblood transition-colors">Applied research</h3>
+          <p class="font-body-md text-on-surface-variant max-w-2xl">
+            Document extraction, classification, and retrieval systems for organizations with large paper or PDF backlogs.
+          </p>
+        </div>
+      </article>
+    </section>
 
-        <article class="group relative flex flex-col w-full py-8 px-gutter border-b border-hairline-stroke hover:bg-surface-container-low transition-colors">
-          <div class="flex flex-col gap-3">
-            <h3 class="font-headline-lg-mobile text-[24px] font-semibold text-ink-black group-hover:text-oxblood transition-colors">Applied research</h3>
-            <p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
-              Document extraction, classification, and retrieval systems for organizations with large paper or PDF backlogs.
-            </p>
-          </div>
-        </article>
-      </section>
-
-      <!-- How we work -->
-      <section class="flex flex-col w-full px-gutter gap-6">
-        <h2 class="font-label-technical text-label-technical text-technical-gray uppercase">How we work</h2>
+    <!-- How we work -->
+    <section class="px-gutter py-section-break">
+      <div class="max-w-[1280px] mx-auto flex flex-col gap-6">
+        <h2 class="font-label-technical text-technical-gray uppercase">How we work</h2>
         <div class="flex flex-col gap-4 font-body-md text-on-surface-variant max-w-2xl">
           <p>We start by reading your existing code and talking to the people who operate it. We prototype against real data, not slide decks. We hand over systems we would be happy to maintain ourselves.</p>
           <p>Most of our engagements are long. We prefer to understand a domain deeply rather than ship fast and leave.</p>
@@ -158,42 +102,40 @@
         <div class="mt-2">
           <a href="enterprise.html" class="inline-flex items-center gap-2 font-label-technical text-ink-black border-b border-ink-black pb-1 hover:text-technical-gray hover:border-technical-gray transition-colors">
             <span>Read about enterprise work</span>
-            <svg class="w-4 h-4"><use href="#icon-arrow-forward"/></svg>
+            <span>→</span>
           </a>
         </div>
-      </section>
+      </div>
+    </section>
 
-    </div>
   </main>
 
-  <footer class="fixed bottom-0 w-full z-50 pb-safe bg-bone/95 backdrop-blur-md border-t border-hairline-stroke">
-    <div class="flex items-center justify-between h-14 px-gutter border-b border-hairline-stroke">
+  <footer class="bg-bone border-t border-hairline-stroke py-8 px-gutter">
+    <div class="max-w-[1280px] mx-auto flex flex-col md:flex-row md:items-center justify-between gap-6">
       <div class="flex items-center gap-2">
-        <img src="assets/images/logo.svg" alt="" class="w-4 h-4 object-contain" style="color:#111">
-        <span class="font-label-technical text-label-technical text-ink-black uppercase tracking-widest">Miomir Labs</span>
+        <img src="assets/images/logo.svg" alt="" class="w-6 h-6 object-contain" style="color:#111">
+        <span class="font-label-technical text-ink-black uppercase">Miomir Labs</span>
       </div>
-      <span class="font-label-technical text-label-technical text-technical-gray">UTC 14:42:08</span>
+      <nav class="flex flex-wrap gap-6" aria-label="Footer">
+        <a href="index.html" class="font-label-technical text-technical-gray hover:text-ink-black uppercase">Home</a>
+        <a href="work.html" class="font-label-technical text-technical-gray hover:text-ink-black uppercase">Work</a>
+        <a href="enterprise.html" class="font-label-technical text-technical-gray hover:text-ink-black uppercase">Enterprise</a>
+        <a href="contact.html" class="font-label-technical text-technical-gray hover:text-ink-black uppercase">Contact</a>
+      </nav>
+      <div class="flex flex-col gap-1 font-label-technical text-technical-gray md:text-right">
+        <a href="mailto:hello@miomir.labs" class="text-ink-black hover:underline">hello@miomir.labs</a>
+        <span>Lagos, Nigeria</span>
+      </div>
     </div>
-    <nav class="flex justify-between items-center h-16 px-4" aria-label="Primary">
-      <a href="index.html" class="flex flex-col items-center justify-center w-1/4 h-full text-technical-gray hover:text-ink-black transition-colors">
-        <svg class="w-5 h-5"><use href="#icon-ledger"/></svg>
-        <span class="font-label-technical mt-1">Home</span>
-      </a>
-      <a href="work.html" class="flex flex-col items-center justify-center w-1/4 h-full text-ink-black border-t-2 border-oxblood transition-colors" aria-current="page">
-        <svg class="w-5 h-5"><use href="#icon-solutions"/></svg>
-        <span class="font-label-technical mt-1">Work</span>
-      </a>
-      <a href="enterprise.html" class="flex flex-col items-center justify-center w-1/4 h-full text-technical-gray hover:text-ink-black transition-colors">
-        <svg class="w-5 h-5"><use href="#icon-enterprise"/></svg>
-        <span class="font-label-technical mt-1">Enterprise</span>
-      </a>
-      <a href="contact.html" class="flex flex-col items-center justify-center w-1/4 h-full text-technical-gray hover:text-ink-black transition-colors">
-        <svg class="w-5 h-5"><use href="#icon-contact"/></svg>
-        <span class="font-label-technical mt-1">Contact</span>
-      </a>
-    </nav>
   </footer>
 
-  <script src="assets/js/main.js"></script>
+  <script>
+    const btn = document.getElementById('menuBtn');
+    const nav = document.getElementById('mobileNav');
+    btn.addEventListener('click', () => {
+      const hidden = nav.classList.toggle('hidden');
+      btn.setAttribute('aria-expanded', String(!hidden));
+    });
+  </script>
 </body>
 </html>

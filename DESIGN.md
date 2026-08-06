@@ -122,15 +122,20 @@ Chromatic accents stay under 5% of the visual area.
 ## File inventory
 
 ```
-site/
 ├── index.html
 ├── work.html
 ├── enterprise.html
 ├── contact.html
 ├── assets/
-│   ├── css/main.css
-│   ├── js/main.js
+│   ├── css/
+│   │   ├── input.css   # Tailwind source + base styles
+│   │   ├── styles.css  # generated, minified production CSS
+│   │   └── fonts.css   # generated @font-face rules
+│   ├── fonts/          # self-hosted font files
 │   └── images/logo.svg
+├── package.json
+├── tailwind.config.js
+└── .gitignore
 ```
 
 ## History

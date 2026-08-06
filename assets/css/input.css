@@ -1,4 +1,6 @@
-/* Miomir Labs — shared base styles */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @layer base {
   html {
@@ -9,11 +11,9 @@
 
   body {
     min-height: max(884px, 100dvh);
-    /* Reserve safe-area space for fixed header/footer on notched devices */
     padding-top: env(safe-area-inset-top);
   }
 
-  /* Visible keyboard focus */
   :focus-visible {
     outline: 2px solid #2D0A0A;
     outline-offset: 3px;
@@ -28,38 +28,14 @@
   }
 }
 
-/* Utility helpers used by pages */
 .pt-safe { padding-top: env(safe-area-inset-top); }
 .pb-safe { padding-bottom: env(safe-area-inset-bottom); }
 
-/* Floating composition boxes used on the Ledger hero */
-.floating-box {
-  background-color: #fff8f7;
-  border: 1px solid rgba(45, 10, 10, 0.15);
-  box-shadow: 0 10px 20px -5px rgba(27, 28, 28, 0.02);
-}
-
-/* Subtle scrollbar instead of hiding it completely */
-::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
-}
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-::-webkit-scrollbar-thumb {
-  background: rgba(45, 10, 10, 0.2);
-  border-radius: 3px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: rgba(45, 10, 10, 0.35);
-}
-
-/* Hero headline responsive sizing */
 .hero-headline {
   font-size: 26px;
   line-height: 1.05;
 }
+
 @media (min-width: 768px) {
   .hero-headline {
     font-size: 72px;
@@ -67,13 +43,6 @@
   }
 }
 
-/* Animations */
-@keyframes fade-in {
-  from { opacity: 0; transform: translateY(5px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
