@@ -1,0 +1,268 @@
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,300;0,400;0,700;1,400&amp;family=JetBrains+Mono:wght@500;700&amp;family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Hanken+Grotesk:wght@100..900&amp;family=JetBrains+Mono:wght@100..900&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "on-secondary": "#ffffff",
+                "on-secondary-fixed-variant": "#474744",
+                "technical-gray": "#8C8C8C",
+                "secondary-fixed-dim": "#c8c6c2",
+                "on-primary-fixed-variant": "#693a38",
+                "on-secondary-container": "#63635f",
+                "surface-container-high": "#f1e6e4",
+                "on-background": "#201a1a",
+                "tertiary-container": "#051d31",
+                "surface-tint": "#84504e",
+                "oxblood": "#2D0A0A",
+                "on-primary": "#ffffff",
+                "on-surface-variant": "#514342",
+                "surface": "#fff8f7",
+                "primary-container": "#34100f",
+                "on-tertiary-fixed-variant": "#34485f",
+                "tertiary-fixed": "#d0e4ff",
+                "ink-black": "#111111",
+                "tertiary": "#000000",
+                "tertiary-fixed-dim": "#b3c9e3",
+                "inverse-surface": "#352f2f",
+                "inverse-on-surface": "#faeeed",
+                "surface-container-low": "#fdf1f0",
+                "secondary": "#5e5e5b",
+                "secondary-fixed": "#e4e2dd",
+                "primary-fixed-dim": "#f8b6b2",
+                "on-error": "#ffffff",
+                "primary-fixed": "#ffdad7",
+                "outline-variant": "#d6c2c0",
+                "surface-container": "#f7ebea",
+                "on-tertiary": "#ffffff",
+                "surface-bright": "#fff8f7",
+                "background": "#fff8f7",
+                "on-secondary-fixed": "#1b1c19",
+                "on-primary-container": "#ae7572",
+                "on-tertiary-container": "#71869e",
+                "primary": "#000000",
+                "on-error-container": "#93000a",
+                "surface-variant": "#ebe0df",
+                "outline": "#847372",
+                "on-surface": "#201a1a",
+                "secondary-container": "#e1dfdb",
+                "on-tertiary-fixed": "#051d31",
+                "error": "#ba1a1a",
+                "inverse-primary": "#f8b6b2",
+                "hairline-stroke": "rgba(45, 10, 10, 0.15)",
+                "surface-dim": "#e2d8d6",
+                "surface-container-lowest": "#ffffff",
+                "surface-container-highest": "#ebe0df",
+                "bone": "#F9F7F2",
+                "error-container": "#ffdad6",
+                "on-primary-fixed": "#34100f"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+        },
+        "spacing": {
+                "margin-narrow": "48px",
+                "unit": "4px",
+                "gutter": "24px",
+                "section-break": "80px",
+                "margin-wide": "120px"
+        },
+        "fontFamily": {
+                "display-xl": [
+                        "Bodoni Moda"
+                ],
+                "label-technical": [
+                        "JetBrains Mono"
+                ],
+                "headline-lg-mobile": [
+                        "Bodoni Moda"
+                ],
+                "headline-lg": [
+                        "Bodoni Moda"
+                ],
+                "index-marker": [
+                        "JetBrains Mono"
+                ],
+                "body-md": [
+                        "Hanken Grotesk"
+                ],
+                "body-lg": [
+                        "Hanken Grotesk"
+                ]
+        },
+        "fontSize": {
+                "display-xl": [
+                        "72px",
+                        {
+                                "lineHeight": "80px",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "label-technical": [
+                        "12px",
+                        {
+                                "lineHeight": "16px",
+                                "letterSpacing": "0.05em",
+                                "fontWeight": "500"
+                        }
+                ],
+                "headline-lg-mobile": [
+                        "32px",
+                        {
+                                "lineHeight": "40px",
+                                "fontWeight": "600"
+                        }
+                ],
+                "headline-lg": [
+                        "48px",
+                        {
+                                "lineHeight": "56px",
+                                "fontWeight": "600"
+                        }
+                ],
+                "index-marker": [
+                        "10px",
+                        {
+                                "lineHeight": "12px",
+                                "fontWeight": "700"
+                        }
+                ],
+                "body-md": [
+                        "16px",
+                        {
+                                "lineHeight": "24px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "body-lg": [
+                        "18px",
+                        {
+                                "lineHeight": "28px",
+                                "fontWeight": "400"
+                        }
+                ]
+        }
+},
+    },
+  }
+</script><style>@layer base { body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; overscroll-behavior-y: none; } .pb-safe { padding-bottom: env(safe-area-inset-bottom); } .pt-safe { padding-top: env(safe-area-inset-top); } } ::-webkit-scrollbar { display: none; }</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head><body class="bg-bone text-ink-black font-body-md"><header class="fixed top-0 w-full z-50 bg-bone/90 backdrop-blur-md border-b border-hairline-stroke pt-safe"><div class="h-16 flex items-center justify-between px-gutter"><div class="flex items-center gap-3"><img alt="Miomir Labs Mark" class="w-8 h-8 object-contain mix-blend-multiply" src="https://lh3.googleusercontent.com/aida/AP1WRLuwyCw-biETWHmoGe0NYYJJiJ2Pa-h1y7qadGO7LDX0fyB41eFrLw_GhnALXjNGemhJTdVtwImvELka4oBjcnZP3GBzi0l3JFESNrZoX6NWyXxrjwr8eM9m0VFu8jLrNZ3iSRIEiIHKIQGtdng16ceXNx0MOSAp5UcqTbeaC4meRcAFpNJzV249O3B_w091_AdgvAjt6am-rdpyZL76xAQfVMDoPx6emBl_608U4Znr1RXeVt5hSj-mdLRi"/><div class="flex flex-col"><span class="font-headline-lg-mobile text-ink-black tracking-tight text-[18px]">Miomir Labs</span><span class="font-label-technical text-oxblood uppercase mt-1">Research Division</span></div></div><div class="flex items-center gap-4"><button class="w-10 h-10 flex items-center justify-center"><span class="material-symbols-outlined text-on-surface-variant">menu</span></button><div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center"><span class="material-symbols-outlined text-ink-black text-[18px]">person</span></div></div></div></header><main class="relative w-full pt-16 pb-32 bg-bone"><div class="flex flex-col w-full px-gutter gap-margin-narrow">
+<!-- Header Section -->
+<section class="flex flex-col gap-4 mt-8">
+<div class="flex items-center gap-4 border-b border-hairline-stroke pb-4 mb-4">
+<span class="font-label-technical text-oxblood uppercase">Protocol 04</span>
+</div>
+<h1 class="font-headline-lg-mobile text-ink-black">Establish<br/>Correspondence</h1>
+<p class="font-body-md text-on-surface-variant max-w-md">
+      Initiate a secure channel for enterprise deployment, research inquiries, or institutional partnerships.
+    </p>
+</section>
+<!-- Contact Form -->
+<section class="flex flex-col gap-8 bg-surface-container-highest p-6 shadow-sm border-t-4 border-oxblood">
+<div class="border-b border-hairline-stroke pb-4 flex justify-between items-center">
+<span class="font-label-technical text-oxblood uppercase">Specimen Form C-04</span>
+<span class="font-index-marker text-technical-gray">REV: 2024.1</span>
+</div>
+<form class="flex flex-col gap-8">
+<div class="flex flex-col gap-2">
+<label class="font-label-technical text-on-surface-variant uppercase" for="fullName">Full Name / Designation</label>
+<input class="bg-bone border border-hairline-stroke text-ink-black p-3 focus:outline-none focus:border-oxblood transition-colors w-full rounded-none placeholder-technical-gray font-label-technical" id="fullName" placeholder="e.g. Dr. A. Turing" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-technical text-on-surface-variant uppercase" for="email">Institutional Email</label>
+<input class="bg-bone border border-hairline-stroke text-ink-black p-3 focus:outline-none focus:border-oxblood transition-colors w-full rounded-none placeholder-technical-gray font-label-technical" id="email" placeholder="user@institution.edu" type="email"/>
+</div>
+<div class="flex flex-col gap-2 relative">
+<label class="font-label-technical text-on-surface-variant uppercase" for="inquiryType">Nature of Inquiry</label>
+<select class="appearance-none bg-bone border border-hairline-stroke text-ink-black p-3 focus:outline-none focus:border-oxblood transition-colors w-full rounded-none font-label-technical" id="inquiryType">
+<option class="bg-bone text-technical-gray" disabled="" selected="" value="">Select category...</option>
+<option class="bg-bone text-ink-black" value="research">Applied Research</option>
+<option class="bg-bone text-ink-black" value="enterprise">Enterprise Deployment</option>
+<option class="bg-bone text-ink-black" value="partnership">Strategic Partnership</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 bottom-3 text-on-surface-variant pointer-events-none">arrow_drop_down</span>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-technical text-on-surface-variant uppercase" for="message">Message</label>
+<textarea class="bg-bone border border-hairline-stroke text-ink-black p-3 focus:outline-none focus:border-oxblood transition-colors w-full rounded-none resize-none overflow-hidden placeholder-technical-gray font-label-technical" id="message" oninput="this.style.height = '';this.style.height = this.scrollHeight + 'px'" placeholder="State your requirements..." rows="3"></textarea>
+</div>
+<div class="border-t border-hairline-stroke pt-6 mt-2 flex justify-end">
+<button class="relative px-8 py-4 bg-ink-black text-bone font-label-technical uppercase tracking-widest transition-all active:scale-95 shadow-sm flex items-center gap-2" type="button">
+          Initialize Request
+          <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</form>
+</section>
+<!-- PGP & Security -->
+<section class="border border-hairline-stroke bg-surface p-6 flex flex-col gap-4">
+<div class="flex items-center gap-2 mb-2 border-b border-hairline-stroke pb-4">
+<span class="material-symbols-outlined text-oxblood text-[18px]">lock</span>
+<span class="font-label-technical text-oxblood uppercase tracking-widest">Secure Communications</span>
+</div>
+<p class="font-body-md text-on-surface-variant">For transmission of sensitive intellectual property or classified schematics, utilize our public key infrastructure.</p>
+<a class="flex items-center justify-between border border-hairline-stroke bg-bone p-3 mt-2 group hover:border-oxblood transition-colors" href="#">
+<span class="font-label-technical text-ink-black">Access PGP Key Directory</span>
+<span class="material-symbols-outlined text-oxblood transition-transform group-hover:-translate-y-1">download</span>
+</a>
+</section>
+<!-- Hiring Block -->
+<section class="border-t-2 border-ink-black pt-8 flex flex-col gap-6 mt-4">
+<div class="flex justify-between items-start">
+<div class="flex flex-col gap-1">
+<span class="font-label-technical text-oxblood uppercase flex items-center gap-2">
+          Appendix A: Active Recruitment
+        </span>
+<h3 class="font-headline-lg-mobile text-[24px] text-ink-black mt-2">Senior Systems Engineer</h3>
+</div>
+<span class="font-index-marker text-technical-gray border border-hairline-stroke px-2 py-1 bg-surface-container-lowest">REQ-892</span>
+</div>
+<div class="grid grid-cols-2 gap-4 border-y border-hairline-stroke py-4">
+<div class="flex flex-col gap-1">
+<span class="font-index-marker text-technical-gray uppercase">Location</span>
+<span class="text-ink-black font-label-technical">Remote / Distributed</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-index-marker text-technical-gray uppercase">Clearance</span>
+<span class="text-ink-black font-label-technical">Level III Req.</span>
+</div>
+</div>
+<button class="w-full py-4 border border-hairline-stroke text-ink-black font-label-technical uppercase hover:bg-surface-container-highest transition-colors shadow-sm bg-bone flex items-center justify-center gap-2">
+      View Specifications
+      <span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</button>
+</section>
+<!-- Remote Operations / Location -->
+<section class="flex flex-col gap-6 pb-8 pt-8 border-t border-hairline-stroke mt-4">
+<div class="flex items-center gap-4 mb-2">
+<span class="font-label-technical text-technical-gray uppercase">Appendix B: Global Operations</span>
+</div>
+<div class="grid grid-cols-2 gap-gutter">
+<div class="flex flex-col gap-2 p-4 bg-surface border border-hairline-stroke">
+<span class="font-index-marker text-oxblood uppercase">Primary Node</span>
+<span class="font-label-technical text-ink-black">Geneva, CH</span>
+<span class="font-index-marker text-technical-gray">46.2044° N, 6.1432° E</span>
+</div>
+<div class="flex flex-col gap-2 p-4 bg-surface border border-hairline-stroke">
+<span class="font-index-marker text-oxblood uppercase">Secondary Node</span>
+<span class="font-label-technical text-ink-black">Kyoto, JP</span>
+<span class="font-index-marker text-technical-gray">35.0116° N, 135.7681° E</span>
+</div>
+</div>
+<div class="border-t border-hairline-stroke pt-6 mt-2">
+<p class="font-label-technical text-on-surface-variant uppercase leading-relaxed text-sm">
+        Notice: Miomir Labs operates entirely through distributed asynchronous networks. Physical mail is not accepted at any location.
+      </p>
+</div>
+</section>
+</div></main><footer class="fixed bottom-0 w-full z-50 pb-safe bg-bone/95 backdrop-blur-md border-t border-hairline-stroke" data-active-classes="text-oxblood border-t-2 border-oxblood"><div class="flex items-center justify-between h-14 px-gutter border-b border-hairline-stroke"><div class="flex items-center gap-3"><img alt="Miomir Labs Mark" class="w-6 h-6 object-contain mix-blend-multiply opacity-80" src="https://lh3.googleusercontent.com/aida/AP1WRLuwyCw-biETWHmoGe0NYYJJiJ2Pa-h1y7qadGO7LDX0fyB41eFrLw_GhnALXjNGemhJTdVtwImvELka4oBjcnZP3GBzi0l3JFESNrZoX6NWyXxrjwr8eM9m0VFu8jLrNZ3iSRIEiIHKIQGtdng16ceXNx0MOSAp5UcqTbeaC4meRcAFpNJzV249O3B_w091_AdgvAjt6am-rdpyZL76xAQfVMDoPx6emBl_608U4Znr1RXeVt5hSj-mdLRi"/><div class="flex items-center gap-2"><div class="w-2 h-2 bg-oxblood animate-pulse"></div><span class="font-label-technical text-oxblood uppercase">System Operational</span></div></div><span class="font-label-technical text-technical-gray">UTC 14:42:08</span></div><nav class="flex justify-between items-center h-16 px-4"><a class="flex flex-col items-center justify-center w-1/4 h-full text-technical-gray hover:text-ink-black transition-colors" data-path="ledger" href="#"><span class="material-symbols-outlined text-[20px]">account_balance_wallet</span><span class="font-label-technical mt-1">Ledger</span></a><a class="flex flex-col items-center justify-center w-1/4 h-full text-technical-gray hover:text-ink-black transition-colors" data-path="solutions" href="#"><span class="material-symbols-outlined text-[20px]">architecture</span><span class="font-label-technical mt-1">Solutions</span></a><a class="flex flex-col items-center justify-center w-1/4 h-full text-technical-gray hover:text-ink-black transition-colors" data-path="enterprise" href="#"><span class="material-symbols-outlined text-[20px]">hub</span><span class="font-label-technical mt-1">Enterprise</span></a><a class="flex flex-col items-center justify-center w-1/4 h-full text-technical-gray hover:text-ink-black transition-colors" data-path="contact" href="#"><span class="material-symbols-outlined text-[20px]">alternate_email</span><span class="font-label-technical mt-1">Contact</span></a></nav></footer></body></html>

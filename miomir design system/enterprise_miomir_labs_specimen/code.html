@@ -1,0 +1,347 @@
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Hanken+Grotesk:ital,wght@0,300..900;1,300..900&amp;family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "on-secondary": "#ffffff",
+                "on-secondary-fixed-variant": "#474744",
+                "technical-gray": "#8C8C8C",
+                "secondary-fixed-dim": "#c8c6c2",
+                "on-primary-fixed-variant": "#693a38",
+                "on-secondary-container": "#63635f",
+                "surface-container-high": "#f1e6e4",
+                "on-background": "#201a1a",
+                "tertiary-container": "#051d31",
+                "surface-tint": "#84504e",
+                "oxblood": "#2D0A0A",
+                "on-primary": "#ffffff",
+                "on-surface-variant": "#514342",
+                "surface": "#fff8f7",
+                "primary-container": "#34100f",
+                "on-tertiary-fixed-variant": "#34485f",
+                "tertiary-fixed": "#d0e4ff",
+                "ink-black": "#111111",
+                "tertiary": "#000000",
+                "tertiary-fixed-dim": "#b3c9e3",
+                "inverse-surface": "#352f2f",
+                "inverse-on-surface": "#faeeed",
+                "surface-container-low": "#fdf1f0",
+                "secondary": "#5e5e5b",
+                "secondary-fixed": "#e4e2dd",
+                "primary-fixed-dim": "#f8b6b2",
+                "on-error": "#ffffff",
+                "primary-fixed": "#ffdad7",
+                "outline-variant": "#d6c2c0",
+                "surface-container": "#f7ebea",
+                "on-tertiary": "#ffffff",
+                "surface-bright": "#fff8f7",
+                "background": "#fff8f7",
+                "on-secondary-fixed": "#1b1c19",
+                "on-primary-container": "#ae7572",
+                "on-tertiary-container": "#71869e",
+                "primary": "#000000",
+                "on-error-container": "#93000a",
+                "surface-variant": "#ebe0df",
+                "outline": "#847372",
+                "on-surface": "#201a1a",
+                "secondary-container": "#e1dfdb",
+                "on-tertiary-fixed": "#051d31",
+                "error": "#ba1a1a",
+                "inverse-primary": "#f8b6b2",
+                "hairline-stroke": "rgba(45, 10, 10, 0.15)",
+                "surface-dim": "#e2d8d6",
+                "surface-container-lowest": "#ffffff",
+                "surface-container-highest": "#ebe0df",
+                "bone": "#F9F7F2",
+                "error-container": "#ffdad6",
+                "on-primary-fixed": "#34100f"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+        },
+        "spacing": {
+                "margin-narrow": "48px",
+                "unit": "4px",
+                "gutter": "24px",
+                "section-break": "80px",
+                "margin-wide": "120px"
+        },
+        "fontFamily": {
+                "display-xl": [
+                        "Bodoni Moda"
+                ],
+                "label-technical": [
+                        "JetBrains Mono"
+                ],
+                "headline-lg-mobile": [
+                        "Bodoni Moda"
+                ],
+                "headline-lg": [
+                        "Bodoni Moda"
+                ],
+                "index-marker": [
+                        "JetBrains Mono"
+                ],
+                "body-md": [
+                        "Hanken Grotesk"
+                ],
+                "body-lg": [
+                        "Hanken Grotesk"
+                ]
+        },
+        "fontSize": {
+                "display-xl": [
+                        "72px",
+                        {
+                                "lineHeight": "80px",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "label-technical": [
+                        "12px",
+                        {
+                                "lineHeight": "16px",
+                                "letterSpacing": "0.05em",
+                                "fontWeight": "500"
+                        }
+                ],
+                "headline-lg-mobile": [
+                        "32px",
+                        {
+                                "lineHeight": "40px",
+                                "fontWeight": "600"
+                        }
+                ],
+                "headline-lg": [
+                        "48px",
+                        {
+                                "lineHeight": "56px",
+                                "fontWeight": "600"
+                        }
+                ],
+                "index-marker": [
+                        "10px",
+                        {
+                                "lineHeight": "12px",
+                                "fontWeight": "700"
+                        }
+                ],
+                "body-md": [
+                        "16px",
+                        {
+                                "lineHeight": "24px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "body-lg": [
+                        "18px",
+                        {
+                                "lineHeight": "28px",
+                                "fontWeight": "400"
+                        }
+                ]
+        }
+},
+    },
+  }
+</script>
+<style>@layer base { body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; overscroll-behavior-y: none; } .pb-safe { padding-bottom: env(safe-area-inset-bottom); } .pt-safe { padding-top: env(safe-area-inset-top); } } ::-webkit-scrollbar { display: none; }</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head><body class="bg-bone text-ink-black font-body-md"><header class="fixed top-0 w-full z-50 bg-bone/90 backdrop-blur-md border-b border-hairline-stroke pt-safe"><div class="h-16 flex items-center justify-between px-gutter"><div class="flex flex-col"><span class="font-headline-lg-mobile text-[16px] text-ink-black tracking-widest uppercase">Miomir Labs</span><span class="font-label-technical text-technical-gray uppercase">Research Division</span></div><div class="flex items-center gap-4"><button class="w-10 h-10 flex items-center justify-center"><span class="material-symbols-outlined text-technical-gray">menu</span></button><div class="w-8 h-8 rounded-full bg-ink-black flex items-center justify-center"><span class="material-symbols-outlined text-bone text-[18px]">person</span></div></div></div></header><main class="relative w-full pt-16 pb-32 bg-bone"><div class="flex flex-col w-full font-body-md text-ink-black bg-bone pb-section-break">
+<!-- Header Section -->
+<div class="px-gutter py-section-break border-b border-hairline-stroke">
+<div class="max-w-[1280px] mx-auto">
+<div class="mb-4">
+<span class="font-label-technical text-oxblood uppercase">Enterprise Deployment</span>
+</div>
+<h1 class="font-headline-lg-mobile md:font-headline-lg text-ink-black leading-tight mb-gutter tracking-tight">
+        Quiet <br/>
+        Infrastructure.
+      </h1>
+<p class="font-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
+        Miomir Labs provides sovereign, local-first architecture for organizations that demand absolute control over their operational data layer.
+      </p>
+</div>
+</div>
+<!-- Feature Ledger -->
+<div class="border-b border-hairline-stroke">
+<div class="max-w-[1280px] mx-auto">
+<!-- Ledger Item 1 -->
+<div class="flex flex-col md:flex-row border-b border-hairline-stroke hover:bg-surface-container-high transition-colors duration-300">
+<div class="w-full md:w-1/3 p-gutter md:border-r border-hairline-stroke flex flex-col justify-between">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-oxblood text-[24px]">vpn_lock</span>
+<h3 class="font-body-md font-bold text-ink-black">Sovereign Infrastructure</h3>
+</div>
+<span class="font-label-technical text-technical-gray uppercase">Module 01</span>
+</div>
+<div class="w-full md:w-2/3 p-gutter pt-0 md:pt-gutter">
+<p class="text-on-surface-variant mb-4 leading-relaxed">
+            Deploy entirely on bare metal or air-gapped environments. Our decentralized sync engine ensures data sovereignty without sacrificing the collaborative capabilities of modern cloud systems.
+          </p>
+<div class="flex flex-wrap gap-2 mt-auto">
+<span class="border border-hairline-stroke rounded-sm px-2 py-1 font-label-technical text-technical-gray">Air-Gapped Ready</span>
+<span class="border border-hairline-stroke rounded-sm px-2 py-1 font-label-technical text-technical-gray">Zero-Trust</span>
+</div>
+</div>
+</div>
+<!-- Ledger Item 2 -->
+<div class="flex flex-col md:flex-row border-b border-hairline-stroke hover:bg-surface-container-high transition-colors duration-300">
+<div class="w-full md:w-1/3 p-gutter md:border-r border-hairline-stroke flex flex-col justify-between">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-oxblood text-[24px]">policy</span>
+<h3 class="font-body-md font-bold text-ink-black">Auditable Algorithms</h3>
+</div>
+<span class="font-label-technical text-technical-gray uppercase">Module 02</span>
+</div>
+<div class="w-full md:w-2/3 p-gutter pt-0 md:pt-gutter">
+<p class="text-on-surface-variant mb-4 leading-relaxed">
+            Every heuristic and machine-learning decision path is cryptographically signed and stored in a transparent ledger. Verify exactly how and why automated actions are triggered.
+          </p>
+<div class="flex flex-wrap gap-2 mt-auto">
+<span class="border border-hairline-stroke rounded-sm px-2 py-1 font-label-technical text-technical-gray">Cryptographic Proofs</span>
+<span class="border border-hairline-stroke rounded-sm px-2 py-1 font-label-technical text-technical-gray">Deterministic</span>
+</div>
+</div>
+</div>
+<!-- Ledger Item 3 -->
+<div class="flex flex-col md:flex-row hover:bg-surface-container-high transition-colors duration-300">
+<div class="w-full md:w-1/3 p-gutter md:border-r border-hairline-stroke flex flex-col justify-between">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-oxblood text-[24px]">cable</span>
+<h3 class="font-body-md font-bold text-ink-black">Legacy Interoperability</h3>
+</div>
+<span class="font-label-technical text-technical-gray uppercase">Module 03</span>
+</div>
+<div class="w-full md:w-2/3 p-gutter pt-0 md:pt-gutter">
+<p class="text-on-surface-variant mb-4 leading-relaxed">
+            Seamlessly bridge archaic relational databases with our distributed graph network. We built specialized adapters to read from and write to systems predating standard APIs.
+          </p>
+<div class="flex flex-wrap gap-2 mt-auto">
+<span class="border border-hairline-stroke rounded-sm px-2 py-1 font-label-technical text-technical-gray">Mainframe Adapters</span>
+<span class="border border-hairline-stroke rounded-sm px-2 py-1 font-label-technical text-technical-gray">Protocol Agnostic</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Technical Diagram Section -->
+<div class="bg-surface border-y border-hairline-stroke">
+<div class="max-w-[1280px] mx-auto p-gutter md:p-section-break">
+<div class="flex flex-col md:flex-row justify-between items-start mb-margin-narrow gap-4">
+<div>
+<h2 class="font-headline-lg-mobile text-ink-black mb-2">Local-First Topology</h2>
+<p class="font-body-lg text-on-surface-variant max-w-md">Peer-to-peer sync engine demonstrating eventual consistency across disconnected nodes.</p>
+</div>
+<span class="font-label-technical bg-bone px-3 py-1 border border-hairline-stroke text-ink-black tracking-widest">DIAG-01-A</span>
+</div>
+<!-- Abstract Diagram Blueprint Style -->
+<div class="relative w-full h-[400px] border border-ink-black bg-surface overflow-hidden flex items-center justify-center">
+<!-- Blueprint Grid -->
+<div class="absolute inset-0" style="background-size: 40px 40px; background-image: linear-gradient(to right, rgba(45,10,10,0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(45,10,10,0.05) 1px, transparent 1px);"></div>
+<div class="absolute inset-0" style="background-size: 10px 10px; background-image: linear-gradient(to right, rgba(45,10,10,0.02) 1px, transparent 1px), linear-gradient(to bottom, rgba(45,10,10,0.02) 1px, transparent 1px);"></div>
+<svg class="w-full max-w-[600px] h-full" fill="none" viewbox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+<!-- Connection Lines Blueprint Style -->
+<path class="sync-line" d="M100 200 L300 100" stroke="#111111" stroke-dasharray="4 4" stroke-opacity="1" stroke-width="1"></path>
+<path class="sync-line" d="M100 200 L300 300" stroke="#111111" stroke-dasharray="4 4" stroke-opacity="1" stroke-width="1"></path>
+<path class="sync-line" d="M300 100 L500 200" stroke="#111111" stroke-dasharray="4 4" stroke-opacity="1" stroke-width="1"></path>
+<path class="sync-line" d="M300 300 L500 200" stroke="#111111" stroke-dasharray="4 4" stroke-opacity="1" stroke-width="1"></path>
+<path d="M300 100 L300 300" stroke="#111111" stroke-dasharray="2 2" stroke-opacity="0.5" stroke-width="1"></path>
+<!-- Nodes -->
+<g transform="translate(100, 200)">
+<circle cx="0" cy="0" fill="#fff8f7" r="20" stroke="#111111" stroke-width="1.5"></circle>
+<circle cx="0" cy="0" fill="#111111" r="3"></circle>
+<text class="font-label-technical text-[10px]" fill="#111111" text-anchor="middle" x="0" y="35">CLIENT A</text>
+</g>
+<g transform="translate(300, 100)">
+<rect fill="#fff8f7" height="40" stroke="#111111" stroke-width="1.5" width="40" x="-20" y="-20"></rect>
+<circle cx="0" cy="0" fill="#111111" r="3"></circle>
+<circle cx="0" cy="0" fill="none" r="10" stroke="#111111" stroke-width="0.5"></circle>
+<text class="font-label-technical text-[10px]" fill="#111111" text-anchor="middle" x="0" y="-30">EDGE NODE</text>
+</g>
+<g transform="translate(300, 300)">
+<rect fill="#fff8f7" height="40" stroke="#111111" stroke-width="1.5" width="40" x="-20" y="-20"></rect>
+<circle cx="0" cy="0" fill="#111111" r="3"></circle>
+<circle cx="0" cy="0" fill="none" r="10" stroke="#111111" stroke-width="0.5"></circle>
+<text class="font-label-technical text-[10px]" fill="#111111" text-anchor="middle" x="0" y="40">EDGE NODE</text>
+</g>
+<g transform="translate(500, 200)">
+<circle cx="0" cy="0" fill="#fff8f7" r="20" stroke="#111111" stroke-width="1.5"></circle>
+<circle cx="0" cy="0" fill="#111111" r="3"></circle>
+<text class="font-label-technical text-[10px]" fill="#111111" text-anchor="middle" x="0" y="35">CLIENT B</text>
+</g>
+<!-- Data Packets -->
+<rect class="data-packet path-1" fill="#2D0A0A" height="6" width="6" x="97" y="197"></rect>
+<rect class="data-packet path-2" fill="#2D0A0A" height="6" width="6" x="497" y="197"></rect>
+</svg>
+<style>
+          @keyframes movePacket1 {
+            0% { transform: translate(0px, 0px); opacity: 1; }
+            45% { transform: translate(200px, -100px); opacity: 1; }
+            50% { opacity: 0; }
+            100% { opacity: 0; }
+          }
+          @keyframes movePacket2 {
+            0% { transform: translate(0px, 0px); opacity: 0; }
+            50% { transform: translate(0px, 0px); opacity: 0; }
+            55% { transform: translate(-200px, 100px); opacity: 1; }
+            95% { transform: translate(-400px, 0px); opacity: 1; }
+            100% { opacity: 0; }
+          }
+          .data-packet {
+             animation-duration: 5s;
+             animation-iteration-count: infinite;
+             animation-timing-function: linear;
+          }
+          .path-1 { animation-name: movePacket1; }
+          .path-2 { animation-name: movePacket2; }
+          .sync-line { animation: dash 20s linear infinite; }
+          @keyframes dash { to { stroke-dashoffset: -100; } }
+        </style>
+</div>
+<div class="flex justify-between items-center mt-4 border-t border-hairline-stroke pt-4">
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 bg-oxblood"></div>
+<span class="font-label-technical text-technical-gray uppercase">CRDT Sync Active</span>
+</div>
+<span class="font-index-marker text-technical-gray">LATENCY: &lt; 12ms</span>
+</div>
+</div>
+</div>
+<!-- Action Section Internal Memo Style -->
+<div class="px-gutter py-section-break max-w-[1280px] mx-auto w-full">
+<div class="border border-ink-black p-margin-narrow relative bg-bone shadow-[8px_8px_0px_0px_rgba(17,17,17,1)]">
+<div class="absolute top-0 right-0 p-4 font-index-marker text-technical-gray border-b border-l border-ink-black">MEMO-REQ-99</div>
+<h2 class="font-headline-lg-mobile text-ink-black mb-4">Request Technical Briefing</h2>
+<p class="font-body-lg text-on-surface-variant mb-margin-narrow max-w-xl">
+        Engage with our engineering team to discuss architecture requirements, security compliance, and pilot deployment protocols.
+      </p>
+<form class="max-w-md flex flex-col gap-6">
+<div class="relative border-b border-hairline-stroke pb-2">
+<label class="font-label-technical text-technical-gray mb-2 block uppercase">Organization Name</label>
+<input class="w-full bg-transparent font-body-lg text-ink-black focus:outline-none placeholder:text-surface-dim transition-colors" placeholder="Acme Corp" type="text"/>
+</div>
+<div class="relative border-b border-hairline-stroke pb-2">
+<label class="font-label-technical text-technical-gray mb-2 block uppercase">Clearance Email Address</label>
+<input class="w-full bg-transparent font-body-lg text-ink-black focus:outline-none placeholder:text-surface-dim transition-colors" placeholder="admin@acme.gov" type="email"/>
+</div>
+<button class="mt-6 self-start border-2 border-ink-black px-6 py-3 font-label-technical text-ink-black hover:bg-ink-black hover:text-bone transition-colors flex items-center gap-2" type="button">
+<span class="uppercase font-bold tracking-widest">Initialize Sequence</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</form>
+</div>
+</div>
+</div></main><footer class="fixed bottom-0 w-full z-50 pb-safe bg-bone/95 backdrop-blur-md border-t border-ink-black" data-active-classes="text-ink-black border-t-2 border-ink-black"><div class="flex items-center justify-between h-12 px-gutter border-b border-hairline-stroke"><div class="flex items-center gap-2"><div class="w-2 h-2 bg-oxblood"></div><span class="font-label-technical text-ink-black uppercase">System Operational</span></div><span class="font-index-marker text-technical-gray">UTC 14:42:08</span></div><nav class="flex justify-between items-center h-16 px-4"><a class="flex flex-col items-center justify-center w-1/4 h-full text-technical-gray hover:text-ink-black transition-colors" data-path="ledger" href="#"><span class="material-symbols-outlined text-[20px]">account_balance_wallet</span><span class="font-label-technical mt-1">Ledger</span></a><a class="flex flex-col items-center justify-center w-1/4 h-full text-technical-gray hover:text-ink-black transition-colors" data-path="solutions" href="#"><span class="material-symbols-outlined text-[20px]">architecture</span><span class="font-label-technical mt-1">Solutions</span></a><a class="flex flex-col items-center justify-center w-1/4 h-full text-ink-black border-t-2 border-ink-black transition-colors" data-path="enterprise" href="#"><span class="material-symbols-outlined text-[20px]">hub</span><span class="font-label-technical mt-1">Enterprise</span></a><a class="flex flex-col items-center justify-center w-1/4 h-full text-technical-gray hover:text-ink-black transition-colors" data-path="contact" href="#"><span class="material-symbols-outlined text-[20px]">alternate_email</span><span class="font-label-technical mt-1">Contact</span></a></nav></footer></body></html>

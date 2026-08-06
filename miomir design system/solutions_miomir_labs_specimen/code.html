@@ -1,0 +1,289 @@
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&amp;family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "on-secondary": "#ffffff",
+                "on-secondary-fixed-variant": "#474744",
+                "technical-gray": "#8C8C8C",
+                "secondary-fixed-dim": "#c8c6c2",
+                "on-primary-fixed-variant": "#693a38",
+                "on-secondary-container": "#63635f",
+                "surface-container-high": "#f1e6e4",
+                "on-background": "#201a1a",
+                "tertiary-container": "#051d31",
+                "surface-tint": "#84504e",
+                "oxblood": "#2D0A0A",
+                "on-primary": "#ffffff",
+                "on-surface-variant": "#514342",
+                "surface": "#fff8f7",
+                "primary-container": "#34100f",
+                "on-tertiary-fixed-variant": "#34485f",
+                "tertiary-fixed": "#d0e4ff",
+                "ink-black": "#111111",
+                "tertiary": "#000000",
+                "tertiary-fixed-dim": "#b3c9e3",
+                "inverse-surface": "#352f2f",
+                "inverse-on-surface": "#faeeed",
+                "surface-container-low": "#fdf1f0",
+                "secondary": "#5e5e5b",
+                "secondary-fixed": "#e4e2dd",
+                "primary-fixed-dim": "#f8b6b2",
+                "on-error": "#ffffff",
+                "primary-fixed": "#ffdad7",
+                "outline-variant": "#d6c2c0",
+                "surface-container": "#f7ebea",
+                "on-tertiary": "#ffffff",
+                "surface-bright": "#fff8f7",
+                "background": "#fff8f7",
+                "on-secondary-fixed": "#1b1c19",
+                "on-primary-container": "#ae7572",
+                "on-tertiary-container": "#71869e",
+                "primary": "#000000",
+                "on-error-container": "#93000a",
+                "surface-variant": "#ebe0df",
+                "outline": "#847372",
+                "on-surface": "#201a1a",
+                "secondary-container": "#e1dfdb",
+                "on-tertiary-fixed": "#051d31",
+                "error": "#ba1a1a",
+                "inverse-primary": "#f8b6b2",
+                "hairline-stroke": "rgba(45, 10, 10, 0.15)",
+                "surface-dim": "#e2d8d6",
+                "surface-container-lowest": "#ffffff",
+                "surface-container-highest": "#ebe0df",
+                "bone": "#F9F7F2",
+                "error-container": "#ffdad6",
+                "on-primary-fixed": "#34100f"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+        },
+        "spacing": {
+                "margin-narrow": "48px",
+                "unit": "4px",
+                "gutter": "24px",
+                "section-break": "80px",
+                "margin-wide": "120px"
+        },
+        "fontFamily": {
+                "display-xl": [
+                        "Bodoni Moda"
+                ],
+                "label-technical": [
+                        "JetBrains Mono"
+                ],
+                "headline-lg-mobile": [
+                        "Bodoni Moda"
+                ],
+                "headline-lg": [
+                        "Bodoni Moda"
+                ],
+                "index-marker": [
+                        "JetBrains Mono"
+                ],
+                "body-md": [
+                        "Hanken Grotesk"
+                ],
+                "body-lg": [
+                        "Hanken Grotesk"
+                ]
+        },
+        "fontSize": {
+                "display-xl": [
+                        "72px",
+                        {
+                                "lineHeight": "80px",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "label-technical": [
+                        "12px",
+                        {
+                                "lineHeight": "16px",
+                                "letterSpacing": "0.05em",
+                                "fontWeight": "500"
+                        }
+                ],
+                "headline-lg-mobile": [
+                        "32px",
+                        {
+                                "lineHeight": "40px",
+                                "fontWeight": "600"
+                        }
+                ],
+                "headline-lg": [
+                        "48px",
+                        {
+                                "lineHeight": "56px",
+                                "fontWeight": "600"
+                        }
+                ],
+                "index-marker": [
+                        "10px",
+                        {
+                                "lineHeight": "12px",
+                                "fontWeight": "700"
+                        }
+                ],
+                "body-md": [
+                        "16px",
+                        {
+                                "lineHeight": "24px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "body-lg": [
+                        "18px",
+                        {
+                                "lineHeight": "28px",
+                                "fontWeight": "400"
+                        }
+                ]
+        }
+},
+    },
+  }
+</script><style>@layer base { body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; overscroll-behavior-y: none; } .pb-safe { padding-bottom: env(safe-area-inset-bottom); } .pt-safe { padding-top: env(safe-area-inset-top); } } ::-webkit-scrollbar { display: none; }</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head><body class="bg-bone text-ink-black font-body-md"><header class="fixed top-0 w-full z-50 bg-bone/90 backdrop-blur-md border-b border-hairline-stroke pt-safe"><div class="h-16 flex items-center justify-between px-gutter"><div class="flex flex-col"><span class="font-headline-lg-mobile text-[16px] text-ink-black tracking-normal font-semibold uppercase">Miomir Labs</span><span class="font-label-technical text-technical-gray mt-1 uppercase">Research Division</span></div><div class="flex items-center gap-4"><button class="w-10 h-10 flex items-center justify-center"><span class="material-symbols-outlined text-technical-gray">menu</span></button><div class="w-8 h-8 rounded-full border border-hairline-stroke bg-surface-container flex items-center justify-center"><span class="material-symbols-outlined text-ink-black text-[18px]">person</span></div></div></div></header><main class="relative w-full pt-16 pb-32 bg-bone"><div class="flex flex-col w-full gap-section-break">
+<!-- Header Section -->
+<section class="flex flex-col w-full pl-margin-narrow pr-gutter pt-10 gap-6">
+<div class="flex flex-col gap-3">
+<span class="font-label-technical text-label-technical text-technical-gray uppercase tracking-widest">Division 02</span>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-ink-black">Solutions<br/>Architecture</h1>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-[280px]">
+      Engineered frameworks for autonomous operations and high-fidelity interface systems.
+    </p>
+</section>
+<!-- Core Work Areas (Ledger Style) -->
+<section class="flex flex-col w-full pl-margin-narrow pr-gutter">
+<div class="flex items-center justify-between mb-4">
+<h2 class="font-label-technical text-label-technical text-technical-gray uppercase">Core Methodologies</h2>
+<span class="font-label-technical text-label-technical text-technical-gray">QTY: 03</span>
+</div>
+<!-- Top bounding line -->
+<div class="w-full h-[1px] bg-hairline-stroke"></div>
+<!-- Ledger Item 1 -->
+<a class="group relative flex flex-col w-full py-8 transition-colors" href="#">
+<div class="flex items-start w-full">
+<span class="font-index-marker text-index-marker text-technical-gray group-hover:text-ink-black transition-colors mt-1">01</span>
+<div class="flex flex-col flex-1 ml-6 gap-3">
+<h3 class="font-headline-lg-mobile text-[24px] font-semibold text-ink-black group-hover:text-oxblood transition-colors">Protocol Formulation</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Development of foundational communication layers and consensus mechanisms for distributed environments.
+          </p>
+<div class="flex gap-2 mt-2">
+<span class="px-2 py-1 bg-surface-container border border-hairline-stroke font-label-technical text-[10px] text-technical-gray uppercase">Latency</span>
+<span class="px-2 py-1 bg-surface-container border border-hairline-stroke font-label-technical text-[10px] text-technical-gray uppercase">Throughput</span>
+</div>
+</div>
+</div>
+<!-- Hover expanding line -->
+<div class="absolute bottom-0 left-0 h-[1px] bg-ink-black w-0 group-hover:w-full transition-all duration-500 ease-out"></div>
+<div class="absolute bottom-0 left-0 h-[1px] bg-hairline-stroke w-full group-hover:opacity-0 transition-opacity duration-300"></div>
+</a>
+<!-- Ledger Item 2 -->
+<a class="group relative flex flex-col w-full py-8 transition-colors" href="#">
+<div class="flex items-start w-full">
+<span class="font-index-marker text-index-marker text-technical-gray group-hover:text-ink-black transition-colors mt-1">02</span>
+<div class="flex flex-col flex-1 ml-6 gap-3">
+<h3 class="font-headline-lg-mobile text-[24px] font-semibold text-ink-black group-hover:text-oxblood transition-colors">Interface Engineering</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Precision-crafted human-machine interactions optimized for technical density and cognitive ease.
+          </p>
+<div class="flex gap-2 mt-2">
+<span class="px-2 py-1 bg-surface-container border border-hairline-stroke font-label-technical text-[10px] text-technical-gray uppercase">Ergonomics</span>
+<span class="px-2 py-1 bg-surface-container border border-hairline-stroke font-label-technical text-[10px] text-technical-gray uppercase">Telemetry</span>
+</div>
+</div>
+</div>
+<!-- Hover expanding line -->
+<div class="absolute bottom-0 left-0 h-[1px] bg-ink-black w-0 group-hover:w-full transition-all duration-500 ease-out"></div>
+<div class="absolute bottom-0 left-0 h-[1px] bg-hairline-stroke w-full group-hover:opacity-0 transition-opacity duration-300"></div>
+</a>
+<!-- Ledger Item 3 -->
+<a class="group relative flex flex-col w-full py-8 transition-colors" href="#">
+<div class="flex items-start w-full">
+<span class="font-index-marker text-index-marker text-technical-gray group-hover:text-ink-black transition-colors mt-1">03</span>
+<div class="flex flex-col flex-1 ml-6 gap-3">
+<h3 class="font-headline-lg-mobile text-[24px] font-semibold text-ink-black group-hover:text-oxblood transition-colors">System Architecture</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Resilient topology design bridging cloud edge networks with localized physical hardware nodes.
+          </p>
+<div class="flex gap-2 mt-2">
+<span class="px-2 py-1 bg-surface-container border border-hairline-stroke font-label-technical text-[10px] text-technical-gray uppercase">Topology</span>
+<span class="px-2 py-1 bg-surface-container border border-hairline-stroke font-label-technical text-[10px] text-technical-gray uppercase">Redundancy</span>
+</div>
+</div>
+</div>
+<!-- Hover expanding line -->
+<div class="absolute bottom-0 left-0 h-[1px] bg-ink-black w-0 group-hover:w-full transition-all duration-500 ease-out"></div>
+<div class="absolute bottom-0 left-0 h-[1px] bg-hairline-stroke w-full group-hover:opacity-0 transition-opacity duration-300"></div>
+</a>
+</section>
+<!-- Recent Deployments -->
+<section class="flex flex-col w-full pl-gutter pr-margin-narrow pb-12">
+<!-- Faked 1px Border Card via wrapper -->
+<div class="w-full border border-hairline-stroke bg-surface-container-lowest relative overflow-hidden group">
+<div class="bg-surface-container-lowest w-full flex flex-col p-6 font-label-technical text-label-technical">
+<div class="flex items-center justify-between mb-6 pb-4 border-b border-hairline-stroke border-dashed">
+<div class="flex items-center gap-3">
+<div class="w-2 h-2 bg-oxblood rounded-full"></div>
+<h3 class="uppercase tracking-widest text-ink-black">Diagnostic Report</h3>
+</div>
+<span class="text-technical-gray">SYS_LOG_V4</span>
+</div>
+<div class="flex flex-col gap-4" id="deployment-logs">
+<!-- Log lines will be hydrated here -->
+</div>
+</div>
+</div>
+</section>
+</div>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const logsContainer = document.getElementById("deployment-logs");
+    const logs = [
+      { time: "14:10:02", msg: "Protocol v4.2.0: Synchronized", status: "OK", color: "text-ink-black" },
+      { time: "14:15:44", msg: "Node_Sigma_79: Re-routed", status: "WARN", color: "text-technical-gray" },
+      { time: "14:38:12", msg: "Telemetry Engine: Active", status: "OK", color: "text-ink-black" },
+      { time: "14:41:09", msg: "Awaiting next package...", status: "STANDBY", color: "text-technical-gray" }
+    ];
+
+    let html = "";
+    logs.forEach((log, index) => {
+      // Create a staggered fade in effect
+      html += `
+        <div class="flex flex-col gap-2 opacity-0" style="animation: fade-in 0.5s ease-out ${index * 0.4}s forwards;">
+          <div class="flex items-center justify-between">
+            <span class="text-technical-gray">[${log.time}]</span>
+            <span class="${log.color}">${log.status}</span>
+          </div>
+          <span class="text-ink-black">${log.msg}</span>
+          ${index < logs.length - 1 ? '<div class="w-full h-[1px] bg-hairline-stroke/50 mt-2"></div>' : ''}
+        </div>
+      `;
+    });
+
+    logsContainer.innerHTML = html;
+  });
+</script>
+<style>
+  @keyframes fade-in {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style></main><footer class="fixed bottom-0 w-full z-50 pb-safe bg-bone/95 backdrop-blur-md border-t border-hairline-stroke" data-active-classes="text-ink-black border-t-2 border-oxblood"><div class="flex items-center justify-between h-14 px-gutter border-b border-hairline-stroke"><div class="flex items-center gap-2"><div class="w-2 h-2 bg-oxblood rounded-full"></div><span class="font-label-technical text-label-technical text-ink-black uppercase tracking-widest">System Operational</span></div><span class="font-label-technical text-label-technical text-technical-gray">UTC 14:42:08</span></div><nav class="flex justify-between items-center h-16 px-4"><a class="flex flex-col items-center justify-center w-1/4 h-full text-technical-gray hover:text-ink-black transition-colors" data-path="ledger" href="#"><span class="material-symbols-outlined text-[20px]">account_balance_wallet</span><span class="font-label-technical mt-1">Ledger</span></a><a class="flex flex-col items-center justify-center w-1/4 h-full text-technical-gray hover:text-ink-black transition-colors border-t-2 border-oxblood text-ink-black" data-path="solutions" href="#"><span class="material-symbols-outlined text-[20px]">architecture</span><span class="font-label-technical mt-1">Solutions</span></a><a class="flex flex-col items-center justify-center w-1/4 h-full text-technical-gray hover:text-ink-black transition-colors" data-path="enterprise" href="#"><span class="material-symbols-outlined text-[20px]">hub</span><span class="font-label-technical mt-1">Enterprise</span></a><a class="flex flex-col items-center justify-center w-1/4 h-full text-technical-gray hover:text-ink-black transition-colors" data-path="contact" href="#"><span class="material-symbols-outlined text-[20px]">alternate_email</span><span class="font-label-technical mt-1">Contact</span></a></nav></footer></body></html>

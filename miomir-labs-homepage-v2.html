@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Miomir — We build the parts that must not fail</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ox-950:#1E0C11;
+  --ox-900:#2F1219;
+  --ox-800:#421A23;
+  --ox-700:#5A2531;
+  --bone:#EFE8DC;
+  --bone-dim:#A8988C;
+  --brass:#C89A4A;
+  --sage:#8AA48F;
+  --rule:rgba(200,154,74,.34);
+
+  --display:"Bricolage Grotesque",system-ui,sans-serif;
+  --body:"Newsreader",Georgia,serif;
+  --mono:"IBM Plex Mono",ui-monospace,monospace;
+
+  --gut:clamp(20px,5vw,72px);
+  --max:1240px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--ox-950);color:var(--bone);
+  font-family:var(--body);font-size:17px;line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:var(--max);margin:0 auto;padding-left:var(--gut);padding-right:var(--gut)}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--brass);outline-offset:3px;border-radius:2px}
+
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--brass);margin:0 0 22px}
+h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.028em;line-height:.98;margin:0}
+h1{font-size:clamp(42px,7.4vw,90px)}
+h2{font-size:clamp(28px,4vw,46px)}
+h3{font-size:19px;font-weight:600;letter-spacing:-.01em;line-height:1.25}
+p{margin:0 0 18px}
+.lede{font-size:clamp(19px,2.1vw,23px);line-height:1.55;max-width:38ch}
+.muted{color:var(--bone-dim)}
+
+header.top{position:sticky;top:0;z-index:40;background:rgba(30,12,17,.86);backdrop-filter:blur(9px);border-bottom:1px solid rgba(239,232,220,.08)}
+.topbar{display:flex;align-items:center;justify-content:space-between;height:66px}
+.brand{display:flex;align-items:baseline;gap:9px;text-decoration:none}
+.brand b{font-family:var(--display);font-weight:800;font-size:19px;letter-spacing:-.02em}
+.brand span{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--brass)}
+nav.links{display:flex;gap:26px}
+nav.links a{font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-decoration:none;color:var(--bone-dim);padding:4px 0}
+nav.links a:hover{color:var(--bone)}
+@media(max-width:820px){nav.links{display:none}}
+
+/* hero */
+.hero{padding:clamp(72px,12vw,140px) 0 0}
+.hero h1{max-width:16ch}
+.hero h1 em{font-style:normal;color:var(--brass)}
+.hero-grid{display:grid;grid-template-columns:1.35fr .85fr;gap:clamp(28px,5vw,80px);align-items:end;margin-top:38px}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr;align-items:start}}
+.etym{font-family:var(--mono);font-size:12px;line-height:1.85;color:var(--bone-dim);border-left:1px solid var(--rule);padding-left:18px}
+.etym b{color:var(--brass);font-weight:500}
+
+/* signature: double-entry */
+.book{margin-top:clamp(56px,9vw,104px);border-top:1px solid var(--rule)}
+.book-head{
+  display:grid;grid-template-columns:52px 1fr 1fr;gap:clamp(16px,3vw,44px);
+  font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;
+  color:rgba(168,152,140,.7);padding:12px 0;border-bottom:1px solid rgba(200,154,74,.16);
+}
+.entry{
+  display:grid;grid-template-columns:52px 1fr 1fr;gap:clamp(16px,3vw,44px);
+  padding:20px 0;border-bottom:1px solid rgba(239,232,220,.07);
+  opacity:0;transform:translateY(6px);animation:rise .5s ease forwards;
+}
+.entry:nth-of-type(2){animation-delay:.06s}
+.entry:nth-of-type(3){animation-delay:.12s}
+.entry:nth-of-type(4){animation-delay:.18s}
+.entry:nth-of-type(5){animation-delay:.24s}
+.entry:nth-of-type(6){animation-delay:.30s}
+@keyframes rise{to{opacity:1;transform:none}}
+.entry .n{font-family:var(--mono);font-size:12px;color:var(--brass)}
+.entry .side{font-size:16.5px;line-height:1.42}
+.entry .side.no{color:var(--bone-dim);border-left:1px solid rgba(239,232,220,.1);padding-left:clamp(16px,3vw,40px)}
+@media(max-width:760px){
+  .book-head{display:none}
+  .entry{grid-template-columns:1fr;gap:10px;padding:22px 0}
+  .entry .n{font-size:11px}
+  .entry .side.no{border-left:2px solid var(--rule);padding-left:14px}
+}
+
+section{padding:clamp(72px,10vw,128px) 0}
+.sec-head{max-width:60ch;margin-bottom:clamp(32px,5vw,56px)}
+.sec-head p{margin-top:18px;color:var(--bone-dim);max-width:52ch}
+.band{background:var(--ox-900)}
+
+/* position essay */
+.light{background:var(--bone);color:var(--ox-950)}
+.light .eyebrow{color:var(--ox-800)}
+.essay{max-width:60ch;font-size:19px;line-height:1.66}
+.essay p{margin-bottom:22px}
+.essay .drop{font-size:22px}
+.essay strong{font-weight:400;font-family:var(--display);font-size:20px;letter-spacing:-.01em}
+
+/* practice */
+.practice{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(239,232,220,.1);border:1px solid rgba(239,232,220,.1)}
+@media(max-width:860px){.practice{grid-template-columns:1fr}}
+.cell{background:var(--ox-900);padding:clamp(24px,3vw,34px)}
+.cell h3{margin-bottom:12px}
+.cell p{font-size:15.5px;color:var(--bone-dim);margin:0}
+.cell .tag{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--brass);display:block;margin-bottom:16px}
+
+/* underway */
+.underway{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,64px);align-items:start}
+@media(max-width:820px){.underway{grid-template-columns:1fr}}
+.status{border-top:1px solid var(--rule);padding-top:20px}
+.status li{list-style:none;display:flex;justify-content:space-between;gap:20px;padding:13px 0;border-bottom:1px solid rgba(239,232,220,.08);font-size:16px}
+.status ul{margin:0;padding:0}
+.status .st{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--sage);white-space:nowrap;padding-top:4px}
+.status .st.soon{color:var(--brass)}
+
+/* cta */
+.cta{border-top:1px solid var(--rule);padding:clamp(56px,8vw,96px) 0 40px}
+.cta-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:clamp(24px,5vw,72px);align-items:start}
+@media(max-width:820px){.cta-grid{grid-template-columns:1fr}}
+.mail{font-family:var(--display);font-weight:600;font-size:clamp(23px,3.4vw,38px);letter-spacing:-.02em;text-decoration:none;border-bottom:2px solid var(--brass);padding-bottom:3px;display:inline-block}
+.mail:hover{color:var(--brass)}
+.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-top:clamp(48px,7vw,80px);padding-top:22px;border-top:1px solid rgba(239,232,220,.09);font-family:var(--mono);font-size:11px;color:var(--bone-dim);letter-spacing:.04em}
+
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .entry{opacity:1;transform:none}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap topbar">
+    <a class="brand" href="#"><b>Miomir</b><span>Labs</span></a>
+    <nav class="links">
+      <a href="#book">What we hold to</a>
+      <a href="#position">Why we exist</a>
+      <a href="#practice">What we do</a>
+      <a href="#underway">Underway</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<div class="wrap hero">
+  <p class="eyebrow">Engineering and research house · Lagos</p>
+  <h1>We build the parts that must not <em>fail</em>.</h1>
+  <div class="hero-grid">
+    <p class="lede">Ledgers, identity, records, money movement. The layer underneath a business, where a rounding error is a lawsuit and an outage is a headline.</p>
+    <div class="etym">
+      <b>mio · mir</b><br>
+      Slavic. Dear peace.<br>
+      The measure of infrastructure<br>
+      is how rarely anyone<br>
+      has to think about it.
+    </div>
+  </div>
+
+  <div class="book" id="book">
+    <div class="book-head">
+      <div>&nbsp;</div>
+      <div>What we hold to</div>
+      <div>What that costs us</div>
+    </div>
+
+    <div class="entry">
+      <div class="n">01</div>
+      <div class="side">We settle the data model before we write code, and we will argue with you about it for weeks.</div>
+      <div class="side no">So we are slow to start, and we lose work to firms that can show you a screen on day three.</div>
+    </div>
+
+    <div class="entry">
+      <div class="n">02</div>
+      <div class="side">Every specification ships with a written list of what we are not building.</div>
+      <div class="side no">So we turn down paid scope, and we say no to features you want.</div>
+    </div>
+
+    <div class="entry">
+      <div class="n">03</div>
+      <div class="side">Nothing we build depends on a single supplier. Not a bank, not a gateway, not a region.</div>
+      <div class="side no">So the first version costs more than the one built on a single partnership.</div>
+    </div>
+
+    <div class="entry">
+      <div class="n">04</div>
+      <div class="side">We operate what we ship, and we hand over runbooks and a team who can run it without us.</div>
+      <div class="side no">So we forfeit the maintenance retainer that most of this industry lives on.</div>
+    </div>
+
+    <div class="entry">
+      <div class="n">05</div>
+      <div class="side">We publish what we learn, including the decisions that turned out wrong.</div>
+      <div class="side no">So our mistakes are on the record, under our name, permanently.</div>
+    </div>
+  </div>
+</div>
+
+<section id="position" class="light">
+  <div class="wrap">
+    <p class="eyebrow">Why we exist</p>
+    <div class="essay">
+      <p class="drop">Nigeria does not have a shortage of people who can ship a product. It has a shortage of systems that survive their second year.</p>
+      <p>Ask around and the same failures repeat. A balance stored in a column instead of derived from entries, and now nobody can prove what a customer is owed. A schema built for one merchant, discovered a year later to need every table migrated. A business that stops when one bank's API changes, because the architecture assumed the partnership would hold forever. A handover that leaves a team unable to change their own product.</p>
+      <p>None of that happens because the engineers were poor. It happens because almost nobody in this market is paid to build for year five. Launch pressure is real, capital is short, and the incentive is to get something on screen and worry later. Later arrives, and it is expensive.</p>
+      <p><strong>We exist to be the house that builds for later.</strong></p>
+      <p>That means we work on the layer where mistakes compound: ledgers, identity, records, the movement of money. It means we take fewer engagements than we could sell. And it means we run our own products on the same foundations we sell, so that when we tell you a decision will hurt in year two, we are speaking from having been hurt by it.</p>
+    </div>
+  </div>
+</section>
+
+<section id="practice" class="band">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">What we do</p>
+      <h2>Three kinds of work. The same people do all of them.</h2>
+      <p>Client engineering funds the house. The products keep us honest about what it is like to operate the thing after launch. The research is how we stay useful in five years.</p>
+    </div>
+    <div class="practice">
+      <div class="cell">
+        <span class="tag">Client engineering</span>
+        <h3>Systems of record</h3>
+        <p>Platforms where money, inventory and obligations have to reconcile, and where an auditor will eventually ask you to prove it. We design the model first and defend it, because that is the decision nobody can undo later.</p>
+      </div>
+      <div class="cell">
+        <span class="tag">Our own products</span>
+        <h3>Infrastructure we run</h3>
+        <p>Software we operate ourselves, built on the same foundations we sell. We carry the pager for it, which changes how we build everything else.</p>
+      </div>
+      <div class="cell">
+        <span class="tag">Research</span>
+        <h3>Frontier, applied</h3>
+        <p>Work on AI systems that has to survive contact with production. Evaluation, reliability, and what happens when a model is confidently wrong inside a system that moves money.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="underway">
+  <div class="wrap">
+    <div class="underway">
+      <div>
+        <p class="eyebrow">Underway</p>
+        <h2>We would rather show you a working thing later.</h2>
+        <p class="muted" style="margin-top:20px;max-width:44ch">Case studies and product pages arrive when there is something real to look at. Until then, here is what the house is actually doing.</p>
+      </div>
+      <div class="status">
+        <ul>
+          <li><span>Commerce and ledger platform for a marketplace operator</span><span class="st">In build</span></li>
+          <li><span>Identity and account infrastructure for developers</span><span class="st soon">In design</span></li>
+          <li><span>Market intelligence product, rebuilt</span><span class="st soon">In build</span></li>
+          <li><span>Knowledge platform for teams</span><span class="st">Running</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap cta" id="contact">
+  <div class="cta-grid">
+    <div>
+      <p class="eyebrow">Work with us</p>
+      <h2 style="margin-bottom:22px">Tell us what has to not fail.</h2>
+      <p class="muted" style="max-width:46ch">We take a small number of engagements a year, and we are honest early about the ones we are wrong for.</p>
+      <a class="mail" href="mailto:hello@miomir.com">hello@miomir.com</a>
+    </div>
+    <div class="etym" style="border-left-color:rgba(239,232,220,.16)">
+      <b>Also hiring</b><br>
+      Engineers who have carried a pager.<br>
+      Researchers who ship.<br><br>
+      <a href="#" style="color:var(--bone)">See open roles →</a>
+    </div>
+  </div>
+  <div class="foot">
+    <span>Miomir Labs · Lagos, Nigeria</span>
+    <span>© 2026</span>
+  </div>
+</div>
+
+</main>
+</body>
+</html>
