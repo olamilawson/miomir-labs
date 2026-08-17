@@ -2,21 +2,27 @@
 
 Static website for Miomir Labs, an engineering and research house in Lagos.
 
-- **Live site:** https://olamilawson.github.io/miomir-labs/
+- **Live site:** https://miomirlabs.com/
 - **Repository:** https://github.com/olamilawson/miomir-labs
 
-## Pages
+## Structure
 
-- Home
-- Work
-- Enterprise
-- Contact
+One page. `docs/index.html` holds every section, reached by anchor:
+
+| Anchor | Section |
+|--------|---------|
+| `#work` | Practice areas |
+| `#products` | Prager and Prai |
+| `#enterprise` | For organizations |
+| `#approach` | Engineering philosophy |
+| `#contact` | Contact |
+
+`work.html`, `products.html`, `enterprise.html`, and `contact.html` are redirect stubs for older inbound links.
 
 ## Local preview
 
 ```bash
-cd docs
-python3 -m http.server 8001
+cd docs && python3 -m http.server 8001
 ```
 
 Open http://localhost:8001.
@@ -24,8 +30,7 @@ Open http://localhost:8001.
 ## Build CSS
 
 ```bash
-npm install
-npm run build
+npm install && npm run build
 ```
 
 For development:
@@ -36,6 +41,7 @@ npm run watch
 
 ## Notes
 
-- The published site lives in `docs/`.
-- Fonts are self-hosted; no external font or CSS CDN is used.
-- See `HANDOFF.md` and `DESIGN.md` for full details.
+- The published site lives in `docs/`; GitHub Pages builds from that folder on `main`.
+- Fonts are self-hosted and subset. No font or CSS CDN.
+- The contact form needs a real Formspree ID before launch. See `HANDOFF.md`.
+- `DESIGN.md` is the source of truth for positioning, tokens, and the copy rules.

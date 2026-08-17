@@ -3,58 +3,170 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Miomir Labs — Systems Engineering & Applied Research</title>
-  <meta name="description" content="An engineering and research house in Lagos. We build systems of record for identity, ledgers, money movement, and applied research.">
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="alternate icon" href="favicon.ico">
-  <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
+
+  <title>Miomir Labs · Correctness-first engineering for ledgers, identity, and money movement</title>
+  <meta name="description" content="Miomir Labs is an engineering and research house in Lagos. We build and maintain the systems of record underneath your business: ledgers, identity, settlement, and applied research.">
+  <link rel="canonical" href="https://miomirlabs.com/">
+
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="theme-color" content="#F9F7F2">
+  <meta name="author" content="Miomir Labs">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Miomir Labs">
+  <meta property="og:locale" content="en_NG">
+  <meta property="og:url" content="https://miomirlabs.com/">
+  <meta property="og:title" content="Miomir Labs · Correctness-first engineering">
+  <meta property="og:description" content="An engineering and research house in Lagos. We build and maintain the systems of record underneath your business: ledgers, identity, settlement, and applied research.">
+  <meta property="og:image" content="https://miomirlabs.com/assets/images/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Miomir Labs · an engineering and research house in Lagos.">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Miomir Labs · Correctness-first engineering">
+  <meta name="twitter:description" content="An engineering and research house in Lagos. We build and maintain the systems of record underneath your business.">
+  <meta name="twitter:image" content="https://miomirlabs.com/assets/images/og-image.png">
+  <meta name="twitter:image:alt" content="Miomir Labs · an engineering and research house in Lagos.">
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="alternate icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/bodoni-moda-12.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/hanken-grotesk-8.woff2" crossorigin>
   <link rel="stylesheet" href="assets/fonts/fonts.css">
   <link rel="stylesheet" href="assets/css/styles.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://miomirlabs.com/#organization",
+        "name": "Miomir Labs",
+        "url": "https://miomirlabs.com/",
+        "email": "hello@miomirlabs.com",
+        "description": "An engineering and research house in Lagos building systems of record for ledgers, identity, settlement, and applied research.",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://miomirlabs.com/assets/images/logo.svg"
+        },
+        "image": "https://miomirlabs.com/assets/images/og-image.png",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Yaba",
+          "addressRegion": "Lagos",
+          "addressCountry": "NG"
+        },
+        "areaServed": "Worldwide",
+        "knowsAbout": [
+          "Distributed ledgers",
+          "Double-entry accounting systems",
+          "Identity and access management",
+          "Payment reconciliation and settlement",
+          "Applied machine learning research"
+        ],
+        "makesOffer": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "SoftwareApplication",
+              "name": "Prager",
+              "applicationCategory": "BusinessApplication",
+              "operatingSystem": "Android, iOS",
+              "description": "A mobile superapp for small business owners. Prager started as a messenger and now covers invoicing, payments, stock, and supplier payouts end to end on a phone."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "SoftwareApplication",
+              "name": "Prai",
+              "applicationCategory": "BusinessApplication",
+              "operatingSystem": "Web",
+              "description": "A productivity assistant trained on Nigerian Pidgin alongside English."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://miomirlabs.com/#website",
+        "url": "https://miomirlabs.com/",
+        "name": "Miomir Labs",
+        "publisher": { "@id": "https://miomirlabs.com/#organization" },
+        "inLanguage": "en"
+      },
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://miomirlabs.com/#service",
+        "name": "Miomir Labs",
+        "parentOrganization": { "@id": "https://miomirlabs.com/#organization" },
+        "url": "https://miomirlabs.com/",
+        "areaServed": { "@type": "Country", "name": "Nigeria" },
+        "serviceType": [
+          "Records and ledgers engineering",
+          "Identity and access engineering",
+          "Settlement and reconciliation systems",
+          "Applied research"
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body class="bg-bone text-ink-black font-body-md selection:bg-oxblood selection:text-bone">
+
+  <a href="#hero" class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[60] focus:bg-oxblood focus:text-bone focus:px-4 focus:py-2 focus:font-label-technical focus:uppercase">Skip to content</a>
 
   <header class="fixed top-0 w-full z-50 bg-bone/90 backdrop-blur-md border-b border-hairline-stroke pt-safe">
     <div class="h-16 flex items-center justify-between px-gutter max-w-[1280px] mx-auto">
       <a href="#hero" class="flex items-center gap-2 no-underline text-ink-black group">
-        <img src="assets/images/logo.svg" alt="Miomir Labs" class="h-8 w-8 object-contain" style="color:#111">
+        <img src="assets/images/logo.svg" alt="Miomir Labs" width="32" height="32" class="h-8 w-8 object-contain" style="color:#111">
         <div class="flex flex-col">
           <span class="font-headline-lg-mobile text-[18px] tracking-tight group-hover:text-oxblood transition-colors">Miomir Labs</span>
           <span class="font-label-technical text-technical-gray -mt-1 uppercase">Lagos, Nigeria</span>
         </div>
       </a>
-      <nav class="hidden md:flex items-center gap-8" aria-label="Primary">
+      <nav class="hidden md:flex items-center gap-7" aria-label="Primary">
         <a href="#work" class="font-label-technical text-technical-gray hover:text-ink-black transition-colors uppercase tracking-wider">Work</a>
+        <a href="#products" class="font-label-technical text-technical-gray hover:text-ink-black transition-colors uppercase tracking-wider">Products</a>
         <a href="#enterprise" class="font-label-technical text-technical-gray hover:text-ink-black transition-colors uppercase tracking-wider">Enterprise</a>
         <a href="#approach" class="font-label-technical text-technical-gray hover:text-ink-black transition-colors uppercase tracking-wider">Approach</a>
         <a href="#contact" class="font-label-technical text-oxblood hover:underline uppercase tracking-wider">Contact</a>
       </nav>
-      <button class="md:hidden w-10 h-10 flex items-center justify-center text-technical-gray hover:text-ink-black transition-colors" aria-label="Open menu" aria-expanded="false" id="menuBtn">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      <button class="md:hidden w-10 h-10 flex items-center justify-center text-technical-gray hover:text-ink-black transition-colors" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav" id="menuBtn">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
       </button>
     </div>
     <nav id="mobileNav" class="hidden md:hidden flex-col border-t border-hairline-stroke bg-bone px-gutter py-4 gap-4" aria-label="Primary mobile">
       <a href="#work" class="mobile-nav-link font-label-technical text-technical-gray uppercase">Work</a>
+      <a href="#products" class="mobile-nav-link font-label-technical text-technical-gray uppercase">Products</a>
       <a href="#enterprise" class="mobile-nav-link font-label-technical text-technical-gray uppercase">Enterprise</a>
       <a href="#approach" class="mobile-nav-link font-label-technical text-technical-gray uppercase">Approach</a>
       <a href="#contact" class="mobile-nav-link font-label-technical text-oxblood uppercase font-bold">Contact</a>
     </nav>
   </header>
 
-  <main class="relative w-full pt-16 bg-bone">
+  <main id="main" class="relative w-full pt-16 bg-bone">
 
     <!-- Hero -->
     <section id="hero" class="px-gutter py-20 md:py-section-break min-h-[580px] flex flex-col justify-center border-b border-hairline-stroke">
       <div class="max-w-[1280px] mx-auto w-full">
-        <div class="mb-4">
-          <span class="font-label-technical text-technical-gray uppercase tracking-widest">Engineering & Research House</span>
+        <div class="mb-5">
+          <span class="font-label-technical text-technical-gray uppercase tracking-widest">Engineering &amp; Research House · Lagos</span>
         </div>
-        <h1 class="text-[36px] sm:text-[52px] md:text-[72px] leading-[1.05] md:leading-[0.95] font-display-xl text-oxblood tracking-tight">Miomir Labs</h1>
-        <p class="font-body-lg text-on-surface-variant max-w-[540px] mt-6 leading-relaxed">
-          We design, build, and maintain software systems for records, identity, ledgers, and money movement. Built for organizations operating under real operational and regulatory constraints.
+        <h1 class="text-[34px] sm:text-[50px] md:text-[68px] leading-[1.06] md:leading-[1.0] font-display-xl text-oxblood tracking-tight max-w-[16ch]">We build software that has to be correct.</h1>
+        <p class="font-body-lg text-on-surface-variant max-w-[560px] mt-7 leading-relaxed">
+          Ledgers, identity, and money movement, for organizations where a wrong number costs real money. Your engineers can now generate more code in a day than your reviewers can check in a week. We take on the systems where that gap costs you most.
         </p>
         <div class="mt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
           <a href="#work" class="px-6 py-3.5 border border-oxblood text-oxblood font-label-technical uppercase tracking-widest hover:bg-oxblood hover:text-bone transition-all inline-flex items-center justify-center gap-2 text-center">
-            Explore practice areas
+            See what we build
           </a>
           <a href="#contact" class="px-6 py-3.5 border border-hairline-stroke text-technical-gray hover:text-ink-black hover:bg-surface-container transition-all font-label-technical uppercase tracking-widest inline-flex items-center justify-center gap-2 text-center">
             Start a conversation →
@@ -64,14 +176,14 @@
     </section>
 
     <!-- Work & Practice Areas -->
-    <section id="work" class="py-16 border-b border-hairline-stroke scroll-mt-16">
+    <section id="work" class="py-16 border-b border-hairline-stroke scroll-mt-16" aria-labelledby="work-heading">
       <div class="max-w-[1280px] mx-auto px-gutter mb-8">
         <div class="flex flex-col gap-2">
           <span class="font-label-technical text-technical-gray uppercase tracking-widest">01 / Practice Areas</span>
-          <h2 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-oxblood">What we do</h2>
+          <h2 id="work-heading" class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-oxblood">What we do</h2>
         </div>
         <p class="font-body-md text-on-surface-variant max-w-2xl mt-3">
-          We design, build, and maintain systems that hold important state and execute sensitive transactions.
+          We build and maintain the systems that hold your records and move your money.
         </p>
       </div>
 
@@ -80,26 +192,26 @@
           <article class="flex flex-col md:flex-row border-b border-hairline-stroke hover:bg-surface-container-low transition-colors group">
             <div class="w-full md:w-1/3 p-6 md:p-8 border-b md:border-b-0 md:border-r border-hairline-stroke flex flex-col justify-between">
               <span class="font-index-marker text-technical-gray group-hover:text-oxblood transition-colors uppercase tracking-wider">Records</span>
-              <h3 class="font-headline-lg-mobile text-[22px] font-semibold text-oxblood mt-2">Records & ledgers</h3>
+              <h3 class="font-headline-lg-mobile text-[22px] font-semibold text-oxblood mt-2">Records &amp; ledgers</h3>
             </div>
             <div class="w-full md:w-2/3 p-6 md:p-8 flex flex-col justify-center gap-2">
               <p class="font-body-md text-on-surface-variant leading-relaxed">
-                Transaction logs, registries, and audit trails. We build software that keeps an accurate, tamper-resistant history and makes complex state searchable in real time.
+                Transaction logs, registries, and audit trails. We build the history your auditors read and your lawyers reach for when a customer disputes a charge, so a balance you query today matches the one you queried last quarter.
               </p>
-              <span class="font-label-technical text-technical-gray mt-1">Audit logs · Data registries · Immutable ledgers</span>
+              <span class="font-label-technical text-technical-gray mt-1">Audit logs · Data registries · Double-entry ledgers</span>
             </div>
           </article>
 
           <article class="flex flex-col md:flex-row border-b border-hairline-stroke hover:bg-surface-container-low transition-colors group">
             <div class="w-full md:w-1/3 p-6 md:p-8 border-b md:border-b-0 md:border-r border-hairline-stroke flex flex-col justify-between">
               <span class="font-index-marker text-technical-gray group-hover:text-oxblood transition-colors uppercase tracking-wider">Identity</span>
-              <h3 class="font-headline-lg-mobile text-[22px] font-semibold text-oxblood mt-2">Identity & access</h3>
+              <h3 class="font-headline-lg-mobile text-[22px] font-semibold text-oxblood mt-2">Identity &amp; access</h3>
             </div>
             <div class="w-full md:w-2/3 p-6 md:p-8 flex flex-col justify-center gap-2">
               <p class="font-body-md text-on-surface-variant leading-relaxed">
-                Authentication, granular authorization, and credential management flows designed for staff, customer portals, and machine-to-machine integrations.
+                Authentication, granular authorization, and credential lifecycles. We write the rules for who may touch what, then keep them readable by your compliance team without a translator.
               </p>
-              <span class="font-label-technical text-technical-gray mt-1">RBAC / ABAC · Credential issuance · SSO & mTLS</span>
+              <span class="font-label-technical text-technical-gray mt-1">RBAC / ABAC · Credential issuance · SSO &amp; mTLS</span>
             </div>
           </article>
 
@@ -110,7 +222,7 @@
             </div>
             <div class="w-full md:w-2/3 p-6 md:p-8 flex flex-col justify-center gap-2">
               <p class="font-body-md text-on-surface-variant leading-relaxed">
-                Automated payment reconciliation, financial reporting pipelines, and robust middleware connecting commercial banks, payment processors, and internal core ledgers.
+                Reconciliation, financial reporting pipelines, and the middleware between commercial banks, processors, and your core ledger. We handle the duplicate postings and the half-finished transfers your team chases by hand today.
               </p>
               <span class="font-label-technical text-technical-gray mt-1">Reconciliation engines · Webhook gateways · Clearing pipelines</span>
             </div>
@@ -123,7 +235,7 @@
             </div>
             <div class="w-full md:w-2/3 p-6 md:p-8 flex flex-col justify-center gap-2">
               <p class="font-body-md text-on-surface-variant leading-relaxed">
-                Structured document extraction, classification, and retrieval systems for institutions managing heavy physical archives or unstructured PDF legacy backlogs.
+                Document extraction, classification, and retrieval for institutions sitting on physical archives or decades of scanned PDFs. We measure what the model gets wrong before we let it near your workflow.
               </p>
               <span class="font-label-technical text-technical-gray mt-1">Document parsing · Knowledge retrieval · Optical classification</span>
             </div>
@@ -139,21 +251,75 @@
             <p class="font-headline-lg-mobile text-[20px] font-semibold text-oxblood mt-1">Deep domain engagement</p>
           </div>
           <div class="w-full md:w-2/3 flex flex-col gap-4 font-body-md text-on-surface-variant">
-            <p>We start by reading your existing codebase and interviewing the operators who run it every day. We prototype directly against production data constraints, not conceptual slide decks.</p>
-            <p>Most of our client engagements are long-term. We prefer to understand a domain deeply and ship systems we would be proud to maintain ourselves.</p>
+            <p>We start by reading your existing codebase and sitting with the operators who run it. We prototype against your real data constraints.</p>
+            <p>Most of our engagements run long. We would rather learn one domain in depth and ship systems we would be willing to maintain ourselves.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Enterprise -->
-    <section id="enterprise" class="py-16 border-b border-hairline-stroke scroll-mt-16">
+    <!-- Products -->
+    <section id="products" class="py-16 bg-surface border-b border-hairline-stroke scroll-mt-16" aria-labelledby="products-heading">
       <div class="max-w-[1280px] mx-auto px-gutter">
         <div class="flex flex-col gap-2 mb-8">
-          <span class="font-label-technical text-technical-gray uppercase tracking-widest">02 / Enterprise</span>
-          <h2 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-oxblood">For organizations</h2>
+          <span class="font-label-technical text-technical-gray uppercase tracking-widest">02 / Products</span>
+          <h2 id="products-heading" class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-oxblood">What we run ourselves</h2>
           <p class="font-body-lg text-on-surface-variant max-w-2xl mt-2 leading-relaxed">
-            We embed with enterprise engineering and government teams to build infrastructure that outlasts the people who originally specified it.
+            We run our own products on the foundations we build for clients. We find out what those foundations cost to operate before you do.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 border-t border-l border-hairline-stroke">
+          <article class="border-r border-b border-hairline-stroke p-6 md:p-8 flex flex-col gap-4 bg-bone hover:bg-surface-container-low transition-colors">
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <h3 class="font-headline-lg-mobile text-[24px] font-semibold text-oxblood">Prager</h3>
+                <span class="font-label-technical text-technical-gray uppercase tracking-wider block mt-1">Superapp for small business</span>
+              </div>
+              <span class="font-index-marker text-oxblood border border-oxblood/40 px-2 py-1 uppercase tracking-wider whitespace-nowrap">Live</span>
+            </div>
+            <p class="font-body-md text-on-surface-variant leading-relaxed">
+              Prager started as a messenger and grew into the app a business runs on. You invoice a customer, take the payment, watch your stock, and pay your supplier, without leaving the thread where the sale started.
+            </p>
+            <p class="font-body-md text-on-surface-variant leading-relaxed">
+              We build it for owners whose only computer is the phone in their hand.
+            </p>
+            <div class="mt-auto pt-4 border-t border-hairline-stroke">
+              <span class="font-label-technical text-technical-gray uppercase tracking-wider">Public API access is not open yet</span>
+            </div>
+          </article>
+
+          <article class="border-r border-b border-hairline-stroke p-6 md:p-8 flex flex-col gap-4 bg-bone hover:bg-surface-container-low transition-colors">
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <h3 class="font-headline-lg-mobile text-[24px] font-semibold text-oxblood">Prai</h3>
+                <span class="font-label-technical text-technical-gray uppercase tracking-wider block mt-1">Assistant · Pidgin &amp; English</span>
+              </div>
+              <span class="font-index-marker text-oxblood border border-oxblood/40 px-2 py-1 uppercase tracking-wider whitespace-nowrap">Live</span>
+            </div>
+            <p class="font-body-md text-on-surface-variant leading-relaxed">
+              A productivity assistant trained on Nigerian Pidgin alongside English. It reads the way your customers write to you, in the register that generic assistants flatten into textbook English.
+            </p>
+            <div class="mt-auto pt-4 border-t border-hairline-stroke">
+              <span class="font-label-technical text-technical-gray uppercase tracking-wider">Public API access is not open yet</span>
+            </div>
+          </article>
+        </div>
+
+        <p class="font-body-md text-on-surface-variant mt-6 max-w-2xl">
+          If you want early access to either product, or to the APIs when they open, <a href="#contact" class="text-oxblood underline underline-offset-4 hover:no-underline">tell us what you would build</a>.
+        </p>
+      </div>
+    </section>
+
+    <!-- Enterprise -->
+    <section id="enterprise" class="py-16 border-b border-hairline-stroke scroll-mt-16" aria-labelledby="enterprise-heading">
+      <div class="max-w-[1280px] mx-auto px-gutter">
+        <div class="flex flex-col gap-2 mb-8">
+          <span class="font-label-technical text-technical-gray uppercase tracking-widest">03 / Enterprise</span>
+          <h2 id="enterprise-heading" class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-oxblood">For organizations</h2>
+          <p class="font-body-lg text-on-surface-variant max-w-2xl mt-2 leading-relaxed">
+            We embed with enterprise and government engineering teams to build infrastructure that outlasts the people who specified it.
           </p>
         </div>
 
@@ -166,19 +332,19 @@
             <div class="p-6 flex flex-col gap-3 hover:bg-surface-container-high transition-colors">
               <h3 class="font-body-md font-bold text-ink-black">Start with what you have</h3>
               <p class="text-on-surface-variant text-sm leading-relaxed">
-                We audit existing databases, APIs, and manual workarounds before proposing new components. Most enterprise bottlenecks are integration problems.
+                We audit your databases, your APIs, and the spreadsheets your team relies on before we propose anything new. The bottleneck sits between your systems more often than inside any one of them.
               </p>
             </div>
             <div class="p-6 flex flex-col gap-3 hover:bg-surface-container-high transition-colors">
               <h3 class="font-body-md font-bold text-ink-black">Build for your environment</h3>
               <p class="text-on-surface-variant text-sm leading-relaxed">
-                We architect for network latency, intermittent connectivity, modest server specs, and the strict regulatory realities of West Africa.
+                We design for the latency, the dropped connections, and the server budget you have in West Africa.
               </p>
             </div>
             <div class="p-6 flex flex-col gap-3 hover:bg-surface-container-high transition-colors">
               <h3 class="font-body-md font-bold text-ink-black">Own the outcome</h3>
               <p class="text-on-surface-variant text-sm leading-relaxed">
-                You receive full source code, comprehensive documentation, and a clear operational handover plan. No vendor lock-in.
+                You keep the source, the documentation, and a handover plan your own engineers can act on. We do not hold your system hostage.
               </p>
             </div>
           </div>
@@ -187,95 +353,119 @@
         <!-- Engagement Process -->
         <div class="bg-surface border border-hairline-stroke p-8 md:p-12">
           <h3 class="font-headline-lg-mobile text-[24px] text-oxblood mb-8 font-semibold">How an engagement runs</h3>
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div class="flex flex-col gap-2">
+          <ol class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 list-none p-0 m-0">
+            <li class="flex flex-col gap-2">
               <span class="font-index-marker text-oxblood uppercase text-lg font-bold">01</span>
               <h4 class="font-body-md font-bold text-ink-black">Discovery</h4>
-              <p class="text-on-surface-variant text-sm leading-relaxed">We interview operators, audit existing source code, and map data flows across teams.</p>
-            </div>
-            <div class="flex flex-col gap-2">
+              <p class="text-on-surface-variant text-sm leading-relaxed">We interview your operators, read your source, and map how data moves between teams.</p>
+            </li>
+            <li class="flex flex-col gap-2">
               <span class="font-index-marker text-oxblood uppercase text-lg font-bold">02</span>
               <h4 class="font-body-md font-bold text-ink-black">Design</h4>
-              <p class="text-on-surface-variant text-sm leading-relaxed">We specify a simple, robust system that fits your operational constraints and regulatory needs.</p>
-            </div>
-            <div class="flex flex-col gap-2">
+              <p class="text-on-surface-variant text-sm leading-relaxed">We specify a system simple enough that your team can hold it in their heads, and write down the invariants it has to hold.</p>
+            </li>
+            <li class="flex flex-col gap-2">
               <span class="font-index-marker text-oxblood uppercase text-lg font-bold">03</span>
               <h4 class="font-body-md font-bold text-ink-black">Build</h4>
-              <p class="text-on-surface-variant text-sm leading-relaxed">We ship working production software in rapid increments, backed by unit tests and audit trails.</p>
-            </div>
-            <div class="flex flex-col gap-2">
+              <p class="text-on-surface-variant text-sm leading-relaxed">We ship production increments, each one backed by tests and an audit trail you can inspect.</p>
+            </li>
+            <li class="flex flex-col gap-2">
               <span class="font-index-marker text-oxblood uppercase text-lg font-bold">04</span>
               <h4 class="font-body-md font-bold text-ink-black">Handover</h4>
-              <p class="text-on-surface-variant text-sm leading-relaxed">We train your in-house engineers, transfer complete repository ownership, and define support terms.</p>
-            </div>
-          </div>
+              <p class="text-on-surface-variant text-sm leading-relaxed">We train your engineers, transfer the repository, and agree what support looks like afterwards.</p>
+            </li>
+          </ol>
         </div>
       </div>
     </section>
 
     <!-- Approach & Constraints -->
-    <section id="approach" class="py-16 bg-surface text-ink-black border-b border-hairline-stroke scroll-mt-16">
+    <section id="approach" class="py-16 bg-surface text-ink-black border-b border-hairline-stroke scroll-mt-16" aria-labelledby="approach-heading">
       <div class="max-w-[1280px] mx-auto px-gutter">
         <div class="flex flex-col gap-2 mb-6">
-          <span class="font-label-technical text-technical-gray uppercase tracking-widest">03 / Engineering Philosophy</span>
-          <h2 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-oxblood">Build for the constraint</h2>
+          <span class="font-label-technical text-technical-gray uppercase tracking-widest">04 / Engineering Philosophy</span>
+          <h2 id="approach-heading" class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-oxblood">Build for the constraint</h2>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 font-body-md text-on-surface-variant leading-relaxed">
           <div class="flex flex-col gap-4">
-            <p>Most software systems in emerging markets must operate reliably under high latency, modest infrastructure budgets, and intense regulatory scrutiny. We design for those hard conditions first rather than patching them later.</p>
+            <p>Systems here run under high latency, modest infrastructure budgets, and close regulatory attention. We design for those conditions at the start, because retrofitting them costs more than planning for them.</p>
+            <p>We write code a stranger can audit. That stranger might be your next hire, your regulator, or one of us in three years with no memory of the decision.</p>
           </div>
           <div class="flex flex-col gap-4">
-            <p>We write clean, readable code that is straightforward to audit, repair, and maintain for years without operational friction. When conducting applied research, we stay grounded in actual transaction data and direct operator feedback.</p>
+            <p>Generating code is now the cheap part of this work. We spend our hours on the expensive part, deciding whether the code is right and proving it stays right as the system changes.</p>
+            <p>When we do applied research, we test against your real transactions and the feedback of the people who process them, rather than a benchmark that flatters the model.</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Contact & Inquiry -->
-    <section id="contact" class="py-16 px-gutter scroll-mt-16">
+    <section id="contact" class="py-16 px-gutter scroll-mt-16" aria-labelledby="contact-heading">
       <div class="max-w-[1280px] mx-auto">
         <div class="flex flex-col gap-2 mb-8">
-          <span class="font-label-technical text-technical-gray uppercase tracking-widest">04 / Contact</span>
-          <h2 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-oxblood">Start a conversation</h2>
+          <span class="font-label-technical text-technical-gray uppercase tracking-widest">05 / Contact</span>
+          <h2 id="contact-heading" class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-oxblood">Start a conversation</h2>
           <p class="font-body-md text-on-surface-variant max-w-lg">
-            Tell us about your organization and what you are building. We review and respond to every inquiry.
+            Tell us about your organization and what you are building. An engineer reads what you send and replies.
           </p>
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-          <form class="lg:col-span-8 flex flex-col gap-6 bg-surface-container-highest p-6 md:p-8 border-t-4 border-oxblood border-x border-b border-hairline-stroke" action="mailto:hello@miomir.labs" method="post" enctype="text/plain">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div class="flex flex-col gap-2">
-                <label class="font-label-technical text-on-surface-variant uppercase text-xs tracking-wider" for="name">Name *</label>
-                <input class="bg-bone border border-hairline-stroke text-ink-black p-3.5 focus:outline-none focus:border-oxblood transition-colors w-full font-label-technical text-base md:text-sm" id="name" placeholder="Your name" type="text" name="name" required>
+          <div class="lg:col-span-8">
+            <form
+              id="contactForm"
+              class="flex flex-col gap-6 bg-surface-container-highest p-6 md:p-8 border-t-4 border-oxblood border-x border-b border-hairline-stroke"
+              action="https://formspree.io/f/YOUR_FORM_ID"
+              method="POST">
+
+              <input type="hidden" name="_subject" value="New enquiry from miomirlabs.com">
+              <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" class="hidden">
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="flex flex-col gap-2">
+                  <label class="font-label-technical text-on-surface-variant uppercase text-xs tracking-wider" for="name">Name *</label>
+                  <input class="bg-bone border border-hairline-stroke text-ink-black p-3.5 focus:outline-none focus:border-oxblood transition-colors w-full font-label-technical text-base md:text-sm" id="name" placeholder="Your name" type="text" name="name" autocomplete="name" required>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <label class="font-label-technical text-on-surface-variant uppercase text-xs tracking-wider" for="email">Work Email *</label>
+                  <input class="bg-bone border border-hairline-stroke text-ink-black p-3.5 focus:outline-none focus:border-oxblood transition-colors w-full font-label-technical text-base md:text-sm" id="email" placeholder="you@organization.com" type="email" name="email" autocomplete="email" required>
+                </div>
               </div>
               <div class="flex flex-col gap-2">
-                <label class="font-label-technical text-on-surface-variant uppercase text-xs tracking-wider" for="email">Work Email *</label>
-                <input class="bg-bone border border-hairline-stroke text-ink-black p-3.5 focus:outline-none focus:border-oxblood transition-colors w-full font-label-technical text-base md:text-sm" id="email" placeholder="you@organization.com" type="email" name="email" required>
+                <label class="font-label-technical text-on-surface-variant uppercase text-xs tracking-wider" for="organization">Organization / Company</label>
+                <input class="bg-bone border border-hairline-stroke text-ink-black p-3.5 focus:outline-none focus:border-oxblood transition-colors w-full font-label-technical text-base md:text-sm" id="organization" placeholder="Organization name" type="text" name="organization" autocomplete="organization">
               </div>
+              <div class="flex flex-col gap-2">
+                <label class="font-label-technical text-on-surface-variant uppercase text-xs tracking-wider" for="message">What are you building? *</label>
+                <textarea class="bg-bone border border-hairline-stroke text-ink-black p-3.5 focus:outline-none focus:border-oxblood transition-colors w-full resize-none font-label-technical text-base md:text-sm" id="message" name="message" rows="5" placeholder="A brief description of your project, constraints, or technical challenge..." required></textarea>
+              </div>
+              <div class="border-t border-hairline-stroke pt-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                <span class="font-label-technical text-technical-gray text-xs">We read enquiries in the order they arrive.</span>
+                <button class="w-full sm:w-auto px-8 py-3.5 bg-oxblood text-bone font-label-technical uppercase tracking-widest hover:bg-ink-black transition-all active:scale-95 flex items-center justify-center gap-2 text-sm" type="submit">
+                  Send message →
+                </button>
+              </div>
+              <p id="formStatus" role="status" aria-live="polite" class="font-label-technical text-sm text-oxblood hidden"></p>
+            </form>
+
+            <!-- Shown only if the Formspree endpoint is still a placeholder -->
+            <div id="formFallback" class="hidden bg-surface-container-highest p-6 md:p-8 border-t-4 border-oxblood border-x border-b border-hairline-stroke">
+              <h3 class="font-headline-lg-mobile text-[20px] font-semibold text-oxblood">Email us directly</h3>
+              <p class="font-body-md text-on-surface-variant mt-3 max-w-lg">
+                Tell us about your organization, the system you are working on, and the constraint that brought you here.
+              </p>
+              <a href="mailto:hello@miomirlabs.com" class="mt-5 inline-flex px-8 py-3.5 bg-oxblood text-bone font-label-technical uppercase tracking-widest hover:bg-ink-black transition-all">
+                hello@miomirlabs.com
+              </a>
             </div>
-            <div class="flex flex-col gap-2">
-              <label class="font-label-technical text-on-surface-variant uppercase text-xs tracking-wider" for="organization">Organization / Company</label>
-              <input class="bg-bone border border-hairline-stroke text-ink-black p-3.5 focus:outline-none focus:border-oxblood transition-colors w-full font-label-technical text-base md:text-sm" id="organization" placeholder="Organization name" type="text" name="organization">
-            </div>
-            <div class="flex flex-col gap-2">
-              <label class="font-label-technical text-on-surface-variant uppercase text-xs tracking-wider" for="message">What are you building? *</label>
-              <textarea class="bg-bone border border-hairline-stroke text-ink-black p-3.5 focus:outline-none focus:border-oxblood transition-colors w-full resize-none font-label-technical text-base md:text-sm" id="message" name="message" rows="5" placeholder="A brief description of your project, constraints, or technical challenge..." required></textarea>
-            </div>
-            <div class="border-t border-hairline-stroke pt-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-              <span class="font-label-technical text-technical-gray text-xs">Direct response guaranteed within 24 hours</span>
-              <button class="w-full sm:w-auto px-8 py-3.5 bg-oxblood text-bone font-label-technical uppercase tracking-widest hover:bg-ink-black transition-all active:scale-95 flex items-center justify-center gap-2 text-sm" type="submit">
-                Send message →
-              </button>
-            </div>
-          </form>
+          </div>
 
           <div class="lg:col-span-4 flex flex-col gap-6 p-6 bg-surface border border-hairline-stroke">
             <h3 class="font-label-technical text-technical-gray uppercase tracking-widest">Direct Contact</h3>
             <div class="flex flex-col gap-3">
               <div>
                 <span class="font-label-technical text-technical-gray text-xs uppercase block">Email</span>
-                <a href="mailto:hello@miomir.labs" class="font-body-lg text-oxblood hover:underline font-semibold">hello@miomir.labs</a>
+                <a href="mailto:hello@miomirlabs.com" class="font-body-lg text-oxblood hover:underline font-semibold break-all">hello@miomirlabs.com</a>
               </div>
               <div class="border-t border-hairline-stroke pt-3 mt-1">
                 <span class="font-label-technical text-technical-gray text-xs uppercase block">Studio Location</span>
@@ -283,7 +473,7 @@
               </div>
               <div class="border-t border-hairline-stroke pt-3 mt-1">
                 <span class="font-label-technical text-technical-gray text-xs uppercase block">Engagements</span>
-                <p class="font-body-md text-technical-gray text-sm">Currently accepting select engineering and research engagements for Q3/Q4 2026.</p>
+                <p class="font-body-md text-technical-gray text-sm">We are taking on engineering and research work for Q4 2026 and Q1 2027.</p>
               </div>
             </div>
           </div>
@@ -296,38 +486,77 @@
   <footer class="bg-bone border-t border-hairline-stroke py-10 px-gutter">
     <div class="max-w-[1280px] mx-auto flex flex-col md:flex-row md:items-center justify-between gap-6">
       <div class="flex items-center gap-2">
-        <img src="assets/images/logo.svg" alt="" class="w-6 h-6 object-contain" style="color:#111">
+        <img src="assets/images/logo.svg" alt="" width="24" height="24" class="w-6 h-6 object-contain" style="color:#111">
         <span class="font-label-technical text-ink-black uppercase tracking-wider">Miomir Labs</span>
       </div>
       <nav class="flex flex-wrap gap-6" aria-label="Footer">
         <a href="#work" class="font-label-technical text-technical-gray hover:text-ink-black uppercase tracking-wider">Work</a>
+        <a href="#products" class="font-label-technical text-technical-gray hover:text-ink-black uppercase tracking-wider">Products</a>
         <a href="#enterprise" class="font-label-technical text-technical-gray hover:text-ink-black uppercase tracking-wider">Enterprise</a>
         <a href="#approach" class="font-label-technical text-technical-gray hover:text-ink-black uppercase tracking-wider">Approach</a>
         <a href="#contact" class="font-label-technical text-technical-gray hover:text-ink-black uppercase tracking-wider">Contact</a>
       </nav>
       <div class="flex flex-col gap-1 font-label-technical text-technical-gray md:text-right text-xs">
-        <a href="mailto:hello@miomir.labs" class="text-ink-black hover:underline font-semibold">hello@miomir.labs</a>
+        <a href="mailto:hello@miomirlabs.com" class="text-ink-black hover:underline font-semibold">hello@miomirlabs.com</a>
         <span>© 2026 Miomir Labs, Lagos, Nigeria</span>
       </div>
     </div>
   </footer>
 
   <script>
-    const btn = document.getElementById('menuBtn');
-    const nav = document.getElementById('mobileNav');
-    const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+    (function () {
+      var btn = document.getElementById('menuBtn');
+      var nav = document.getElementById('mobileNav');
 
-    btn.addEventListener('click', () => {
-      const hidden = nav.classList.toggle('hidden');
-      btn.setAttribute('aria-expanded', String(!hidden));
-    });
-
-    mobileLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        nav.classList.add('hidden');
-        btn.setAttribute('aria-expanded', 'false');
+      btn.addEventListener('click', function () {
+        var hidden = nav.classList.toggle('hidden');
+        btn.setAttribute('aria-expanded', String(!hidden));
       });
-    });
+
+      document.querySelectorAll('.mobile-nav-link').forEach(function (link) {
+        link.addEventListener('click', function () {
+          nav.classList.add('hidden');
+          btn.setAttribute('aria-expanded', 'false');
+        });
+      });
+
+      var form = document.getElementById('contactForm');
+      var fallback = document.getElementById('formFallback');
+      var status = document.getElementById('formStatus');
+
+      // Until a real Formspree endpoint is configured, show the email block
+      // instead of a form that would silently drop every message.
+      if (form.getAttribute('action').indexOf('YOUR_FORM_ID') !== -1) {
+        form.classList.add('hidden');
+        fallback.classList.remove('hidden');
+        return;
+      }
+
+      form.addEventListener('submit', function (event) {
+        event.preventDefault();
+        var button = form.querySelector('button[type="submit"]');
+        button.disabled = true;
+        status.classList.remove('hidden');
+        status.textContent = 'Sending...';
+
+        fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { Accept: 'application/json' }
+        }).then(function (response) {
+          if (response.ok) {
+            form.reset();
+            status.textContent = 'Thank you. Your message reached us.';
+          } else {
+            status.textContent = 'That did not send. Email hello@miomirlabs.com instead.';
+          }
+        }).catch(function () {
+          status.textContent = 'That did not send. Email hello@miomirlabs.com instead.';
+        }).finally(function () {
+          button.disabled = false;
+        });
+      });
+    })();
   </script>
 </body>
 </html>

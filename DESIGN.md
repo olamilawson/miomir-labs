@@ -10,6 +10,18 @@ The domain is **ledgers, identity, records, and money movement**: the layer unde
 
 The name is Slavic. *Mio* means dear; *mir* means peace. The reading the brand takes: the measure of infrastructure is how rarely anyone has to think about it.
 
+### Positioning
+
+The site leads with **correctness**, not breadth. The thesis: AI made code cheap to produce, and did nothing to make it cheap to verify. The expensive work moved to deciding whether a system is right and proving it stays right. That is the work Miomir Labs sells.
+
+The reference point is TigerBeetle, whose credibility comes from narrowness and checkable claims rather than from category language. "Foundation for digital infrastructure" is a category and survives no follow-up question. Copy should stay at the altitude of the specific thing being built.
+
+Two products, Prager and Prai, appear as **evidence of the thesis rather than a catalog**. The house is the hero; the products show it runs its own foundations. Both are live; neither has public API access yet, and the site must not imply otherwise.
+
+**Prager is a superapp, not a messenger.** It began as a messenger for teams and now covers the whole business a small owner runs from a phone: invoicing, payments, stock, and supplier payouts. Copy that calls it a chat app undersells it and describes a product that no longer exists. The concrete details worth keeping: the owner stays in the thread where the sale started, and the phone is the only computer they have.
+
+Prai's Nigerian Pidgin training is the most defensible claim on the site. Keep it specific.
+
 ## Job of the site
 
 A visitor should decide within ten seconds that these people are serious, and within a minute that they are unusually disciplined. The site exists to signal competence, not to persuade.
@@ -43,14 +55,20 @@ These rules apply to every line of copy and every layout decision.
 
 ## Structure
 
-The current site has four pages:
+The site is **one page**. `index.html` carries every section; navigation is in-page anchors.
 
-- `index.html` — Home. Who Miomir Labs is, what it does at a glance, and its approach.
-- `work.html` — What we do. The four practice areas in plain language.
-- `enterprise.html` — For organizations. How engagements work.
-- `contact.html` — Contact. A simple form and direct email.
+| Anchor | Section | Content |
+|--------|---------|---------|
+| `#hero` | — | The correctness thesis and the two calls to action. |
+| `#work` | 01 / Practice Areas | Records, identity, settlement, applied research. Plus "How we work". |
+| `#products` | 02 / Products | Prager and Prai, as proof the house runs its own foundations. |
+| `#enterprise` | 03 / Enterprise | Core principles and the four-stage engagement. |
+| `#approach` | 04 / Engineering Philosophy | Designing for the constraint. |
+| `#contact` | 05 / Contact | Form and direct email. |
 
-Navigation labels: Home, Work, Enterprise, Contact.
+Navigation labels: Work, Products, Enterprise, Approach, Contact.
+
+`work.html`, `products.html`, `enterprise.html`, and `contact.html` remain as `noindex, follow` redirect stubs pointing at the matching anchor, so older inbound links keep resolving. They hold no content and are not in the sitemap.
 
 ## Visual system
 
@@ -119,22 +137,42 @@ Chromatic accents stay under 5% of the visual area.
 - Fast on a Nigerian mobile connection: self-hosted or subset fonts, no heavy assets.
 - Responsive to 360px. Visible keyboard focus. Semantic headings. Reduced motion honoured. Contrast passing AA.
 
+## Discoverability
+
+The canonical origin is `https://miomirlabs.com/`. Every absolute URL in metadata points there, so changing domain is a find-and-replace on that string plus the `CNAME` file.
+
+- **Canonical + description** on `index.html`; `noindex, follow` on the four redirect stubs so they never compete with the real page.
+- **Open Graph and Twitter** tags with a 1200×630 card at `assets/images/og-image.png`, generated from `docs/_ogsrc.html` (deleted after render) using the site's own fonts. Regenerate it with headless Chrome if the headline changes.
+- **JSON-LD** `@graph` in the `<head>`: `Organization` (with address, email, logo, `makesOffer` for both products), `WebSite`, and `ProfessionalService`. This is what LLM crawlers and rich results read, so keep product status honest here too.
+- **`robots.txt`** allows everything and points to the sitemap. **`sitemap.xml`** lists the single canonical URL.
+- **`CNAME`** holds `miomirlabs.com` for GitHub Pages.
+- Headings run h1 → h2 → h3 with no skipped levels, sections carry `aria-labelledby`, and the engagement stages are an ordered list because they are genuinely sequential.
+
 ## File inventory
 
 ```
 ├── docs/                          # published site (GitHub Pages source)
-│   ├── index.html
-│   ├── work.html
-│   ├── enterprise.html
-│   ├── contact.html
+│   ├── index.html                 # the entire site
+│   ├── work.html                  # redirect stub → /#work
+│   ├── products.html              # redirect stub → /#products
+│   ├── enterprise.html            # redirect stub → /#enterprise
+│   ├── contact.html               # redirect stub → /#contact
+│   ├── CNAME                      # miomirlabs.com
+│   ├── robots.txt
+│   ├── sitemap.xml
+│   ├── favicon.svg / favicon.ico
 │   ├── .nojekyll
 │   └── assets/
 │       ├── css/
 │       │   ├── input.css          # Tailwind source + base styles
-│       │   ├── styles.css         # generated, minified production CSS
-│       │   └── fonts.css          # generated @font-face rules
-│       ├── fonts/                 # self-hosted font files
-│       └── images/logo.svg
+│       │   └── styles.css         # generated, minified production CSS
+│       ├── fonts/
+│       │   ├── fonts.css          # @font-face rules
+│       │   └── *.woff2            # self-hosted, subset
+│       └── images/
+│           ├── logo.svg
+│           ├── og-image.png       # 1200×630 social card
+│           └── apple-touch-icon.png
 ├── package.json
 ├── tailwind.config.js
 ├── .gitignore
