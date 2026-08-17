@@ -38,7 +38,7 @@ Miomir/
 │       └── images/                # logo.svg, og-image.png, apple-touch-icon.png
 ├── nginx/                         # reference copy of the live nginx directives
 ├── miomir-design-brief.md         # original brief
-├── miomir design system/          # explored design directions (15 MB, reference only)
+├── design-history/                # the three explored directions (28 KB)
 ├── DESIGN.md                      # single source of truth for design and copy rules
 ├── HANDOFF.md                     # this file
 ├── package.json
@@ -169,5 +169,4 @@ A personal access token was used to create the repository during the original ha
 ## Known loose ends
 
 - **Formspree is deliberately unwired.** `docs/index.html` still has `action="https://formspree.io/f/YOUR_FORM_ID"`. The form should deliver to a real `@miomirlabs.com` inbox, so wiring it waits on purchasing the custom email for the domain. Until then the page detects the placeholder and shows the direct email block instead, so no message is dropped without the sender knowing. This is intentional; do not "fix" it by deleting the fallback.
-- `miomir design system/` is 15 MB of reference material in a public repo. Consider moving it out.
 - No client names, testimonials, or case studies until cleared.

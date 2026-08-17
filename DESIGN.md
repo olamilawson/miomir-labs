@@ -171,6 +171,7 @@ The canonical origin is `https://miomirlabs.com/`. Every absolute URL in metadat
 │           ├── logo.svg
 │           ├── og-image.png       # 1200×630 social card
 │           └── apple-touch-icon.png
+├── design-history/                # the three explored directions
 ├── package.json
 ├── tailwind.config.js
 ├── .gitignore
@@ -180,5 +181,5 @@ The canonical origin is `https://miomirlabs.com/`. Every absolute URL in metadat
 ## History
 
 - Original brief: `miomir-design-brief.md`
-- Explored directions: `miomir design system/functionalist_precision/DESIGN.md`, `functionalist_specimen/DESIGN.md`, `industrial_minimalism/DESIGN.md`
+- Explored directions: `design-history/functionalist_precision.md`, `design-history/functionalist_specimen.md`, `design-history/industrial_minimalism.md`. The full 15 MB exploration, with mockup screenshots and prototype HTML, was moved out of the repo on 2026-08-17 to `Desktop/Personal/Mine/miomir-design-archive/`.
 - Chosen direction: functionalist specimen, light variant, with the copy rewritten to remove AI-generated institutional fiction.
