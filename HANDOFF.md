@@ -112,27 +112,43 @@ Tokens live in `tailwind.config.js` and are documented in `DESIGN.md`. Key value
 
 ## Deployment
 
-The site is hosted on **Hostinger**. It is static, so deployment is a file copy: everything inside `docs/` goes into `public_html/`, with `index.html` at the root of `public_html`, not inside a subfolder.
+The site is hosted on a **Hostinger VPS** that also serves other domains, and it is deployed from the terminal. Nothing in this repository's git history describes that; the older commits are GitHub Pages plumbing and the live site was first put up outside this working copy.
 
-Build the CSS first, then upload:
+Deployment is a file copy: the **contents** of `docs/` go into the miomirlabs.com document root, with `index.html` at that root.
 
-```bash
-npm run build
-```
+### One-time setup
 
-**Via hPanel.** Files → File Manager → `public_html`. Delete whatever is already there, upload a zip of the contents of `docs/`, and extract in place. To rebuild that zip:
+Find the document root on the VPS. Do not guess it, because other live domains share the machine:
 
 ```bash
-cd docs && zip -r ~/Desktop/miomir-hostinger.zip . -x ".DS_Store" "*/.DS_Store"
+ssh <host> 'grep -RiE "root|DocumentRoot" /etc/nginx/sites-enabled/ /etc/apache2/sites-enabled/ 2>/dev/null | grep -i miomir'
 ```
 
-**Via SFTP.** Credentials are under hPanel → Files → FTP Accounts. Upload the contents of `docs/` to `public_html/`. Include the dotfile `.htaccess`; many FTP clients hide dotfiles by default, so turn on hidden files or the compression and cache headers silently go missing.
+Then copy `scripts/deploy.env.example` to `scripts/deploy.env` and fill in `DEPLOY_HOST`, `DEPLOY_PATH`, and `DEPLOY_PORT`. That file is gitignored, so no credentials or paths land in the public repo.
 
-**Domain and TLS.** Add `miomirlabs.com` in hPanel → Domains. Either point your registrar's nameservers at Hostinger (`ns1.dns-parking.com`, `ns2.dns-parking.com`) or set an A record for the apex to the server IP shown in hPanel. Then hPanel → Security → SSL to issue the free certificate, and turn on **Force HTTPS** once it is active. HTTPS redirection lives in that toggle rather than in `.htaccess`, so the file is safe to upload before the certificate exists.
+### Deploying
 
-Do not also point the domain at GitHub Pages. One host serves the domain, and the previous GitHub Pages A records would take it away from Hostinger. The repository still holds the source; it no longer publishes the site, and `docs/CNAME` has been removed because it only ever meant anything to GitHub Pages.
+```bash
+./scripts/deploy.sh
+```
 
-After the first deploy, check `https://miomirlabs.com/robots.txt` and `https://miomirlabs.com/sitemap.xml` resolve, then submit the sitemap in Google Search Console.
+That builds the CSS and performs a **dry run**. Read the output, in particular any line starting with `*deleting`, then:
+
+```bash
+./scripts/deploy.sh --live
+```
+
+The script uses `rsync --delete`, so the server ends up matching `docs/` exactly. It refuses to run against a `DEPLOY_PATH` that does not name miomirlabs, which is what keeps a mistyped path from emptying another domain on the same VPS.
+
+The first run will list deletions for anything currently on the server that is absent from `docs/`. That is expected if the live site was uploaded by hand, but read the list before going live rather than trusting it.
+
+### TLS
+
+The certificate is managed on the VPS, not by this repo. If the site is served by nginx, `certbot --nginx -d miomirlabs.com` issues and renews it. Confirm HTTPS and the redirect after the first deploy:
+
+```bash
+curl -sI http://miomirlabs.com/ | head -3
+```
 
 ## Security note
 
@@ -140,6 +156,6 @@ A personal access token was used to create the repository during the original ha
 
 ## Known loose ends
 
-- Formspree ID and DNS, above.
+- **Formspree is deliberately unwired.** `docs/index.html` still has `action="https://formspree.io/f/YOUR_FORM_ID"`. The form should deliver to a real `@miomirlabs.com` inbox, so wiring it waits on purchasing the custom email for the domain. Until then the page detects the placeholder and shows the direct email block instead, so no message is dropped without the sender knowing. This is intentional; do not "fix" it by deleting the fallback.
 - `miomir design system/` is 15 MB of reference material in a public repo. Consider moving it out.
 - No client names, testimonials, or case studies until cleared.

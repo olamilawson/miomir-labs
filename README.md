@@ -41,7 +41,7 @@ npm run watch
 
 ## Notes
 
-- The published site lives in `docs/`. Deployment copies that folder into `public_html/` on Hostinger. See `HANDOFF.md`.
+- The published site lives in `docs/`. Deploy with `./scripts/deploy.sh` (dry run) then `--live`. See `HANDOFF.md`.
 - Fonts are self-hosted and subset. No font or CSS CDN.
 - The contact form needs a real Formspree ID before launch. See `HANDOFF.md`.
 - `DESIGN.md` is the source of truth for positioning, tokens, and the copy rules.
