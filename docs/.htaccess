@@ -1,0 +1,44 @@
+# Miomir Labs — static hosting rules (Apache / Hostinger)
+# HTTPS redirection is handled by the "Force HTTPS" toggle in hPanel, not here,
+# so this file stays safe to upload before the SSL certificate is issued.
+
+# Compression
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/css text/xml
+  AddOutputFilterByType DEFLATE application/javascript application/json
+  AddOutputFilterByType DEFLATE image/svg+xml application/xml
+</IfModule>
+
+# woff2 is already compressed; leave it alone.
+
+# Caching
+<IfModule mod_expires.c>
+  ExpiresActive On
+
+  # Fonts are content-hashed by filename and never change in place.
+  ExpiresByType font/woff2 "access plus 1 year"
+  <FilesMatch "\.woff2$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType image/png "access plus 1 month"
+  ExpiresByType image/svg+xml "access plus 1 month"
+  ExpiresByType image/x-icon "access plus 1 month"
+
+  # HTML stays short so copy edits appear without a hard refresh.
+  ExpiresByType text/html "access plus 0 seconds"
+</IfModule>
+
+# Correct MIME types
+<IfModule mod_mime.c>
+  AddType font/woff2 .woff2
+  AddType image/svg+xml .svg
+  AddType application/xml .xml
+</IfModule>
+
+# Serve the single page for the bare domain
+DirectoryIndex index.html
+
+# Keep directory contents private
+Options -Indexes

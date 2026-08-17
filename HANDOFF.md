@@ -21,13 +21,13 @@ The positioning leads with correctness rather than category breadth, and present
 
 ```
 Miomir/
-├── docs/                          # published site (GitHub Pages source)
+├── docs/                          # published site (upload contents to public_html/)
 │   ├── index.html                 # the entire site
 │   ├── work.html                  # redirect stubs
 │   ├── products.html
 │   ├── enterprise.html
 │   ├── contact.html
-│   ├── CNAME                      # miomirlabs.com
+│   ├── .htaccess                  # compression + cache headers (Apache)
 │   ├── robots.txt
 │   ├── sitemap.xml
 │   ├── favicon.svg / favicon.ico
@@ -80,16 +80,7 @@ Two things are wired but not finished:
 
 **1. Formspree endpoint.** `docs/index.html` has `action="https://formspree.io/f/YOUR_FORM_ID"`. Create a form at formspree.io, point it at your real inbox, and replace `YOUR_FORM_ID`. Until you do, the page detects the placeholder and swaps the form for a direct email block, so nothing silently drops messages. Submission is AJAX and reports success or failure inline.
 
-**2. DNS for miomirlabs.com.** `docs/CNAME` is committed. In the GitHub repo, go to Settings → Pages, set the custom domain to `miomirlabs.com`, and enable Enforce HTTPS once the certificate provisions. At your registrar, point the apex at GitHub Pages:
-
-```
-A     @   185.199.108.153
-A     @   185.199.109.153
-A     @   185.199.110.153
-A     @   185.199.111.153
-```
-
-Add `CNAME www → olamilawson.github.io` if you want www to resolve.
+**2. DNS and hosting for miomirlabs.com.** The site deploys to Hostinger. See the Deployment section below.
 
 Also confirm `hello@miomirlabs.com` actually receives mail. It appears in the footer, the contact card, the fallback block, and the JSON-LD.
 
@@ -121,7 +112,27 @@ Tokens live in `tailwind.config.js` and are documented in `DESIGN.md`. Key value
 
 ## Deployment
 
-GitHub Pages publishes from `docs/` on `main`. Pushing to `main` triggers a build. The repository is public, so anything committed is published.
+The site is hosted on **Hostinger**. It is static, so deployment is a file copy: everything inside `docs/` goes into `public_html/`, with `index.html` at the root of `public_html`, not inside a subfolder.
+
+Build the CSS first, then upload:
+
+```bash
+npm run build
+```
+
+**Via hPanel.** Files → File Manager → `public_html`. Delete whatever is already there, upload a zip of the contents of `docs/`, and extract in place. To rebuild that zip:
+
+```bash
+cd docs && zip -r ~/Desktop/miomir-hostinger.zip . -x ".DS_Store" "*/.DS_Store"
+```
+
+**Via SFTP.** Credentials are under hPanel → Files → FTP Accounts. Upload the contents of `docs/` to `public_html/`. Include the dotfile `.htaccess`; many FTP clients hide dotfiles by default, so turn on hidden files or the compression and cache headers silently go missing.
+
+**Domain and TLS.** Add `miomirlabs.com` in hPanel → Domains. Either point your registrar's nameservers at Hostinger (`ns1.dns-parking.com`, `ns2.dns-parking.com`) or set an A record for the apex to the server IP shown in hPanel. Then hPanel → Security → SSL to issue the free certificate, and turn on **Force HTTPS** once it is active. HTTPS redirection lives in that toggle rather than in `.htaccess`, so the file is safe to upload before the certificate exists.
+
+Do not also point the domain at GitHub Pages. One host serves the domain, and the previous GitHub Pages A records would take it away from Hostinger. The repository still holds the source; it no longer publishes the site, and `docs/CNAME` has been removed because it only ever meant anything to GitHub Pages.
+
+After the first deploy, check `https://miomirlabs.com/robots.txt` and `https://miomirlabs.com/sitemap.xml` resolve, then submit the sitemap in Google Search Console.
 
 ## Security note
 

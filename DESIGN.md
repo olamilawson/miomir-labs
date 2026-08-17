@@ -139,25 +139,24 @@ Chromatic accents stay under 5% of the visual area.
 
 ## Discoverability
 
-The canonical origin is `https://miomirlabs.com/`. Every absolute URL in metadata points there, so changing domain is a find-and-replace on that string plus the `CNAME` file.
+The canonical origin is `https://miomirlabs.com/`. Every absolute URL in metadata points there, so changing domain is a find-and-replace on that string.
 
 - **Canonical + description** on `index.html`; `noindex, follow` on the four redirect stubs so they never compete with the real page.
 - **Open Graph and Twitter** tags with a 1200×630 card at `assets/images/og-image.png`, generated from `docs/_ogsrc.html` (deleted after render) using the site's own fonts. Regenerate it with headless Chrome if the headline changes.
 - **JSON-LD** `@graph` in the `<head>`: `Organization` (with address, email, logo, `makesOffer` for both products), `WebSite`, and `ProfessionalService`. This is what LLM crawlers and rich results read, so keep product status honest here too.
 - **`robots.txt`** allows everything and points to the sitemap. **`sitemap.xml`** lists the single canonical URL.
-- **`CNAME`** holds `miomirlabs.com` for GitHub Pages.
 - Headings run h1 → h2 → h3 with no skipped levels, sections carry `aria-labelledby`, and the engagement stages are an ordered list because they are genuinely sequential.
 
 ## File inventory
 
 ```
-├── docs/                          # published site (GitHub Pages source)
+├── docs/                          # published site (upload contents to public_html/)
 │   ├── index.html                 # the entire site
 │   ├── work.html                  # redirect stub → /#work
 │   ├── products.html              # redirect stub → /#products
 │   ├── enterprise.html            # redirect stub → /#enterprise
 │   ├── contact.html               # redirect stub → /#contact
-│   ├── CNAME                      # miomirlabs.com
+│   ├── .htaccess                  # compression + cache headers (Apache)
 │   ├── robots.txt
 │   ├── sitemap.xml
 │   ├── favicon.svg / favicon.ico
