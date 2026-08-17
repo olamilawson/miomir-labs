@@ -21,13 +21,12 @@ The positioning leads with correctness rather than category breadth, and present
 
 ```
 Miomir/
-├── docs/                          # published site (upload contents to public_html/)
+├── docs/                          # published site (nginx docroot on the VPS)
 │   ├── index.html                 # the entire site
 │   ├── work.html                  # redirect stubs
 │   ├── products.html
 │   ├── enterprise.html
 │   ├── contact.html
-│   ├── .htaccess                  # compression + cache headers (Apache)
 │   ├── robots.txt
 │   ├── sitemap.xml
 │   ├── favicon.svg / favicon.ico
@@ -37,6 +36,7 @@ Miomir/
 │       ├── css/styles.css         # generated production CSS
 │       ├── fonts/                 # self-hosted, subset woff2 + fonts.css
 │       └── images/                # logo.svg, og-image.png, apple-touch-icon.png
+├── nginx/                         # reference copy of the live nginx directives
 ├── miomir-design-brief.md         # original brief
 ├── miomir design system/          # explored design directions (15 MB, reference only)
 ├── DESIGN.md                      # single source of truth for design and copy rules
@@ -112,42 +112,54 @@ Tokens live in `tailwind.config.js` and are documented in `DESIGN.md`. Key value
 
 ## Deployment
 
-The site is hosted on a **Hostinger VPS** that also serves other domains, and it is deployed from the terminal. Nothing in this repository's git history describes that; the older commits are GitHub Pages plumbing and the live site was first put up outside this working copy.
+The VPS holds a **clone of this repository** at `/var/www/miomirlabs.com`, and nginx serves its `docs/` subdirectory:
 
-Deployment is a file copy: the **contents** of `docs/` go into the miomirlabs.com document root, with `index.html` at that root.
-
-### One-time setup
-
-Find the document root on the VPS. Do not guess it, because other live domains share the machine:
-
-```bash
-ssh <host> 'grep -RiE "root|DocumentRoot" /etc/nginx/sites-enabled/ /etc/apache2/sites-enabled/ 2>/dev/null | grep -i miomir'
+```
+root /var/www/miomirlabs.com/docs;
 ```
 
-Then copy `scripts/deploy.env.example` to `scripts/deploy.env` and fill in `DEPLOY_HOST`, `DEPLOY_PATH`, and `DEPLOY_PORT`. That file is gitignored, so no credentials or paths land in the public repo.
+So deploying is a `git pull` on the server, not a file upload. No earlier commit recorded this because there was nothing to record; the server simply tracks the repo. `docs/assets/css/styles.css` is committed, so the server needs no build step.
+
+The same VPS serves roughly eighteen other domains, including `prager.my`, `prai.dev`, `praiki.com`, and `tobilawson.com`, all under `/var/www/`. Never run a destructive command there without checking the path.
 
 ### Deploying
+
+Push to GitHub first, then:
 
 ```bash
 ./scripts/deploy.sh
 ```
 
-That builds the CSS and performs a **dry run**. Read the output, in particular any line starting with `*deleting`, then:
+That reports what the server is on, what origin is on, how far behind it is, and whether it has local edits. Then:
 
 ```bash
 ./scripts/deploy.sh --live
 ```
 
-The script uses `rsync --delete`, so the server ends up matching `docs/` exactly. It refuses to run against a `DEPLOY_PATH` that does not name miomirlabs, which is what keeps a mistyped path from emptying another domain on the same VPS.
+Which runs `git pull --ff-only` over SSH. Set `DEPLOY_HOST` in `scripts/deploy.env`, copied from `scripts/deploy.env.example`. That file is gitignored, so the host stays out of the public repo.
 
-The first run will list deletions for anything currently on the server that is absent from `docs/`. That is expected if the live site was uploaded by hand, but read the list before going live rather than trusting it.
-
-### TLS
-
-The certificate is managed on the VPS, not by this repo. If the site is served by nginx, `certbot --nginx -d miomirlabs.com` issues and renews it. Confirm HTTPS and the redirect after the first deploy:
+Doing it by hand is the same two steps:
 
 ```bash
-curl -sI http://miomirlabs.com/ | head -3
+ssh <host> 'cd /var/www/miomirlabs.com && git pull'
+```
+
+### The clone reports every file as modified
+
+Files in the server clone carry mode 755 while git recorded 644, so git flags a modification on every file including binary fonts. It is permission noise, not content. Fixed once with:
+
+```bash
+cd /var/www/miomirlabs.com && git config core.filemode false
+```
+
+That setting is already applied. If `git status` ever lists files again, they are real edits made on the server; inspect them before pulling rather than reaching for `git checkout .`.
+
+### nginx
+
+Compression and cache headers live in the nginx server block on the VPS at `/etc/nginx/sites-available/miomirlabs.com`, not in this repo. nginx ignores `.htaccess`, so an `.htaccess` here would do nothing. `nginx/miomirlabs.com.conf.example` holds a reference copy of the directives worth having. Apply changes on the VPS, then:
+
+```bash
+nginx -t && systemctl reload nginx
 ```
 
 ## Security note

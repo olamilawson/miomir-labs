@@ -414,7 +414,7 @@
           <div class="lg:col-span-8">
             <form
               id="contactForm"
-              class="flex flex-col gap-6 bg-surface-container-highest p-6 md:p-8 border-t-4 border-oxblood border-x border-b border-hairline-stroke"
+              class="hidden flex-col gap-6 bg-surface-container-highest p-6 md:p-8 border-t-4 border-oxblood border-x border-b border-hairline-stroke"
               action="https://formspree.io/f/YOUR_FORM_ID"
               method="POST">
 
@@ -449,7 +449,7 @@
             </form>
 
             <!-- Shown only if the Formspree endpoint is still a placeholder -->
-            <div id="formFallback" class="hidden bg-surface-container-highest p-6 md:p-8 border-t-4 border-oxblood border-x border-b border-hairline-stroke">
+            <div id="formFallback" class="bg-surface-container-highest p-6 md:p-8 border-t-4 border-oxblood border-x border-b border-hairline-stroke">
               <h3 class="font-headline-lg-mobile text-[20px] font-semibold text-oxblood">Email us directly</h3>
               <p class="font-body-md text-on-surface-variant mt-3 max-w-lg">
                 Tell us about your organization, the system you are working on, and the constraint that brought you here.
@@ -524,13 +524,15 @@
       var fallback = document.getElementById('formFallback');
       var status = document.getElementById('formStatus');
 
-      // Until a real Formspree endpoint is configured, show the email block
-      // instead of a form that would silently drop every message.
+      // The email block is the default so that a reader without JavaScript,
+      // and a crawler, both get a contact route that works. The form appears
+      // only once a real Formspree endpoint replaces the placeholder.
       if (form.getAttribute('action').indexOf('YOUR_FORM_ID') !== -1) {
-        form.classList.add('hidden');
-        fallback.classList.remove('hidden');
         return;
       }
+      fallback.classList.add('hidden');
+      form.classList.remove('hidden');
+      form.classList.add('flex');
 
       form.addEventListener('submit', function (event) {
         event.preventDefault();

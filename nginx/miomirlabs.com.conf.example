@@ -1,0 +1,38 @@
+# Reference copy of the performance directives for miomirlabs.com.
+# The live config is on the VPS at /etc/nginx/sites-available/miomirlabs.com
+# and is NOT deployed from this repo. This file exists so the settings are
+# reviewable alongside the site. Apply changes by editing the server block on
+# the VPS, then: nginx -t && systemctl reload nginx
+#
+# nginx ignores .htaccess entirely, so caching and compression must live here.
+
+server {
+    server_name miomirlabs.com www.miomirlabs.com;
+    root /var/www/miomirlabs.com/docs;
+    index index.html;
+
+    # Compression. woff2 is already compressed; do not add it.
+    gzip on;
+    gzip_vary on;
+    gzip_min_length 256;
+    gzip_types text/plain text/css text/xml application/javascript
+               application/json image/svg+xml application/xml;
+
+    # Fonts are subset and stable; cache hard.
+    location ~* \.woff2$ {
+        add_header Cache-Control "public, max-age=31536000, immutable";
+    }
+
+    location ~* \.(css|png|svg|ico)$ {
+        add_header Cache-Control "public, max-age=2592000";
+    }
+
+    # HTML stays uncached so copy edits appear on refresh.
+    location = /index.html {
+        add_header Cache-Control "no-cache";
+    }
+
+    # Keep the repo checkout out of reach. root is docs/, so .git and the
+    # markdown files already sit outside the docroot, but be explicit.
+    location ~ /\.git { deny all; }
+}

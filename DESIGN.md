@@ -150,13 +150,12 @@ The canonical origin is `https://miomirlabs.com/`. Every absolute URL in metadat
 ## File inventory
 
 ```
-├── docs/                          # published site (upload contents to public_html/)
+├── docs/                          # published site (nginx docroot on the VPS)
 │   ├── index.html                 # the entire site
 │   ├── work.html                  # redirect stub → /#work
 │   ├── products.html              # redirect stub → /#products
 │   ├── enterprise.html            # redirect stub → /#enterprise
 │   ├── contact.html               # redirect stub → /#contact
-│   ├── .htaccess                  # compression + cache headers (Apache)
 │   ├── robots.txt
 │   ├── sitemap.xml
 │   ├── favicon.svg / favicon.ico

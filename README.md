@@ -41,7 +41,7 @@ npm run watch
 
 ## Notes
 
-- The published site lives in `docs/`. Deploy with `./scripts/deploy.sh` (dry run) then `--live`. See `HANDOFF.md`.
+- The published site lives in `docs/`. The VPS clones this repo and nginx serves that folder, so deploying is a `git pull` on the server: `./scripts/deploy.sh` then `--live`. See `HANDOFF.md`.
 - Fonts are self-hosted and subset. No font or CSS CDN.
 - The contact form needs a real Formspree ID before launch. See `HANDOFF.md`.
 - `DESIGN.md` is the source of truth for positioning, tokens, and the copy rules.
