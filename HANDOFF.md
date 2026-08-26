@@ -78,11 +78,11 @@ The generated file is `docs/assets/css/styles.css`. Tailwind scans `docs/*.html`
 
 Two things are wired but not finished:
 
-**1. Formspree endpoint.** `docs/index.html` has `action="https://formspree.io/f/YOUR_FORM_ID"`. Create a form at formspree.io, point it at your real inbox, and replace `YOUR_FORM_ID`. Until you do, the page detects the placeholder and swaps the form for a direct email block, so nothing silently drops messages. Submission is AJAX and reports success or failure inline.
+**1. Formspree endpoint.** `docs/index.html` has `action="https://formspree.io/f/YOUR_FORM_ID"`. Create a form at formspree.io pointed at `build@miomirlabs.com`, then replace `YOUR_FORM_ID` with the id from the endpoint it gives you. Until then the page shows the direct email block instead of the form, so nothing is dropped. Submission is AJAX and reports success or failure inline.
 
 **2. DNS and hosting for miomirlabs.com.** The site deploys to Hostinger. See the Deployment section below.
 
-Also confirm `hello@miomirlabs.com` actually receives mail. It appears in the footer, the contact card, the fallback block, and the JSON-LD.
+The contact address is `build@miomirlabs.com`, live since 2026-08-26. It appears in the footer, the contact card, the fallback block, the AJAX error message, and the JSON-LD.
 
 ## Regenerating the social card
 
