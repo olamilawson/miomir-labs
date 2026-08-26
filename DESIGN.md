@@ -22,6 +22,19 @@ Two products, Prager and Prai, appear as **evidence of the thesis rather than a 
 
 Prai's Nigerian Pidgin training is the most defensible claim on the site. Keep it specific.
 
+### Proof, and its limits
+
+A buyer evaluating an eighteen-month infrastructure commitment reviewed the site in August 2026 and found the writing and the positioning working, and the proof missing. Three gaps: no named people, no delivered engagements, and two products marked live that nobody outside can open.
+
+What the site does about that, and what it deliberately does not:
+
+- **No case studies, and no invented ones.** There is no delivered client work to cite yet. The Work section states capability and earns belief through specificity instead: named registries, named regimes, the failure modes someone who has done the work would name. Specificity substitutes for a track record until there is one. It does not pretend to be one.
+- **Regulation is named.** The NDPA, the CBN open banking guidelines, and PCI DSS appear in the Approach section and in the JSON-LD. The claim is that the systems are designed against them. It is not a claim of certification or registration, and it must not drift into one.
+- **Products are evidence, not a catalogue.** Prager and Prai stay two compact cards. They exist on the page to show the house builds and operates what it designs, and Prager carries the only claim on the site that Miomir does merchant-facing mobile product work rather than backend alone. Resist expanding this into a product showcase; Miomir sells engineering, and a shop window changes what the firm appears to be.
+- **Still open: people.** A firm this size is underwritten as individuals. A section naming the CEO and the CTO is the largest remaining gap and is pending their details.
+
+Prager overlaps the businesses of some prospective clients. That is a commercial question about IP and carve-outs, settled in a contract rather than on this page. Do not solve it by hiding the product, since a buyer who discovers it later reads the omission as concealment.
+
 ## Job of the site
 
 A visitor should decide within ten seconds that these people are serious, and within a minute that they are unusually disciplined. The site exists to signal competence, not to persuade.
