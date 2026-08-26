@@ -31,7 +31,7 @@ What the site does about that, and what it deliberately does not:
 - **No case studies, and no invented ones.** There is no delivered client work to cite yet. The Work section states capability and earns belief through specificity instead: named registries, named regimes, the failure modes someone who has done the work would name. Specificity substitutes for a track record until there is one. It does not pretend to be one.
 - **Regulation is named.** The NDPA, the CBN open banking guidelines, and PCI DSS appear in the Approach section and in the JSON-LD. The claim is that the systems are designed against them. It is not a claim of certification or registration, and it must not drift into one.
 - **Products are evidence, not a catalogue.** Prager and Prai stay two compact cards. They exist on the page to show the house builds and operates what it designs, and Prager carries the only claim on the site that Miomir does merchant-facing mobile product work rather than backend alone. Resist expanding this into a product showcase; Miomir sells engineering, and a shop window changes what the firm appears to be.
-- **Still open: people.** A firm this size is underwritten as individuals. A section naming the CEO and the CTO is the largest remaining gap and is pending their details.
+- **People are named.** A firm this size is underwritten as individuals, so the People section carries Tobi Lawson and Emmanuel Modebelu with photographs. The lines beneath them state accountability rather than biography, which is what a buyer worried about continuity is actually asking. Both names also appear in the JSON-LD as `founder` and `employee`.
 
 Prager overlaps the businesses of some prospective clients. That is a commercial question about IP and carve-outs, settled in a contract rather than on this page. Do not solve it by hiding the product, since a buyer who discovers it later reads the omission as concealment.
 
@@ -77,9 +77,10 @@ The site is **one page**. `index.html` carries every section; navigation is in-p
 | `#products` | 02 / Products | Prager and Prai, as proof the house runs its own foundations. |
 | `#enterprise` | 03 / Enterprise | Core principles and the four-stage engagement. |
 | `#approach` | 04 / Engineering Philosophy | Designing for the constraint. |
-| `#contact` | 05 / Contact | Form and direct email. |
+| `#team` | 05 / People | Tobi Lawson and Emmanuel Modebelu, named and pictured. |
+| `#contact` | 06 / Contact | Form and direct email. |
 
-Navigation labels: Work, Products, Enterprise, Approach, Contact.
+Navigation labels: Work, Products, Enterprise, Approach, Team, Contact.
 
 `work.html`, `products.html`, `enterprise.html`, and `contact.html` remain as `noindex, follow` redirect stubs pointing at the matching anchor, so older inbound links keep resolving. They hold no content and are not in the sitemap.
 
@@ -142,7 +143,7 @@ Chromatic accents stay under 5% of the visual area.
 
 ## Constraints
 
-- No stock photography or people in golden light.
+- No stock photography or people in golden light. Portraits of the team are real photographs, neither generated nor stock. Emmanuel's source file arrives as a transparent PNG with a `ChatGPT_Image` filename because the background was removed from a real photograph, confirmed 2026-08-26; the face is not synthetic. Both are converted to a duotone ramp from oxblood `#2D0A0A` to bone `#F9F7F2` so that images shot in different places read as one set and stay inside the palette. Crop to 4:5 at 640x800, hairline border, sharp corners.
 - No abstract data visualisations or gradient meshes.
 - No logo carousel. No client names until cleared.
 - No numbered 01/02/03 feature cards unless the content is genuinely a sequence.
@@ -181,6 +182,7 @@ The canonical origin is `https://miomirlabs.com/`. Every absolute URL in metadat
 │       │   ├── fonts.css          # @font-face rules
 │       │   └── *.woff2            # self-hosted, subset
 │       └── images/
+│           ├── team/                # duotone portraits, 4:5
 │           ├── logo.svg
 │           ├── og-image.png       # 1200×630 social card
 │           └── apple-touch-icon.png

@@ -15,6 +15,7 @@ One page. `docs/index.html` holds every section, reached by anchor:
 | `#products` | Prager and Prai |
 | `#enterprise` | For organizations |
 | `#approach` | Engineering philosophy |
+| `#team` | Tobi Lawson and Emmanuel Modebelu |
 | `#contact` | Contact |
 
 `work.html`, `products.html`, `enterprise.html`, and `contact.html` are redirect stubs for older inbound links.

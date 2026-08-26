@@ -11,7 +11,7 @@ Static website for Miomir Labs, an engineering and research house in Lagos.
 
 ## What the site is
 
-**One page.** `docs/index.html` holds everything; navigation is in-page anchors: `#hero`, `#work`, `#products`, `#enterprise`, `#approach`, `#contact`.
+**One page.** `docs/index.html` holds everything; navigation is in-page anchors: `#hero`, `#work`, `#products`, `#enterprise`, `#approach`, `#team`, `#contact`.
 
 `work.html`, `products.html`, `enterprise.html`, and `contact.html` are `noindex, follow` redirect stubs that send old inbound links to the matching anchor. They carry no content.
 
@@ -35,7 +35,7 @@ Miomir/
 │       ├── css/input.css          # Tailwind source + base styles
 │       ├── css/styles.css         # generated production CSS
 │       ├── fonts/                 # self-hosted, subset woff2 + fonts.css
-│       └── images/                # logo.svg, og-image.png, apple-touch-icon.png
+│       └── images/                # logo.svg, og-image.png, apple-touch-icon.png, team/
 ├── nginx/                         # reference copy of the live nginx directives
 ├── miomir-design-brief.md         # original brief
 ├── design-history/                # the three explored directions (28 KB)
