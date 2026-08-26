@@ -63,7 +63,7 @@ These rules apply to every line of copy and every layout decision.
 - Put the reader in the room; use *you* over *people*.
 - Vary sentence rhythm; do not lean on em dashes.
 - Avoid generic AI design defaults: gradient heroes, single font, centered everything, icon-tile cards, numbered feature lists unless genuinely sequential, speculative technical fiction.
-- No fictional protocols, clearance levels, specimen forms, fake locations, or invented job requisitions.
+- No fictional protocols, clearance levels, specimen forms, fake locations, or invented job requisitions. The site says Lagos and stops there. A "Studio Location" block naming a neighbourhood was removed on 2026-08-26: studio is agency vocabulary for a firm that calls itself an engineering house, and a neighbourhood without a street address gestures at premises rather than stating them. Add a real address when there is one to state.
 - No claims about innovation, clarity, excellence, or transformation.
 
 ## Structure
