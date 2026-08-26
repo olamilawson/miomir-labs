@@ -143,7 +143,7 @@ Chromatic accents stay under 5% of the visual area.
 
 ## Constraints
 
-- No stock photography or people in golden light. Portraits of the team are real photographs, neither generated nor stock. Emmanuel's source file arrives as a transparent PNG with a `ChatGPT_Image` filename because the background was removed from a real photograph, confirmed 2026-08-26; the face is not synthetic. Both are converted to a duotone ramp from oxblood `#2D0A0A` to bone `#F9F7F2` so that images shot in different places read as one set and stay inside the palette. Crop to 4:5 at 640x800, hairline border, sharp corners.
+- No stock photography or people in golden light. Team portraits are real photographs supplied with the background removed, then converted to a duotone ramp from oxblood `#2D0A0A` to bone `#F9F7F2`. The duotone is applied to the subject alone and composited onto exact bone, so the image carries no visible plate and the figure sits on the page rather than inside a box. No border. The bottom 16% dissolves to bone so the body is not sliced off at a hard edge. Framing is derived from the head: crop width is 3.4 head-widths, 4:5 at 640x800, crown at 12% of frame height, which keeps every portrait at a matched scale whoever took it. A photograph with its original background cannot be used this way and will read as pasted next to one that can.
 - No abstract data visualisations or gradient meshes.
 - No logo carousel. No client names until cleared.
 - No numbered 01/02/03 feature cards unless the content is genuinely a sequence.
