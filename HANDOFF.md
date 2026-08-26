@@ -138,10 +138,22 @@ That reports what the server is on, what origin is on, how far behind it is, and
 
 Which runs `git pull --ff-only` over SSH. Set `DEPLOY_HOST` in `scripts/deploy.env`, copied from `scripts/deploy.env.example`. That file is gitignored, so the host stays out of the public repo.
 
-Doing it by hand is the same two steps:
+Doing it by hand is two steps. First open a shell on the VPS, using the host and credentials from hPanel:
 
 ```bash
-ssh <host> 'cd /var/www/miomirlabs.com && git pull'
+ssh root@srv518191
+```
+
+Then, at the server's own prompt, run this on its own. Do not prefix it with `ssh`, and do not wrap it in quotes:
+
+```bash
+cd /var/www/miomirlabs.com && git pull
+```
+
+Confirm nginx is serving the new build without leaving the box:
+
+```bash
+curl -sI http://localhost | head -1 && curl -s http://localhost | grep -c build@miomirlabs.com
 ```
 
 ### The clone reports every file as modified
