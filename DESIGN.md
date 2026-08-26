@@ -65,6 +65,7 @@ These rules apply to every line of copy and every layout decision.
 - Avoid generic AI design defaults: gradient heroes, single font, centered everything, icon-tile cards, numbered feature lists unless genuinely sequential, speculative technical fiction.
 - No fictional protocols, clearance levels, specimen forms, fake locations, or invented job requisitions. The site says Lagos and stops there. A "Studio Location" block naming a neighbourhood was removed on 2026-08-26: studio is agency vocabulary for a firm that calls itself an engineering house, and a neighbourhood without a street address gestures at premises rather than stating them. Add a real address when there is one to state.
 - No claims about innovation, clarity, excellence, or transformation.
+- Do not argue by naming failure. A line like "the ones you reach when it breaks" tells a buyer their system will break and invites the question of why they are hiring you. State the same continuity as a positive: the people who design it build it and stay with it after it ships. This pattern recurs, so check for it before handing copy over.
 
 ## Structure
 
