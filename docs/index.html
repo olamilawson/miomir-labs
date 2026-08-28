@@ -82,28 +82,6 @@
           "PCI DSS card data handling",
           "KYB verification against CAC and BVN",
           "NIBSS and payment processor integration"
-        ],
-        "makesOffer": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "SoftwareApplication",
-              "name": "Prager",
-              "applicationCategory": "BusinessApplication",
-              "operatingSystem": "Android, iOS",
-              "description": "A mobile superapp for small business owners. Prager started as a messenger and now covers invoicing, payments, stock, and supplier payouts end to end on a phone."
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "SoftwareApplication",
-              "name": "Prai",
-              "applicationCategory": "BusinessApplication",
-              "operatingSystem": "Web",
-              "description": "A productivity assistant trained on Nigerian Pidgin alongside English."
-            }
-          }
         ]
       },
       {
@@ -125,7 +103,8 @@
           "Records and ledgers engineering",
           "Identity and access engineering",
           "Settlement and reconciliation systems",
-          "Applied research"
+          "Applied research",
+          "Operator-facing mobile product design"
         ]
       }
     ]
@@ -147,7 +126,6 @@
       </a>
       <nav class="hidden md:flex items-center gap-7" aria-label="Primary">
         <a href="#work" class="font-label-technical text-technical-gray hover:text-ink-black transition-colors uppercase tracking-wider">Work</a>
-        <a href="#products" class="font-label-technical text-technical-gray hover:text-ink-black transition-colors uppercase tracking-wider">Products</a>
         <a href="#enterprise" class="font-label-technical text-technical-gray hover:text-ink-black transition-colors uppercase tracking-wider">Enterprise</a>
         <a href="#approach" class="font-label-technical text-technical-gray hover:text-ink-black transition-colors uppercase tracking-wider">Approach</a>
         <a href="#team" class="font-label-technical text-technical-gray hover:text-ink-black transition-colors uppercase tracking-wider">Team</a>
@@ -159,7 +137,6 @@
     </div>
     <nav id="mobileNav" class="hidden md:hidden flex-col border-t border-hairline-stroke bg-bone px-gutter py-4 gap-4" aria-label="Primary mobile">
       <a href="#work" class="mobile-nav-link font-label-technical text-technical-gray uppercase">Work</a>
-      <a href="#products" class="mobile-nav-link font-label-technical text-technical-gray uppercase">Products</a>
       <a href="#enterprise" class="mobile-nav-link font-label-technical text-technical-gray uppercase">Enterprise</a>
       <a href="#approach" class="mobile-nav-link font-label-technical text-technical-gray uppercase">Approach</a>
       <a href="#team" class="mobile-nav-link font-label-technical text-technical-gray uppercase">Team</a>
@@ -198,7 +175,7 @@
           <h2 id="work-heading" class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-oxblood">What we do</h2>
         </div>
         <p class="font-body-md text-on-surface-variant max-w-2xl mt-3">
-          We build and maintain the systems that hold your records and move your money.
+          We build and maintain the systems that hold your records and move your money, along with the screens your operators use to run them.
         </p>
       </div>
 
@@ -245,6 +222,19 @@
 
           <article class="flex flex-col md:flex-row border-b border-hairline-stroke hover:bg-surface-container-low transition-colors group">
             <div class="w-full md:w-1/3 p-6 md:p-8 border-b md:border-b-0 md:border-r border-hairline-stroke flex flex-col justify-between">
+              <span class="font-index-marker text-technical-gray group-hover:text-oxblood transition-colors uppercase tracking-wider">Product</span>
+              <h3 class="font-headline-lg-mobile text-[22px] font-semibold text-oxblood mt-2">Operator-facing product</h3>
+            </div>
+            <div class="w-full md:w-2/3 p-6 md:p-8 flex flex-col justify-center gap-2">
+              <p class="font-body-md text-on-surface-variant leading-relaxed">
+                The screens a trader uses on a phone to invoice a customer, take a payment, and see what is left in stock. We design the interface and the ledger under it, for the device that is the only computer the owner has.
+              </p>
+              <span class="font-label-technical text-technical-gray mt-1">Native mobile · Offline-tolerant sync · Merchant onboarding</span>
+            </div>
+          </article>
+
+          <article class="flex flex-col md:flex-row border-b border-hairline-stroke hover:bg-surface-container-low transition-colors group">
+            <div class="w-full md:w-1/3 p-6 md:p-8 border-b md:border-b-0 md:border-r border-hairline-stroke flex flex-col justify-between">
               <span class="font-index-marker text-technical-gray group-hover:text-oxblood transition-colors uppercase tracking-wider">Research</span>
               <h3 class="font-headline-lg-mobile text-[22px] font-semibold text-oxblood mt-2">Applied research</h3>
             </div>
@@ -273,67 +263,11 @@
       </div>
     </section>
 
-    <!-- Products -->
-    <section id="products" class="py-16 bg-surface border-b border-hairline-stroke scroll-mt-16" aria-labelledby="products-heading">
-      <div class="max-w-[1280px] mx-auto px-gutter">
-        <div class="flex flex-col gap-2 mb-8">
-          <span class="font-label-technical text-technical-gray uppercase tracking-widest">02 / Products</span>
-          <h2 id="products-heading" class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-oxblood">What we run ourselves</h2>
-          <p class="font-body-lg text-on-surface-variant max-w-2xl mt-2 leading-relaxed">
-            We run our own products on the foundations we build for clients, so we find out what those foundations cost to operate before you do. Prager puts invoicing, payments, and stock into a phone app. We designed the interface and the ledger underneath it.
-          </p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 border-t border-l border-hairline-stroke">
-          <article class="border-r border-b border-hairline-stroke p-6 md:p-8 flex flex-col gap-4 bg-bone hover:bg-surface-container-low transition-colors">
-            <div class="flex items-start justify-between gap-4">
-              <div>
-                <h3 class="font-headline-lg-mobile text-[24px] font-semibold text-oxblood">Prager</h3>
-                <span class="font-label-technical text-technical-gray uppercase tracking-wider block mt-1">Superapp for small business</span>
-              </div>
-              <span class="font-index-marker text-oxblood border border-oxblood/40 px-2 py-1 uppercase tracking-wider whitespace-nowrap">Live</span>
-            </div>
-            <p class="font-body-md text-on-surface-variant leading-relaxed">
-              Prager started as a messenger and grew into the app a business runs on. You invoice a customer, take the payment, watch your stock, and pay your supplier, without leaving the thread where the sale started.
-            </p>
-            <p class="font-body-md text-on-surface-variant leading-relaxed">
-              We build it for owners whose only computer is the phone in their hand.
-            </p>
-            <div class="mt-auto pt-4 border-t border-hairline-stroke flex flex-wrap items-center gap-x-5 gap-y-2">
-              <a href="https://prager.my" target="_blank" rel="noopener noreferrer" class="font-label-technical text-oxblood uppercase tracking-wider underline underline-offset-4 hover:no-underline">prager.my &rarr;</a>
-              <span class="font-label-technical text-technical-gray uppercase tracking-wider">API access not open yet</span>
-            </div>
-          </article>
-
-          <article class="border-r border-b border-hairline-stroke p-6 md:p-8 flex flex-col gap-4 bg-bone hover:bg-surface-container-low transition-colors">
-            <div class="flex items-start justify-between gap-4">
-              <div>
-                <h3 class="font-headline-lg-mobile text-[24px] font-semibold text-oxblood">Prai</h3>
-                <span class="font-label-technical text-technical-gray uppercase tracking-wider block mt-1">Assistant · Pidgin &amp; English</span>
-              </div>
-              <span class="font-index-marker text-oxblood border border-oxblood/40 px-2 py-1 uppercase tracking-wider whitespace-nowrap">Live</span>
-            </div>
-            <p class="font-body-md text-on-surface-variant leading-relaxed">
-              A productivity assistant trained on Nigerian Pidgin alongside English. It reads the way your customers write to you, in the register that generic assistants flatten into textbook English.
-            </p>
-            <div class="mt-auto pt-4 border-t border-hairline-stroke flex flex-wrap items-center gap-x-5 gap-y-2">
-              <a href="https://prai.dev" target="_blank" rel="noopener noreferrer" class="font-label-technical text-oxblood uppercase tracking-wider underline underline-offset-4 hover:no-underline">prai.dev &rarr;</a>
-              <span class="font-label-technical text-technical-gray uppercase tracking-wider">API access not open yet</span>
-            </div>
-          </article>
-        </div>
-
-        <p class="font-body-md text-on-surface-variant mt-6 max-w-2xl">
-          If you want early access to either product, or to the APIs when they open, <a href="#contact" class="text-oxblood underline underline-offset-4 hover:no-underline">tell us what you would build</a>.
-        </p>
-      </div>
-    </section>
-
     <!-- Enterprise -->
     <section id="enterprise" class="py-16 border-b border-hairline-stroke scroll-mt-16" aria-labelledby="enterprise-heading">
       <div class="max-w-[1280px] mx-auto px-gutter">
         <div class="flex flex-col gap-2 mb-8">
-          <span class="font-label-technical text-technical-gray uppercase tracking-widest">03 / Enterprise</span>
+          <span class="font-label-technical text-technical-gray uppercase tracking-widest">02 / Enterprise</span>
           <h2 id="enterprise-heading" class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-oxblood">For organizations</h2>
           <p class="font-body-lg text-on-surface-variant max-w-2xl mt-2 leading-relaxed">
             We embed with enterprise and government engineering teams to build infrastructure that outlasts the people who specified it.
@@ -400,7 +334,7 @@
     <section id="approach" class="py-16 bg-surface text-ink-black border-b border-hairline-stroke scroll-mt-16" aria-labelledby="approach-heading">
       <div class="max-w-[1280px] mx-auto px-gutter">
         <div class="flex flex-col gap-2 mb-6">
-          <span class="font-label-technical text-technical-gray uppercase tracking-widest">04 / Engineering Philosophy</span>
+          <span class="font-label-technical text-technical-gray uppercase tracking-widest">03 / Engineering Philosophy</span>
           <h2 id="approach-heading" class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-oxblood">Build for the constraint</h2>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 font-body-md text-on-surface-variant leading-relaxed">
@@ -420,7 +354,7 @@
     <section id="team" class="py-16 border-b border-hairline-stroke scroll-mt-16" aria-labelledby="team-heading">
       <div class="max-w-[1280px] mx-auto px-gutter">
         <div class="flex flex-col gap-2 mb-10">
-          <span class="font-label-technical text-technical-gray uppercase tracking-widest">05 / People</span>
+          <span class="font-label-technical text-technical-gray uppercase tracking-widest">04 / People</span>
           <h2 id="team-heading" class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-oxblood">Who does the work</h2>
           <p class="font-body-lg text-on-surface-variant max-w-2xl mt-2 leading-relaxed">
             The people who design your system build it, and stay with it after it ships.
@@ -448,7 +382,7 @@
     <section id="contact" class="py-16 px-gutter scroll-mt-16" aria-labelledby="contact-heading">
       <div class="max-w-[1280px] mx-auto">
         <div class="flex flex-col gap-2 mb-8">
-          <span class="font-label-technical text-technical-gray uppercase tracking-widest">06 / Contact</span>
+          <span class="font-label-technical text-technical-gray uppercase tracking-widest">05 / Contact</span>
           <h2 id="contact-heading" class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-oxblood">Start a conversation</h2>
           <p class="font-body-md text-on-surface-variant max-w-lg">
             Tell us about your organization and what you are building. An engineer reads what you send and replies.
@@ -532,7 +466,6 @@
       </div>
       <nav class="flex flex-wrap gap-6" aria-label="Footer">
         <a href="#work" class="font-label-technical text-technical-gray hover:text-ink-black uppercase tracking-wider">Work</a>
-        <a href="#products" class="font-label-technical text-technical-gray hover:text-ink-black uppercase tracking-wider">Products</a>
         <a href="#enterprise" class="font-label-technical text-technical-gray hover:text-ink-black uppercase tracking-wider">Enterprise</a>
         <a href="#approach" class="font-label-technical text-technical-gray hover:text-ink-black uppercase tracking-wider">Approach</a>
         <a href="#team" class="font-label-technical text-technical-gray hover:text-ink-black uppercase tracking-wider">Team</a>

@@ -11,11 +11,11 @@ Static website for Miomir Labs, an engineering and research house in Lagos.
 
 ## What the site is
 
-**One page.** `docs/index.html` holds everything; navigation is in-page anchors: `#hero`, `#work`, `#products`, `#enterprise`, `#approach`, `#team`, `#contact`.
+**One page.** `docs/index.html` holds everything; navigation is in-page anchors: `#hero`, `#work`, `#enterprise`, `#approach`, `#team`, `#contact`.
 
-`work.html`, `products.html`, `enterprise.html`, and `contact.html` are `noindex, follow` redirect stubs that send old inbound links to the matching anchor. They carry no content.
+`work.html`, `enterprise.html`, and `contact.html` are `noindex, follow` redirect stubs that send old inbound links to the matching anchor. They carry no content.
 
-The positioning leads with correctness rather than category breadth, and presents Prager and Prai as evidence that the house runs its own foundations. See the Positioning section of `DESIGN.md` before rewriting any copy.
+The positioning leads with correctness rather than category breadth. The firm's own products, Prager and Prai, were removed from the site on 2026-08-26 because both are unfinished; see the Positioning section of `DESIGN.md` before restoring them or rewriting any copy.
 
 ## Repository layout
 
@@ -24,7 +24,6 @@ Miomir/
 ├── docs/                          # published site (nginx docroot on the VPS)
 │   ├── index.html                 # the entire site
 │   ├── work.html                  # redirect stubs
-│   ├── products.html
 │   ├── enterprise.html
 │   ├── contact.html
 │   ├── robots.txt

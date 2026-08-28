@@ -4,7 +4,7 @@ This document is the single source of truth for the Miomir Labs website. It cons
 
 ## Identity
 
-Miomir Labs is an engineering and research house in Lagos. It builds systems of record for clients, runs a small number of its own products, and does applied research on AI in production.
+Miomir Labs is an engineering and research house in Lagos. It builds systems of record for clients and does applied research on AI in production. It also builds products of its own, which stay off the site until they ship.
 
 The domain is **ledgers, identity, records, and money movement**: the layer underneath a business where errors compound and outages are visible.
 
@@ -16,11 +16,13 @@ The site leads with **correctness**, not breadth. The thesis: AI made code cheap
 
 The reference point is TigerBeetle, whose credibility comes from narrowness and checkable claims rather than from category language. "Foundation for digital infrastructure" is a category and survives no follow-up question. Copy should stay at the altitude of the specific thing being built.
 
-Two products, Prager and Prai, appear as **evidence of the thesis rather than a catalog**. The house is the hero; the products show it runs its own foundations. Both are live; neither has public API access yet, and the site must not imply otherwise.
+The house runs two products of its own, Prager and Prai. **Neither appears on the site.** They were cut on 2026-08-26 because both are unfinished, and the cards carried a "Live" badge and outbound links a reader could check in one click. A disprovable claim is the most expensive kind of error on a page whose argument is correctness.
 
-**Prager is a superapp, not a messenger.** It began as a messenger for teams and now covers the whole business a small owner runs from a phone: invoicing, payments, stock, and supplier payouts. Copy that calls it a chat app undersells it and describes a product that no longer exists. The concrete details worth keeping: the owner stays in the thread where the sale started, and the phone is the only computer they have.
+Two further reasons not to restore them until they ship. For a buyer weighing a long engagement on two named people, side products read as divided attention rather than capability. And Prager overlaps the businesses of some prospective clients, which is a commercial question about IP and carve-outs, settled in a contract rather than on this page.
 
-Prai's Nigerian Pidgin training is the most defensible claim on the site. Keep it specific.
+What the products were carrying, and where it now lives: Prager was the only evidence that Miomir builds merchant-facing mobile product rather than backend alone. That claim moved into the Work section as the Operator-facing product practice area, stated as capability with no product named. Keep it there.
+
+When either product genuinely ships, it can return as evidence. Prager is a superapp, not a messenger: it began as a messenger for teams and covers the business a small owner runs from a phone, invoicing through supplier payouts. Prai's Nigerian Pidgin training is the most defensible product claim available. Both need something a reader can open before either goes back on the page.
 
 ### Proof, and its limits
 
@@ -30,10 +32,8 @@ What the site does about that, and what it deliberately does not:
 
 - **No case studies, and no invented ones.** There is no delivered client work to cite yet. The Work section states capability and earns belief through specificity instead: named registries, named regimes, the failure modes someone who has done the work would name. Specificity substitutes for a track record until there is one. It does not pretend to be one.
 - **Regulation is named.** The NDPA, the CBN open banking guidelines, and PCI DSS appear in the Approach section and in the JSON-LD. The claim is that the systems are designed against them. It is not a claim of certification or registration, and it must not drift into one.
-- **Products are evidence, not a catalogue.** Prager and Prai stay two compact cards. They exist on the page to show the house builds and operates what it designs, and Prager carries the only claim on the site that Miomir does merchant-facing mobile product work rather than backend alone. Resist expanding this into a product showcase; Miomir sells engineering, and a shop window changes what the firm appears to be.
+- **No products on the page.** Prager and Prai were removed once it was clear both are unfinished. Do not restore them as "coming soon"; an unfinished product signals divided attention to this audience and gives a sceptical reader something to disprove. The merchant-facing product capability they were carrying now sits in the Work section instead.
 - **People are named.** A firm this size is underwritten as individuals, so the People section carries Tobi Lawson and Emmanuel Modebelu with photographs. The lines beneath them state accountability rather than biography, which is what a buyer worried about continuity is actually asking. Both names also appear in the JSON-LD as `founder` and `employee`.
-
-Prager overlaps the businesses of some prospective clients. That is a commercial question about IP and carve-outs, settled in a contract rather than on this page. Do not solve it by hiding the product, since a buyer who discovers it later reads the omission as concealment.
 
 ## Job of the site
 
@@ -74,16 +74,15 @@ The site is **one page**. `index.html` carries every section; navigation is in-p
 | Anchor | Section | Content |
 |--------|---------|---------|
 | `#hero` | — | The correctness thesis and the two calls to action. |
-| `#work` | 01 / Practice Areas | Records, identity, settlement, applied research. Plus "How we work". |
-| `#products` | 02 / Products | Prager and Prai, as proof the house runs its own foundations. |
-| `#enterprise` | 03 / Enterprise | Core principles and the four-stage engagement. |
-| `#approach` | 04 / Engineering Philosophy | Designing for the constraint. |
-| `#team` | 05 / People | Tobi Lawson and Emmanuel Modebelu, named and pictured. |
-| `#contact` | 06 / Contact | Form and direct email. |
+| `#work` | 01 / Practice Areas | Records, identity, settlement, operator-facing product, applied research. Plus "How we work". |
+| `#enterprise` | 02 / Enterprise | Core principles and the four-stage engagement. |
+| `#approach` | 03 / Engineering Philosophy | Designing for the constraint. |
+| `#team` | 04 / People | Tobi Lawson and Emmanuel Modebelu, named and pictured. |
+| `#contact` | 05 / Contact | Form and direct email. |
 
-Navigation labels: Work, Products, Enterprise, Approach, Team, Contact.
+Navigation labels: Work, Enterprise, Approach, Team, Contact.
 
-`work.html`, `products.html`, `enterprise.html`, and `contact.html` remain as `noindex, follow` redirect stubs pointing at the matching anchor, so older inbound links keep resolving. They hold no content and are not in the sitemap.
+`work.html`, `enterprise.html`, and `contact.html` remain as `noindex, follow` redirect stubs pointing at the matching anchor, so older inbound links keep resolving. They hold no content and are not in the sitemap.
 
 ## Visual system
 
@@ -168,7 +167,6 @@ The canonical origin is `https://miomirlabs.com/`. Every absolute URL in metadat
 ├── docs/                          # published site (nginx docroot on the VPS)
 │   ├── index.html                 # the entire site
 │   ├── work.html                  # redirect stub → /#work
-│   ├── products.html              # redirect stub → /#products
 │   ├── enterprise.html            # redirect stub → /#enterprise
 │   ├── contact.html               # redirect stub → /#contact
 │   ├── robots.txt
