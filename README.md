@@ -27,6 +27,8 @@ One page plus field notes. `docs/index.html` holds every main section, reached b
 cd docs && python3 -m http.server 8001
 ```
 
+No Python? `npx http-server docs -p 8001` works the same way.
+
 Open http://localhost:8001.
 
 ## Build CSS

@@ -1,0 +1,20 @@
+name: build
+
+on: [push, pull_request]
+
+jobs:
+  css-fresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      # styles.css is committed and the VPS deploys by git pull with no build
+      # step, so a stale stylesheet ships silently. Fail if input.css changed
+      # without a rebuild.
+      - name: Fail if the committed stylesheet is stale
+        run: git diff --exit-code docs/assets/css/styles.css

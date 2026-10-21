@@ -185,5 +185,6 @@ A personal access token was used to create the repository during the original ha
 - **Emmanuel Modebelu has no profile link yet.** A commented slot sits under his role in the People section; add a confirmed LinkedIn or GitHub URL there. Tobi Lawson links to `tobilawson.com`.
 - **The CAC RC number is unstated.** A commented slot sits in the footer above the copyright line; add the registration number once confirmed. It is a checkable claim, so verify it before shipping.
 - **No analytics.** A comment in the `index.html` head marks where a self-hosted GoatCounter or Plausible snippet goes. Until wired, there is no signal on whether visitors reach `#contact`.
+- **Security headers are not yet applied on the VPS.** `nginx/miomirlabs.com.conf.example` now carries CSP, nosniff, frame, referrer, and permissions-policy directives. They are a reference copy only; apply them to `/etc/nginx/sites-available/miomirlabs.com` on the server, then `nginx -t && systemctl reload nginx`. The CSP assumes all JS stays external in `assets/js/main.js` — no inline `<script>` or `style` attributes.
 - **Current status is scaffolded but hidden.** A commented `#status` section sits between Notes and People in `index.html`. Uncomment it only with real work-in-progress items in honest states.
 - No client names, testimonials, or case studies until cleared.

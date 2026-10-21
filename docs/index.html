@@ -60,6 +60,7 @@
           "url": "https://miomirlabs.com/assets/images/logo.svg"
         },
         "image": "https://miomirlabs.com/assets/images/og-image.png",
+        "sameAs": ["https://github.com/olamilawson/miomir-labs"],
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Lagos",
@@ -123,7 +124,7 @@
   <header class="fixed top-0 w-full z-50 bg-bone/90 backdrop-blur-md border-b border-hairline-stroke pt-safe">
     <div class="h-16 flex items-center justify-between px-gutter max-w-[1280px] mx-auto">
       <a href="#hero" class="flex items-center gap-2 no-underline text-ink-black group">
-        <img src="assets/images/logo.svg" alt="Miomir Labs" width="32" height="32" class="h-8 w-8 object-contain" style="color:#111">
+        <img src="assets/images/logo.svg" alt="Miomir Labs" width="32" height="32" class="h-8 w-8 object-contain">
         <div class="flex flex-col">
           <span class="font-headline-lg-mobile text-[18px] tracking-tight group-hover:text-oxblood transition-colors">Miomir Labs</span>
           <span class="font-label-technical text-technical-gray -mt-1 uppercase">Lagos, Nigeria</span>
@@ -557,7 +558,7 @@
   <footer class="bg-bone border-t border-hairline-stroke py-10 px-gutter">
     <div class="max-w-[1280px] mx-auto flex flex-col md:flex-row md:items-center justify-between gap-6">
       <div class="flex items-center gap-2">
-        <img src="assets/images/logo.svg" alt="" width="24" height="24" class="w-6 h-6 object-contain" style="color:#111">
+        <img src="assets/images/logo.svg" alt="" width="24" height="24" class="w-6 h-6 object-contain">
         <span class="font-label-technical text-ink-black uppercase tracking-wider">Miomir Labs</span>
       </div>
       <nav class="flex flex-wrap gap-6" aria-label="Footer">
@@ -577,93 +578,6 @@
     </div>
   </footer>
 
-  <script>
-    (function () {
-      var btn = document.getElementById('menuBtn');
-      var nav = document.getElementById('mobileNav');
-
-      function setMenu(open) {
-        nav.classList.toggle('hidden', !open);
-        btn.setAttribute('aria-expanded', String(open));
-        btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
-      }
-
-      btn.addEventListener('click', function () {
-        setMenu(nav.classList.contains('hidden'));
-      });
-
-      document.addEventListener('keydown', function (event) {
-        if (event.key === 'Escape' && !nav.classList.contains('hidden')) {
-          setMenu(false);
-          btn.focus();
-        }
-      });
-
-      document.querySelectorAll('.mobile-nav-link').forEach(function (link) {
-        link.addEventListener('click', function () {
-          setMenu(false);
-        });
-      });
-
-      // The ledger reveal is the page's one orchestrated moment. Rows start
-      // hidden only when JS and IntersectionObserver are both available; the
-      // reduced-motion media query makes the transition instant regardless.
-      var ledgerRows = document.querySelectorAll('[data-ledger-row]');
-      if ('IntersectionObserver' in window && ledgerRows.length) {
-        var ledgerObserver = new IntersectionObserver(function (entries) {
-          entries.forEach(function (entry) {
-            if (entry.isIntersecting) {
-              entry.target.classList.remove('is-hidden');
-              ledgerObserver.unobserve(entry.target);
-            }
-          });
-        }, { threshold: 0.2 });
-        ledgerRows.forEach(function (row, index) {
-          row.style.transitionDelay = (index * 90) + 'ms';
-          row.classList.add('is-hidden');
-          ledgerObserver.observe(row);
-        });
-      }
-
-      var form = document.getElementById('contactForm');
-      var fallback = document.getElementById('formFallback');
-      var status = document.getElementById('formStatus');
-
-      // The email block is the default so that a reader without JavaScript,
-      // and a crawler, both get a contact route that works. The form appears
-      // only once a real Formspree endpoint replaces the placeholder.
-      if (form.getAttribute('action').indexOf('YOUR_FORM_ID') !== -1) {
-        return;
-      }
-      fallback.classList.add('hidden');
-      form.classList.remove('hidden');
-      form.classList.add('flex');
-
-      form.addEventListener('submit', function (event) {
-        event.preventDefault();
-        var button = form.querySelector('button[type="submit"]');
-        button.disabled = true;
-        status.classList.remove('hidden');
-        status.textContent = 'Sending...';
-
-        fetch(form.action, {
-          method: 'POST',
-          body: new FormData(form),
-          headers: { Accept: 'application/json' }
-        }).then(function (response) {
-          if (response.ok) {
-            form.reset();
-            status.textContent = 'Thank you. Your message reached us.';
-          } else {
-            status.textContent = 'That did not send. Email build@miomirlabs.com instead.';
-          }
-        }).catch(function () {
-          status.textContent = 'That did not send. Email build@miomirlabs.com instead.';
-        }).finally(function () {
-          button.disabled = false;
-        });
-      });
-    })();
-  </script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>

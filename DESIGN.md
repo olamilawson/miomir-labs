@@ -178,10 +178,12 @@ The canonical origin is `https://miomirlabs.com/`. Every absolute URL in metadat
 │   ├── sitemap.xml
 │   ├── favicon.svg / favicon.ico
 │   ├── .nojekyll
+│   ├── .well-known/security.txt   # RFC 9116 security contact
 │   └── assets/
 │       ├── css/
 │       │   ├── input.css          # Tailwind source + base styles
 │       │   └── styles.css         # generated, minified production CSS
+│       ├── js/main.js             # menu, ledger reveal, contact form (kept external for CSP)
 │       ├── fonts/
 │       │   ├── fonts.css          # @font-face rules
 │       │   └── *.woff2            # self-hosted, subset
