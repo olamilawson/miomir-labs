@@ -74,13 +74,17 @@ The site is **one page**. `index.html` carries every section; navigation is in-p
 | Anchor | Section | Content |
 |--------|---------|---------|
 | `#hero` | — | The correctness thesis and the two calls to action. |
+| `#ledger` | — | The signature element: what the house commits to, paired with what each commitment costs it. |
 | `#work` | 01 / Practice Areas | Records, identity, settlement, operator-facing product, applied research. Plus "How we work". |
 | `#enterprise` | 02 / Enterprise | Core principles and the four-stage engagement. |
 | `#approach` | 03 / Engineering Philosophy | Designing for the constraint. |
-| `#team` | 04 / People | Tobi Lawson and Emmanuel Modebelu, named and pictured. |
-| `#contact` | 05 / Contact | Form and direct email. |
+| `#notes` | 04 / Notes | Field notes: short technical writing where the reasoning itself is the checkable evidence. |
+| `#team` | 05 / People | Tobi Lawson and Emmanuel Modebelu, named and pictured, with a hiring line. |
+| `#contact` | 06 / Contact | Form and direct email. |
 
-Navigation labels: Work, Enterprise, Approach, Team, Contact.
+A commented `#status` scaffold sits between Notes and People in `index.html`. It ships only when populated with real, checkable items — honest states, no client names — per the original brief's "current status" requirement.
+
+Navigation labels: Work, Enterprise, Approach, Notes, Team, Contact.
 
 `work.html`, `enterprise.html`, and `contact.html` remain as `noindex, follow` redirect stubs pointing at the matching anchor, so older inbound links keep resolving. They hold no content and are not in the sitemap.
 
@@ -158,14 +162,15 @@ The canonical origin is `https://miomirlabs.com/`. Every absolute URL in metadat
 - **Canonical + description** on `index.html`; `noindex, follow` on the four redirect stubs so they never compete with the real page.
 - **Open Graph and Twitter** tags with a 1200×630 card at `assets/images/og-image.png`, generated from `docs/_ogsrc.html` (deleted after render) using the site's own fonts. Regenerate it with headless Chrome if the headline changes.
 - **JSON-LD** `@graph` in the `<head>`: `Organization` (with address, email, logo, `makesOffer` for both products), `WebSite`, and `ProfessionalService`. This is what LLM crawlers and rich results read, so keep product status honest here too.
-- **`robots.txt`** allows everything and points to the sitemap. **`sitemap.xml`** lists the single canonical URL.
+- **`robots.txt`** allows everything and points to the sitemap. **`sitemap.xml`** lists the canonical page and each note URL.
 - Headings run h1 → h2 → h3 with no skipped levels, sections carry `aria-labelledby`, and the engagement stages are an ordered list because they are genuinely sequential.
 
 ## File inventory
 
 ```
 ├── docs/                          # published site (nginx docroot on the VPS)
-│   ├── index.html                 # the entire site
+│   ├── index.html                 # the main page
+│   ├── notes/                     # field notes: standalone technical articles
 │   ├── work.html                  # redirect stub → /#work
 │   ├── enterprise.html            # redirect stub → /#enterprise
 │   ├── contact.html               # redirect stub → /#contact

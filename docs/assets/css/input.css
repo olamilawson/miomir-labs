@@ -10,7 +10,7 @@
   }
 
   body {
-    min-height: max(884px, 100dvh);
+    min-height: 100dvh;
     padding-top: env(safe-area-inset-top);
   }
 
@@ -30,6 +30,15 @@
 
 .pt-safe { padding-top: env(safe-area-inset-top); }
 .pb-safe { padding-bottom: env(safe-area-inset-bottom); }
+
+.ledger-row {
+  transition: opacity 500ms ease, transform 500ms ease;
+}
+
+.ledger-row.is-hidden {
+  opacity: 0;
+  transform: translateY(12px);
+}
 
 .hero-headline {
   font-size: 26px;

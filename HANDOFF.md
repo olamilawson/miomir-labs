@@ -11,7 +11,9 @@ Static website for Miomir Labs, an engineering and research house in Lagos.
 
 ## What the site is
 
-**One page.** `docs/index.html` holds everything; navigation is in-page anchors: `#hero`, `#work`, `#enterprise`, `#approach`, `#team`, `#contact`.
+**One page plus field notes.** `docs/index.html` holds the main page; navigation is in-page anchors: `#hero`, `#ledger`, `#work`, `#enterprise`, `#approach`, `#notes`, `#team`, `#contact`. `#ledger` is the double-entry signature element from the original brief: what the house commits to, paired with what each commitment costs it.
+
+`docs/notes/` holds standalone technical articles linked from the Notes section. They carry no client work; the reasoning itself is the checkable evidence. Match `docs/notes/what-a-ledger-has-to-prove.html` for the template when adding a new note, and add its URL to `docs/sitemap.xml`.
 
 `work.html`, `enterprise.html`, and `contact.html` are `noindex, follow` redirect stubs that send old inbound links to the matching anchor. They carry no content.
 
@@ -180,4 +182,8 @@ A personal access token was used to create the repository during the original ha
 ## Known loose ends
 
 - **Formspree is deliberately unwired.** `docs/index.html` still has `action="https://formspree.io/f/YOUR_FORM_ID"`. The form should deliver to a real `@miomirlabs.com` inbox, so wiring it waits on purchasing the custom email for the domain. Until then the page detects the placeholder and shows the direct email block instead, so no message is dropped without the sender knowing. This is intentional; do not "fix" it by deleting the fallback.
+- **Emmanuel Modebelu has no profile link yet.** A commented slot sits under his role in the People section; add a confirmed LinkedIn or GitHub URL there. Tobi Lawson links to `tobilawson.com`.
+- **The CAC RC number is unstated.** A commented slot sits in the footer above the copyright line; add the registration number once confirmed. It is a checkable claim, so verify it before shipping.
+- **No analytics.** A comment in the `index.html` head marks where a self-hosted GoatCounter or Plausible snippet goes. Until wired, there is no signal on whether visitors reach `#contact`.
+- **Current status is scaffolded but hidden.** A commented `#status` section sits between Notes and People in `index.html`. Uncomment it only with real work-in-progress items in honest states.
 - No client names, testimonials, or case studies until cleared.

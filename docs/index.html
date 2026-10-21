@@ -40,6 +40,10 @@
   <link rel="stylesheet" href="assets/fonts/fonts.css">
   <link rel="stylesheet" href="assets/css/styles.css">
 
+  <!-- Analytics: none by default. When an endpoint exists, self-host GoatCounter or
+       Plausible on the VPS and paste its snippet here. Until then there is no way to
+       know whether visitors reach #contact, so this is worth wiring. -->
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -65,7 +69,8 @@
         "founder": {
           "@type": "Person",
           "name": "Tobi Lawson",
-          "jobTitle": "Chief Executive"
+          "jobTitle": "Chief Executive",
+          "url": "https://tobilawson.com/"
         },
         "employee": [
           { "@type": "Person", "name": "Tobi Lawson", "jobTitle": "Chief Executive" },
@@ -128,6 +133,7 @@
         <a href="#work" class="font-label-technical text-technical-gray hover:text-ink-black transition-colors uppercase tracking-wider">Work</a>
         <a href="#enterprise" class="font-label-technical text-technical-gray hover:text-ink-black transition-colors uppercase tracking-wider">Enterprise</a>
         <a href="#approach" class="font-label-technical text-technical-gray hover:text-ink-black transition-colors uppercase tracking-wider">Approach</a>
+        <a href="#notes" class="font-label-technical text-technical-gray hover:text-ink-black transition-colors uppercase tracking-wider">Notes</a>
         <a href="#team" class="font-label-technical text-technical-gray hover:text-ink-black transition-colors uppercase tracking-wider">Team</a>
         <a href="#contact" class="font-label-technical text-oxblood hover:underline uppercase tracking-wider">Contact</a>
       </nav>
@@ -139,6 +145,7 @@
       <a href="#work" class="mobile-nav-link font-label-technical text-technical-gray uppercase">Work</a>
       <a href="#enterprise" class="mobile-nav-link font-label-technical text-technical-gray uppercase">Enterprise</a>
       <a href="#approach" class="mobile-nav-link font-label-technical text-technical-gray uppercase">Approach</a>
+      <a href="#notes" class="mobile-nav-link font-label-technical text-technical-gray uppercase">Notes</a>
       <a href="#team" class="mobile-nav-link font-label-technical text-technical-gray uppercase">Team</a>
       <a href="#contact" class="mobile-nav-link font-label-technical text-oxblood uppercase font-bold">Contact</a>
     </nav>
@@ -157,12 +164,46 @@
           Ledgers, identity, and money movement, for organizations where a wrong number costs real money. Your engineers can now generate more code in a day than your reviewers can check in a week. We take on the systems where that gap costs you most.
         </p>
         <div class="mt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
-          <a href="#work" class="px-6 py-3.5 border border-oxblood text-oxblood font-label-technical uppercase tracking-widest hover:bg-oxblood hover:text-bone transition-all inline-flex items-center justify-center gap-2 text-center">
-            See what we build
-          </a>
-          <a href="#contact" class="px-6 py-3.5 border border-hairline-stroke text-technical-gray hover:text-ink-black hover:bg-surface-container transition-all font-label-technical uppercase tracking-widest inline-flex items-center justify-center gap-2 text-center">
+          <a href="#contact" class="px-6 py-3.5 bg-oxblood text-bone font-label-technical uppercase tracking-widest hover:bg-ink-black transition-all inline-flex items-center justify-center gap-2 text-center">
             Start a conversation →
           </a>
+          <a href="#work" class="px-6 py-3.5 border border-hairline-stroke text-technical-gray hover:text-ink-black hover:bg-surface-container transition-all font-label-technical uppercase tracking-widest inline-flex items-center justify-center gap-2 text-center">
+            See what we build
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- The ledger: the signature element from the original brief. What the house
+         commits to, and what each commitment costs it. -->
+    <section id="ledger" class="bg-surface border-b border-hairline-stroke" aria-labelledby="ledger-heading">
+      <h2 id="ledger-heading" class="sr-only">What we commit and what it costs us</h2>
+      <div class="max-w-[1280px] mx-auto px-gutter py-16 md:py-20">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16">
+          <span class="font-label-technical text-technical-gray uppercase tracking-widest pb-4 border-b border-hairline-stroke">What we commit</span>
+          <span class="font-label-technical text-technical-gray uppercase tracking-widest pb-4 border-b border-hairline-stroke hidden md:block">What it costs us</span>
+        </div>
+        <div>
+          <div class="ledger-row grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-2 py-6 border-b border-hairline-stroke" data-ledger-row>
+            <p class="font-headline-lg-mobile text-[20px] font-semibold text-oxblood leading-snug self-center">We specify the system before we write a line of code.</p>
+            <p class="font-body-md text-on-surface-variant leading-relaxed self-center"><span class="font-index-marker text-technical-gray uppercase tracking-wider md:hidden block mb-1">Cost</span>We decline work that has to ship before that happens.</p>
+          </div>
+          <div class="ledger-row grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-2 py-6 border-b border-hairline-stroke" data-ledger-row>
+            <p class="font-headline-lg-mobile text-[20px] font-semibold text-oxblood leading-snug self-center">The people who design your system build it.</p>
+            <p class="font-body-md text-on-surface-variant leading-relaxed self-center"><span class="font-index-marker text-technical-gray uppercase tracking-wider md:hidden block mb-1">Cost</span>We take on fewer engagements than we could fill.</p>
+          </div>
+          <div class="ledger-row grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-2 py-6 border-b border-hairline-stroke" data-ledger-row>
+            <p class="font-headline-lg-mobile text-[20px] font-semibold text-oxblood leading-snug self-center">We write code a stranger can audit.</p>
+            <p class="font-body-md text-on-surface-variant leading-relaxed self-center"><span class="font-index-marker text-technical-gray uppercase tracking-wider md:hidden block mb-1">Cost</span>Our first month moves slower than a vendor who starts typing on day one.</p>
+          </div>
+          <div class="ledger-row grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-2 py-6 border-b border-hairline-stroke" data-ledger-row>
+            <p class="font-headline-lg-mobile text-[20px] font-semibold text-oxblood leading-snug self-center">We stay with a system after it ships.</p>
+            <p class="font-body-md text-on-surface-variant leading-relaxed self-center"><span class="font-index-marker text-technical-gray uppercase tracking-wider md:hidden block mb-1">Cost</span>We only take systems we are willing to maintain for years.</p>
+          </div>
+          <div class="ledger-row grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-2 py-6 border-b border-hairline-stroke" data-ledger-row>
+            <p class="font-headline-lg-mobile text-[20px] font-semibold text-oxblood leading-snug self-center">We say what the audit finds, not what the engagement would prefer.</p>
+            <p class="font-body-md text-on-surface-variant leading-relaxed self-center"><span class="font-index-marker text-technical-gray uppercase tracking-wider md:hidden block mb-1">Cost</span>Sometimes the finding is that you should not build what you hired us to scope.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -350,11 +391,59 @@
       </div>
     </section>
 
+    <!-- Notes: short technical writing. No client work is described; the reasoning
+         itself is the checkable evidence this section exists to provide. -->
+    <section id="notes" class="py-16 border-b border-hairline-stroke scroll-mt-16" aria-labelledby="notes-heading">
+      <div class="max-w-[1280px] mx-auto px-gutter mb-8">
+        <div class="flex flex-col gap-2">
+          <span class="font-label-technical text-technical-gray uppercase tracking-widest">04 / Notes</span>
+          <h2 id="notes-heading" class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-oxblood">Field notes</h2>
+        </div>
+        <p class="font-body-md text-on-surface-variant max-w-2xl mt-3">
+          Short technical writing on the systems we work on. No client work appears here; the reasoning is the evidence.
+        </p>
+      </div>
+      <div class="max-w-[1280px] mx-auto px-gutter">
+        <div class="border-y border-hairline-stroke divide-y divide-hairline-stroke">
+          <a href="notes/what-a-ledger-has-to-prove.html" class="group py-6 flex flex-col md:flex-row md:items-baseline gap-1 md:gap-8 hover:bg-surface-container-low transition-colors px-2 -mx-2">
+            <span class="font-index-marker text-technical-gray uppercase tracking-wider md:w-28 shrink-0">2026-10</span>
+            <span class="font-headline-lg-mobile text-[20px] font-semibold text-oxblood group-hover:underline underline-offset-4">What a ledger has to prove</span>
+            <span class="font-body-md text-on-surface-variant md:ml-auto md:max-w-sm md:text-right">The invariants we write down before any ledger code exists.</span>
+          </a>
+          <a href="notes/where-reconciliation-fails.html" class="group py-6 flex flex-col md:flex-row md:items-baseline gap-1 md:gap-8 hover:bg-surface-container-low transition-colors px-2 -mx-2">
+            <span class="font-index-marker text-technical-gray uppercase tracking-wider md:w-28 shrink-0">2026-10</span>
+            <span class="font-headline-lg-mobile text-[20px] font-semibold text-oxblood group-hover:underline underline-offset-4">Where reconciliation fails</span>
+            <span class="font-body-md text-on-surface-variant md:ml-auto md:max-w-sm md:text-right">The matching is the easy part. The residue is the product.</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Current status: uncomment and populate with real items only. The value of
+         this section is that every line is checkable, so name no clients and keep
+         states honest (in design / in build / in maintenance). Example row format:
+         <li><span>Settlement reconciliation engine</span><span>In build</span></li>
+    <section id="status" class="py-16 border-b border-hairline-stroke scroll-mt-16" aria-labelledby="status-heading">
+      <div class="max-w-[1280px] mx-auto px-gutter">
+        <div class="flex flex-col gap-2 mb-8">
+          <span class="font-label-technical text-technical-gray uppercase tracking-widest">05 / Current status</span>
+          <h2 id="status-heading" class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-oxblood">Work in progress</h2>
+        </div>
+        <ul class="border-y border-hairline-stroke divide-y divide-hairline-stroke list-none p-0 m-0">
+          <li class="py-5 flex items-baseline justify-between gap-6">
+            <span class="font-body-md text-ink-black">ITEM</span>
+            <span class="font-label-technical text-technical-gray uppercase">STATE</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+    -->
+
     <!-- People -->
     <section id="team" class="py-16 border-b border-hairline-stroke scroll-mt-16" aria-labelledby="team-heading">
       <div class="max-w-[1280px] mx-auto px-gutter">
         <div class="flex flex-col gap-2 mb-10">
-          <span class="font-label-technical text-technical-gray uppercase tracking-widest">04 / People</span>
+          <span class="font-label-technical text-technical-gray uppercase tracking-widest">05 / People</span>
           <h2 id="team-heading" class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-oxblood">Who does the work</h2>
           <p class="font-body-lg text-on-surface-variant max-w-2xl mt-2 leading-relaxed">
             The people who design your system build it, and stay with it after it ships.
@@ -366,15 +455,22 @@
             <img src="assets/images/team/tobi-lawson.jpg" alt="Tobi Lawson" width="640" height="800" loading="lazy" class="w-full h-auto">
             <h3 class="font-headline-lg-mobile text-[20px] font-semibold text-oxblood mt-1">Tobi Lawson</h3>
             <span class="font-label-technical text-technical-gray uppercase tracking-wider mt-1">Chief Executive</span>
+            <a href="https://tobilawson.com/" class="font-label-technical text-oxblood uppercase tracking-wider mt-1 hover:underline" target="_blank" rel="noopener">tobilawson.com ↗</a>
             <p class="font-body-md text-on-surface-variant mt-3 leading-relaxed">Takes the first meeting and stays on the engagement through handover.</p>
           </article>
           <article class="flex flex-col">
             <img src="assets/images/team/emmanuel-modebelu.jpg" alt="Emmanuel Modebelu" width="640" height="800" loading="lazy" class="w-full h-auto">
             <h3 class="font-headline-lg-mobile text-[20px] font-semibold text-oxblood mt-1">Emmanuel Modebelu</h3>
             <span class="font-label-technical text-technical-gray uppercase tracking-wider mt-1">Chief Technology Officer</span>
+            <!-- Public profile link pending: add Emmanuel's LinkedIn/GitHub URL here
+                 once confirmed, in the same style as Tobi's link above. -->
             <p class="font-body-md text-on-surface-variant mt-3 leading-relaxed">Owns the architecture and the data model your system is built on.</p>
           </article>
         </div>
+
+        <p class="font-body-md text-on-surface-variant mt-10 max-w-2xl leading-relaxed">
+          We hire slowly, and mostly by conversation. If the way this page talks about work is the way you want to work, write to <a href="mailto:build@miomirlabs.com" class="text-oxblood underline underline-offset-4 hover:text-ink-black">build@miomirlabs.com</a>.
+        </p>
       </div>
     </section>
 
@@ -382,7 +478,7 @@
     <section id="contact" class="py-16 px-gutter scroll-mt-16" aria-labelledby="contact-heading">
       <div class="max-w-[1280px] mx-auto">
         <div class="flex flex-col gap-2 mb-8">
-          <span class="font-label-technical text-technical-gray uppercase tracking-widest">05 / Contact</span>
+          <span class="font-label-technical text-technical-gray uppercase tracking-widest">06 / Contact</span>
           <h2 id="contact-heading" class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-oxblood">Start a conversation</h2>
           <p class="font-body-md text-on-surface-variant max-w-lg">
             Tell us about your organization and what you are building. An engineer reads what you send and replies.
@@ -448,7 +544,7 @@
               </div>
               <div class="border-t border-hairline-stroke pt-3 mt-1">
                 <span class="font-label-technical text-technical-gray text-xs uppercase block">Engagements</span>
-                <p class="font-body-md text-technical-gray text-sm">We are taking on engineering and research work for Q4 2026 and Q1 2027.</p>
+                <p class="font-body-md text-technical-gray text-sm">We take on a small number of engagements at a time. Write to ask about the current intake.</p>
               </div>
             </div>
           </div>
@@ -468,11 +564,14 @@
         <a href="#work" class="font-label-technical text-technical-gray hover:text-ink-black uppercase tracking-wider">Work</a>
         <a href="#enterprise" class="font-label-technical text-technical-gray hover:text-ink-black uppercase tracking-wider">Enterprise</a>
         <a href="#approach" class="font-label-technical text-technical-gray hover:text-ink-black uppercase tracking-wider">Approach</a>
+        <a href="#notes" class="font-label-technical text-technical-gray hover:text-ink-black uppercase tracking-wider">Notes</a>
         <a href="#team" class="font-label-technical text-technical-gray hover:text-ink-black uppercase tracking-wider">Team</a>
         <a href="#contact" class="font-label-technical text-technical-gray hover:text-ink-black uppercase tracking-wider">Contact</a>
       </nav>
       <div class="flex flex-col gap-1 font-label-technical text-technical-gray md:text-right text-xs">
         <a href="mailto:build@miomirlabs.com" class="text-ink-black hover:underline font-semibold">build@miomirlabs.com</a>
+        <!-- Legal entity line: add the CAC RC number once confirmed, e.g.
+             "RC 1234567 · Registered in Nigeria". Skeptical buyers check it. -->
         <span>© 2026 Miomir Labs, Lagos, Nigeria</span>
       </div>
     </div>
@@ -483,17 +582,48 @@
       var btn = document.getElementById('menuBtn');
       var nav = document.getElementById('mobileNav');
 
+      function setMenu(open) {
+        nav.classList.toggle('hidden', !open);
+        btn.setAttribute('aria-expanded', String(open));
+        btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      }
+
       btn.addEventListener('click', function () {
-        var hidden = nav.classList.toggle('hidden');
-        btn.setAttribute('aria-expanded', String(!hidden));
+        setMenu(nav.classList.contains('hidden'));
+      });
+
+      document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape' && !nav.classList.contains('hidden')) {
+          setMenu(false);
+          btn.focus();
+        }
       });
 
       document.querySelectorAll('.mobile-nav-link').forEach(function (link) {
         link.addEventListener('click', function () {
-          nav.classList.add('hidden');
-          btn.setAttribute('aria-expanded', 'false');
+          setMenu(false);
         });
       });
+
+      // The ledger reveal is the page's one orchestrated moment. Rows start
+      // hidden only when JS and IntersectionObserver are both available; the
+      // reduced-motion media query makes the transition instant regardless.
+      var ledgerRows = document.querySelectorAll('[data-ledger-row]');
+      if ('IntersectionObserver' in window && ledgerRows.length) {
+        var ledgerObserver = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.remove('is-hidden');
+              ledgerObserver.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.2 });
+        ledgerRows.forEach(function (row, index) {
+          row.style.transitionDelay = (index * 90) + 'ms';
+          row.classList.add('is-hidden');
+          ledgerObserver.observe(row);
+        });
+      }
 
       var form = document.getElementById('contactForm');
       var fallback = document.getElementById('formFallback');

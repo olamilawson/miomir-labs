@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+  <title>Where reconciliation fails · Miomir Labs</title>
+  <meta name="description" content="Most settlement lines match on reference alone. A reconciliation system earns its keep on the residue: duplicates, partials, timing skew, reversals, rounding.">
+  <link rel="canonical" href="https://miomirlabs.com/notes/where-reconciliation-fails.html">
+
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#F9F7F2">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Miomir Labs">
+  <meta property="og:url" content="https://miomirlabs.com/notes/where-reconciliation-fails.html">
+  <meta property="og:title" content="Where reconciliation fails · Miomir Labs">
+  <meta property="og:description" content="The matching is the easy part. The residue is the product.">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Where reconciliation fails · Miomir Labs">
+  <meta name="twitter:description" content="The matching is the easy part. The residue is the product.">
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="alternate icon" href="/favicon.ico">
+
+  <link rel="stylesheet" href="/assets/fonts/fonts.css">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body class="bg-bone text-ink-black font-body-md selection:bg-oxblood selection:text-bone">
+
+  <header class="border-b border-hairline-stroke">
+    <div class="h-16 flex items-center justify-between px-gutter max-w-[1280px] mx-auto">
+      <a href="/" class="flex items-center gap-2 no-underline text-ink-black group">
+        <img src="/assets/images/logo.svg" alt="" width="32" height="32" class="h-8 w-8 object-contain" style="color:#111">
+        <span class="font-headline-lg-mobile text-[18px] tracking-tight group-hover:text-oxblood transition-colors">Miomir Labs</span>
+      </a>
+      <a href="/#notes" class="font-label-technical text-technical-gray hover:text-ink-black transition-colors uppercase tracking-wider">← All notes</a>
+    </div>
+  </header>
+
+  <main>
+    <article class="max-w-[720px] mx-auto px-gutter py-16 md:py-section-break">
+      <span class="font-label-technical text-technical-gray uppercase tracking-widest">Field note · 2026-10</span>
+      <h1 class="font-display-xl text-[30px] md:text-headline-lg leading-[1.15] md:leading-[56px] text-oxblood tracking-tight mt-4 mb-10">Where reconciliation fails</h1>
+
+      <div class="flex flex-col gap-6 font-body-md text-on-surface-variant leading-relaxed">
+        <p>Most of the work in a settlement system is not the matching. The processor gives you a report, the bank gives you a statement, your ledger knows what it posted, and most lines line up on transaction reference alone. A reconciliation system earns its keep on the residue.</p>
+
+        <p>The residue has a small number of recurring shapes, and every one of them will show up in your data eventually:</p>
+
+        <ul class="list-none p-0 m-0 flex flex-col gap-4">
+          <li class="pl-5 border-l-2 border-oxblood"><strong class="text-ink-black font-bold">Duplicates.</strong> A retried transfer posts twice at the processor and once in your ledger. The second posting is real money until someone notices it is not.</li>
+          <li class="pl-5 border-l-2 border-oxblood"><strong class="text-ink-black font-bold">Partial settlement.</strong> A processor settles in two batches and the bank sees one credit. Which ledger entries does it cover? The answer changes the balance.</li>
+          <li class="pl-5 border-l-2 border-oxblood"><strong class="text-ink-black font-bold">Timing skew.</strong> A transaction at 23:58 posts to your ledger today and lands on the bank statement tomorrow. Every day-end boundary invents a discrepancy that resolves itself if you wait, which is why an unmatched item needs an age, not just a flag.</li>
+          <li class="pl-5 border-l-2 border-oxblood"><strong class="text-ink-black font-bold">Reversals.</strong> A transaction that failed after settlement comes back as a debit days later, long after your reports said the books were clean.</li>
+          <li class="pl-5 border-l-2 border-oxblood"><strong class="text-ink-black font-bold">Rounding.</strong> FX conversions accumulate kobo-level differences that no single line explains and every aggregate report inherits.</li>
+        </ul>
+
+        <p>The discipline is simple to state and easy to skip: match on evidence, escalate on doubt. A line that cannot be matched belongs in a queue that ages and that a named person owns. Auto-resolving an unmatched line is how a small discrepancy becomes the write-off nobody can explain at the end of the quarter.</p>
+
+        <p>The edge cases are the product. Anyone can build the part where the references match.</p>
+      </div>
+    </article>
+  </main>
+
+  <footer class="border-t border-hairline-stroke py-8 px-gutter">
+    <div class="max-w-[1280px] mx-auto flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+      <span class="font-label-technical text-technical-gray uppercase tracking-wider text-xs">© 2026 Miomir Labs, Lagos, Nigeria</span>
+      <a href="mailto:build@miomirlabs.com" class="font-label-technical text-ink-black hover:underline text-xs uppercase tracking-wider">build@miomirlabs.com</a>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -7,13 +7,15 @@ Static website for Miomir Labs, an engineering and research house in Lagos.
 
 ## Structure
 
-One page. `docs/index.html` holds every section, reached by anchor:
+One page plus field notes. `docs/index.html` holds every main section, reached by anchor:
 
 | Anchor | Section |
 |--------|---------|
+| `#ledger` | The double-entry signature: commitments and their costs |
 | `#work` | Practice areas |
 | `#enterprise` | For organizations |
 | `#approach` | Engineering philosophy |
+| `#notes` | Field notes linking to `docs/notes/` articles |
 | `#team` | Tobi Lawson and Emmanuel Modebelu |
 | `#contact` | Contact |
 

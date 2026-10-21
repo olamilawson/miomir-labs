@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+  <title>What a ledger has to prove · Miomir Labs</title>
+  <meta name="description" content="The invariants we write down before any ledger code exists: conservation, replay, idempotency, and immutability.">
+  <link rel="canonical" href="https://miomirlabs.com/notes/what-a-ledger-has-to-prove.html">
+
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#F9F7F2">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Miomir Labs">
+  <meta property="og:url" content="https://miomirlabs.com/notes/what-a-ledger-has-to-prove.html">
+  <meta property="og:title" content="What a ledger has to prove · Miomir Labs">
+  <meta property="og:description" content="The invariants we write down before any ledger code exists.">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="What a ledger has to prove · Miomir Labs">
+  <meta name="twitter:description" content="The invariants we write down before any ledger code exists.">
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="alternate icon" href="/favicon.ico">
+
+  <link rel="stylesheet" href="/assets/fonts/fonts.css">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body class="bg-bone text-ink-black font-body-md selection:bg-oxblood selection:text-bone">
+
+  <header class="border-b border-hairline-stroke">
+    <div class="h-16 flex items-center justify-between px-gutter max-w-[1280px] mx-auto">
+      <a href="/" class="flex items-center gap-2 no-underline text-ink-black group">
+        <img src="/assets/images/logo.svg" alt="" width="32" height="32" class="h-8 w-8 object-contain" style="color:#111">
+        <span class="font-headline-lg-mobile text-[18px] tracking-tight group-hover:text-oxblood transition-colors">Miomir Labs</span>
+      </a>
+      <a href="/#notes" class="font-label-technical text-technical-gray hover:text-ink-black transition-colors uppercase tracking-wider">← All notes</a>
+    </div>
+  </header>
+
+  <main>
+    <article class="max-w-[720px] mx-auto px-gutter py-16 md:py-section-break">
+      <span class="font-label-technical text-technical-gray uppercase tracking-widest">Field note · 2026-10</span>
+      <h1 class="font-display-xl text-[30px] md:text-headline-lg leading-[1.15] md:leading-[56px] text-oxblood tracking-tight mt-4 mb-10">What a ledger has to prove</h1>
+
+      <div class="flex flex-col gap-6 font-body-md text-on-surface-variant leading-relaxed">
+        <p>Before we write a line of a ledger, we write down the invariants it has to hold. The code is checked against the invariants, not the other way round. Four of them come up on every system of record we build.</p>
+
+        <h2 class="font-body-md font-bold text-ink-black mt-4">Conservation</h2>
+        <p>Money is neither created nor destroyed. Every entry in the ledger balances: debits equal credits, account by account, transaction by transaction. If a report and a sum disagree, the report is wrong. The invariant is not negotiable.</p>
+
+        <h2 class="font-body-md font-bold text-ink-black mt-4">Replay</h2>
+        <p>The same events, applied in the same order, produce the same state. A ledger you cannot replay is a ledger you cannot audit, because nothing outside the live database can confirm the numbers it holds.</p>
+
+        <h2 class="font-body-md font-bold text-ink-black mt-4">Idempotency</h2>
+        <p>An instruction applied twice is applied once. Networks retry, queues redeliver, operators click a button twice. The ledger treats each instruction as identified once and refuses to post it twice.</p>
+
+        <h2 class="font-body-md font-bold text-ink-black mt-4">Immutability</h2>
+        <p>Corrections are new entries, never edits. A wrong posting is reversed by a second posting that references the first. An auditor should be able to reconstruct every decision, including the mistakes.</p>
+
+        <p class="mt-4">These are not aspirations. They are properties a system either has or does not, and each one can be tested in an afternoon with a script and a hostile operator. That is the standard we hold our own work to, and it is the standard a buyer should hold us to. Do not take the claim on faith. Ask to see the test.</p>
+      </div>
+    </article>
+  </main>
+
+  <footer class="border-t border-hairline-stroke py-8 px-gutter">
+    <div class="max-w-[1280px] mx-auto flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+      <span class="font-label-technical text-technical-gray uppercase tracking-wider text-xs">© 2026 Miomir Labs, Lagos, Nigeria</span>
+      <a href="mailto:build@miomirlabs.com" class="font-label-technical text-ink-black hover:underline text-xs uppercase tracking-wider">build@miomirlabs.com</a>
+    </div>
+  </footer>
+
+</body>
+</html>
