@@ -92,6 +92,10 @@ Navigation labels: Work, Enterprise, Approach, Notes, Team, Contact.
 
 The chosen direction is a restrained editorial/specimen aesthetic: bone ground, oxblood and ink accents, hairline rules, sharp corners, and a three-way type pairing. It is a Lagos engineering house, not a dark-terminal fantasy or a navy SaaS template.
 
+### Brand mark
+
+The mark is the ledger itself: one sharp-cornered frame divided into two columns, with entry ticks in each column — the double-entry signature reduced to its essence. Oxblood strokes only, no fills, sharp corners, legible at 16px. It replaced a generic precision-gauge placeholder on 2026-10-24. The same drawing serves as `logo.svg`, `favicon.svg` (heavier strokes for small sizes), `favicon.ico`, `apple-touch-icon.png`, and inside `og-image.png`.
+
 ### Palette
 
 | Token | Value | Use |
