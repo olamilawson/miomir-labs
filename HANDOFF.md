@@ -11,6 +11,16 @@ Static website for Miomir Labs, an engineering and research house in Lagos.
 
 ## What the site is
 
+### November 2026 update
+
+The homepage now introduces Briclair at `#project`, after the shorter hero. Its ledger design note lives at `docs/notes/briclair-ledger-design.html` and is in the sitemap. The note describes schema choices and test coverage, with no production performance claim.
+
+The Enterprise anchor remains `#enterprise`; the label is Engagements. The section offers a scoped system review and explains the written deliverables. Repeated process sections have been condensed. Team responsibilities remain factual; Emmanuel’s biography and public link need founder input. Email remains the active contact route until a real form endpoint exists.
+
+Read the current revision in `DESIGN.md` before changing this structure.
+
+The founder requested a stronger aesthetic connection to Pierre: the site now uses a 760px left-aligned document column, monospace typography, static navigation, plain contact links, and small grayscale team portraits. Tobi’s personal website link sits below his description in muted type. The former ledger reveal animation is removed. Notes share the new typography. CSS defines the presentation through `company-site` and `company-note` body classes.
+
 **One page plus field notes.** `docs/index.html` holds the main page; navigation is in-page anchors: `#hero`, `#ledger`, `#work`, `#enterprise`, `#approach`, `#notes`, `#team`, `#contact`. `#ledger` is the double-entry signature element from the original brief: what the house commits to, paired with what each commitment costs it.
 
 `docs/notes/` holds standalone technical articles linked from the Notes section. They carry no client work; the reasoning itself is the checkable evidence. Match `docs/notes/what-a-ledger-has-to-prove.html` for the template when adding a new note, and add its URL to `docs/sitemap.xml`.

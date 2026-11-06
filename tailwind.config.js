@@ -16,7 +16,7 @@ module.exports = {
         'surface-dim': '#e2d8d6',
         'ink-black': '#111111',
         oxblood: '#2D0A0A',
-        'technical-gray': '#8C8C8C',
+        'technical-gray': '#68615E',
         'on-surface-variant': '#514342',
         'hairline-stroke': 'rgba(45, 10, 10, 0.15)'
       },

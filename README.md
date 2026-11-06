@@ -11,9 +11,10 @@ One page plus field notes. `docs/index.html` holds every main section, reached b
 
 | Anchor | Section |
 |--------|---------|
+| `#project` | Briclair and its ledger design note |
 | `#ledger` | The double-entry signature: commitments and their costs |
 | `#work` | Practice areas |
-| `#enterprise` | For organizations |
+| `#enterprise` | Engagements, starting with a system review |
 | `#approach` | Engineering philosophy |
 | `#notes` | Field notes linking to `docs/notes/` articles |
 | `#team` | Tobi Lawson and Emmanuel Modebelu |

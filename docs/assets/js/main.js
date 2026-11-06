@@ -4,6 +4,7 @@
 
   function setMenu(open) {
     nav.classList.toggle('hidden', !open);
+    nav.classList.toggle('flex', open);
     btn.setAttribute('aria-expanded', String(open));
     btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
   }
@@ -24,26 +25,6 @@
       setMenu(false);
     });
   });
-
-  // The ledger reveal is the page's one orchestrated moment. Rows start
-  // hidden only when JS and IntersectionObserver are both available; the
-  // reduced-motion media query makes the transition instant regardless.
-  var ledgerRows = document.querySelectorAll('[data-ledger-row]');
-  if ('IntersectionObserver' in window && ledgerRows.length) {
-    var ledgerObserver = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.remove('is-hidden');
-          ledgerObserver.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.2 });
-    ledgerRows.forEach(function (row, index) {
-      row.style.transitionDelay = (index * 90) + 'ms';
-      row.classList.add('is-hidden');
-      ledgerObserver.observe(row);
-    });
-  }
 
   var form = document.getElementById('contactForm');
   var fallback = document.getElementById('formFallback');

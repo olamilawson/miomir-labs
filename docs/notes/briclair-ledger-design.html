@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Inside Briclair’s ledger design · Miomir Labs</title>
+  <meta name="description" content="An engineering note on Briclair’s ledger design: integer amounts, corrections as new transfers, and database tests for invalid operations.">
+  <link rel="canonical" href="https://miomirlabs.com/notes/briclair-ledger-design.html">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#F7F7F5">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Miomir Labs">
+  <meta property="og:title" content="Inside Briclair’s ledger design · Miomir Labs">
+  <meta property="og:description" content="The representation of money, the record of a correction, and the tests around both.">
+  <meta property="og:url" content="https://miomirlabs.com/notes/briclair-ledger-design.html">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="alternate icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/assets/fonts/fonts.css">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body class="company-note bg-bone text-ink-black font-body-md selection:bg-oxblood selection:text-bone">
+  <a href="#article" class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:bg-bone focus:px-4 focus:py-2">Skip to article</a>
+  <header class="border-b border-hairline-stroke">
+    <div class="h-16 flex items-center justify-between px-gutter max-w-[1120px] mx-auto">
+      <a href="/" class="flex items-center gap-2 text-ink-black">
+        <img src="/assets/images/logo.svg" alt="" width="32" height="32">
+        <span class="font-headline-lg-mobile text-[18px]">Miomir Labs</span>
+      </a>
+      <a href="/#project" class="text-link text-sm">← Our work</a>
+    </div>
+  </header>
+  <main id="article">
+    <article class="max-w-[720px] mx-auto px-gutter py-16 md:py-section-break">
+      <span class="font-label-technical text-technical-gray uppercase tracking-widest">Engineering note · Briclair · 2026-11</span>
+      <h1 class="font-display-xl text-[30px] md:text-headline-lg leading-[1.15] text-oxblood tracking-tight mt-4 mb-8">Inside Briclair’s ledger design</h1>
+      <div class="flex flex-col gap-6 text-on-surface-variant leading-relaxed">
+        <p>For <a href="https://briclair.com/" class="underline underline-offset-4 text-oxblood">Briclair</a>, our work covers identity, accounts, and compliance infrastructure for developers in Nigeria. This note describes the ledger design and the database tests we wrote around it.</p>
+        <p>A ledger needs to preserve the history of a payment through a correction. We chose accounts and transfers as its core entities. A transfer joins a debit account to a credit account on the same ledger.</p>
+
+        <h2 class="font-headline-lg-mobile text-[24px] text-oxblood mt-4">Represent the smallest unit</h2>
+        <p>We represent naira amounts as integers in kobo, with a fixed scale of two decimal places. An amount of ₦125.50 is 12,550 kobo. The ledger stores the integer; the interface formats it for the reader.</p>
+        <p>Each account belongs to a ledger with a defined currency and scale. The schema constrains a transfer to two accounts on that same ledger. Currency conversion needs a separate design.</p>
+
+        <h2 class="font-headline-lg-mobile text-[24px] text-oxblood mt-4">Preserve the original posting</h2>
+        <p>We record a correction as a new transfer in the opposite direction. The original transfer remains in the history. An auditor can reconstruct the posting and its correction.</p>
+        <p>We separate pending transfers from their resolution. Posting or voiding a pending transfer creates another record. The database must refuse a second resolution of that same pending transfer.</p>
+
+        <h2 class="font-headline-lg-mobile text-[24px] text-oxblood mt-4">Test the operations we must refuse</h2>
+        <p>The database test suite attempts invalid operations and expects rejection. It covers:</p>
+        <ul class="list-disc pl-5 space-y-3">
+          <li>A transfer between accounts on different ledgers.</li>
+          <li>A transfer to the same account, or an amount of zero or less.</li>
+          <li>A second resolution of a pending transfer.</li>
+          <li>An update or deletion of a transfer through the ledger role.</li>
+        </ul>
+        <p>These tests exercise the schema and database permissions. They establish a narrower claim than a production reliability record. They do not establish bank integration behaviour, throughput, or uptime.</p>
+
+        <div class="border-t border-hairline-stroke pt-6 mt-4">
+          <p class="text-sm">This note draws on Briclair’s ledger decision record, schema, and database invariant tests. The public project site contains API examples and an issuer-routing simulation.</p>
+          <a href="https://briclair.com/" class="text-link mt-3">Visit Briclair <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </article>
+  </main>
+  <footer class="border-t border-hairline-stroke py-8 px-gutter">
+    <div class="max-w-[1120px] mx-auto flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+      <span class="font-label-technical text-technical-gray text-xs">© 2026 Miomir Labs, Lagos, Nigeria</span>
+      <a href="mailto:build@miomirlabs.com" class="text-link text-sm">build@miomirlabs.com</a>
+    </div>
+  </footer>
+</body>
+</html>

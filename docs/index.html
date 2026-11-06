@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -9,7 +9,7 @@
   <link rel="canonical" href="https://miomirlabs.com/">
 
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-  <meta name="theme-color" content="#F9F7F2">
+  <meta name="theme-color" content="#F7F7F5">
   <meta name="author" content="Miomir Labs">
 
   <!-- Open Graph -->
@@ -35,8 +35,7 @@
   <link rel="alternate icon" href="/favicon.ico">
   <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
 
-  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/bodoni-moda-12.woff2" crossorigin>
-  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/hanken-grotesk-8.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/jetbrains-mono-6.woff2" crossorigin>
   <link rel="stylesheet" href="assets/fonts/fonts.css">
   <link rel="stylesheet" href="assets/css/styles.css">
 
@@ -117,60 +116,80 @@
   }
   </script>
 </head>
-<body class="bg-bone text-ink-black font-body-md selection:bg-oxblood selection:text-bone">
+<body class="company-site bg-bone selection:bg-oxblood selection:text-bone">
 
   <a href="#hero" class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[60] focus:bg-oxblood focus:text-bone focus:px-4 focus:py-2 focus:font-label-technical focus:uppercase">Skip to content</a>
 
-  <header class="fixed top-0 w-full z-50 bg-bone/90 backdrop-blur-md border-b border-hairline-stroke pt-safe">
-    <div class="h-16 flex items-center justify-between px-gutter max-w-[1280px] mx-auto">
-      <a href="#hero" class="flex items-center gap-2 no-underline text-ink-black group">
-        <img src="assets/images/logo.svg" alt="Miomir Labs" width="32" height="32" class="h-8 w-8 object-contain">
+  <header class="company-header">
+    <div class="company-header-row">
+      <a href="#hero" class="flex items-center gap-2 no-underline group">
+        <img src="assets/images/logo.svg" alt="" width="24" height="24" class="company-mark">
         <div class="flex flex-col">
-          <span class="font-headline-lg-mobile text-[18px] tracking-tight group-hover:text-oxblood transition-colors">Miomir Labs</span>
-          <span class="font-label-technical text-technical-gray -mt-1 uppercase">Lagos, Nigeria</span>
+          <span class="company-name">Miomir Labs</span>
+          <span class="company-location">Lagos, Nigeria</span>
         </div>
       </a>
-      <nav class="hidden md:flex items-center gap-7" aria-label="Primary">
-        <a href="#work" class="font-label-technical text-technical-gray hover:text-ink-black transition-colors uppercase tracking-wider">Work</a>
-        <a href="#enterprise" class="font-label-technical text-technical-gray hover:text-ink-black transition-colors uppercase tracking-wider">Enterprise</a>
-        <a href="#approach" class="font-label-technical text-technical-gray hover:text-ink-black transition-colors uppercase tracking-wider">Approach</a>
-        <a href="#notes" class="font-label-technical text-technical-gray hover:text-ink-black transition-colors uppercase tracking-wider">Notes</a>
-        <a href="#team" class="font-label-technical text-technical-gray hover:text-ink-black transition-colors uppercase tracking-wider">Team</a>
-        <a href="#contact" class="font-label-technical text-oxblood hover:underline uppercase tracking-wider">Contact</a>
-      </nav>
-      <button class="md:hidden w-10 h-10 flex items-center justify-center text-technical-gray hover:text-ink-black transition-colors" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav" id="menuBtn">
+
+      <button class="sm:hidden w-11 h-11 flex items-center justify-center hover:text-ink-black transition-colors" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav" id="menuBtn">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
       </button>
     </div>
-    <nav id="mobileNav" class="hidden md:hidden flex-col border-t border-hairline-stroke bg-bone px-gutter py-4 gap-4" aria-label="Primary mobile">
-      <a href="#work" class="mobile-nav-link font-label-technical text-technical-gray uppercase">Work</a>
-      <a href="#enterprise" class="mobile-nav-link font-label-technical text-technical-gray uppercase">Enterprise</a>
-      <a href="#approach" class="mobile-nav-link font-label-technical text-technical-gray uppercase">Approach</a>
-      <a href="#notes" class="mobile-nav-link font-label-technical text-technical-gray uppercase">Notes</a>
-      <a href="#team" class="mobile-nav-link font-label-technical text-technical-gray uppercase">Team</a>
-      <a href="#contact" class="mobile-nav-link font-label-technical text-oxblood uppercase font-bold">Contact</a>
+      <nav class="company-nav hidden sm:flex" aria-label="Primary">
+        <a href="#work" class="section-label hover:text-ink-black transition-colors uppercase">Work</a>
+        <a href="#enterprise" class="section-label hover:text-ink-black transition-colors uppercase">Engagements</a>
+        <a href="#approach" class="section-label hover:text-ink-black transition-colors uppercase">Approach</a>
+        <a href="#notes" class="section-label hover:text-ink-black transition-colors uppercase">Notes</a>
+        <a href="#team" class="section-label hover:text-ink-black transition-colors uppercase">Team</a>
+        <a href="#contact" class="section-label hover:underline uppercase">Contact</a>
+      </nav>
+    <nav id="mobileNav" class="hidden sm:hidden flex-col" aria-label="Primary mobile">
+      <a href="#work" class="mobile-nav-link section-label uppercase">Work</a>
+      <a href="#enterprise" class="mobile-nav-link section-label uppercase">Engagements</a>
+      <a href="#approach" class="mobile-nav-link section-label uppercase">Approach</a>
+      <a href="#notes" class="mobile-nav-link section-label uppercase">Notes</a>
+      <a href="#team" class="mobile-nav-link section-label uppercase">Team</a>
+      <a href="#contact" class="mobile-nav-link section-label uppercase">Contact</a>
     </nav>
   </header>
 
-  <main id="main" class="relative w-full pt-16 bg-bone">
+  <main id="main" class="company-main">
 
     <!-- Hero -->
-    <section id="hero" class="px-gutter py-20 md:py-section-break min-h-[580px] flex flex-col justify-center border-b border-hairline-stroke">
-      <div class="max-w-[1280px] mx-auto w-full">
+    <section id="hero" class="px-gutter py-16 md:py-section-break min-h-[500px] flex flex-col justify-center border-b border-hairline-stroke">
+      <div class="max-w-[1120px] mx-auto w-full">
         <div class="mb-5">
-          <span class="font-label-technical text-technical-gray uppercase tracking-widest">Engineering &amp; Research House · Lagos</span>
+          <span class="section-label uppercase">Engineering &amp; Research House · Lagos</span>
         </div>
-        <h1 class="text-[34px] sm:text-[50px] md:text-[68px] leading-[1.06] md:leading-[1.0] font-display-xl text-oxblood tracking-tight max-w-[16ch]">We build software that has to be correct.</h1>
-        <p class="font-body-lg text-on-surface-variant max-w-[560px] mt-7 leading-relaxed">
-          Ledgers, identity, and money movement, for organizations where a wrong number costs real money. Your engineers can now generate more code in a day than your reviewers can check in a week. We take on the systems where that gap costs you most.
+        <h1 class="sm:text-[50px] md:text-[68px] md:leading-[1.0] max-w-[16ch]">We build software that has to be correct.</h1>
+        <p class="max-w-[560px] mt-7">
+          We build ledgers, identity, and money movement systems for organizations where a wrong number costs real money.
         </p>
         <div class="mt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
-          <a href="#contact" class="px-6 py-3.5 bg-oxblood text-bone font-label-technical uppercase tracking-widest hover:bg-ink-black transition-all inline-flex items-center justify-center gap-2 text-center">
-            Start a conversation →
+          <a href="#contact" class="px-6 py-3.5 bg-oxblood section-label uppercase hover:bg-ink-black transition-all inline-flex items-center justify-center gap-2">
+            Start a conversation
           </a>
-          <a href="#work" class="px-6 py-3.5 border border-hairline-stroke text-technical-gray hover:text-ink-black hover:bg-surface-container transition-all font-label-technical uppercase tracking-widest inline-flex items-center justify-center gap-2 text-center">
-            See what we build
+          <a href="#project" class="px-6 py-3.5 border border-hairline-stroke hover:text-ink-black hover:bg-surface-container transition-all section-label uppercase inline-flex items-center justify-center gap-2">
+            See our work
           </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- A public project, with an engineering note grounded in its source. -->
+    <section id="project" class="py-16 px-gutter border-b border-hairline-stroke scroll-mt-16" aria-labelledby="project-heading">
+      <div class="max-w-[1120px] mx-auto project-layout">
+        <div>
+          <span class="section-label uppercase">Selected work</span>
+          <h2 id="project-heading" class="md:text-headline-lg mt-3">Briclair</h2>
+          <p class="mt-5 max-w-lg">Our work on identity, accounts, and compliance infrastructure for developers in Nigeria.</p>
+          <a href="https://briclair.com/" class="text-link mt-6">Visit Briclair <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="project-detail">
+          <span class="section-label uppercase">Inside the engineering</span>
+          <h3 class="mt-3">A correction leaves a record.</h3>
+          <p class="mt-4">In Briclair’s ledger design, we record a correction as a new transfer. We keep the posting and its reversal so an auditor can reconstruct both.</p>
+          <a href="notes/briclair-ledger-design.html" class="text-link mt-5">Read the ledger design note <span aria-hidden="true">→</span></a>
+          <p class="section-label mt-5">On the project site: API examples and an interactive issuer-routing simulation.</p>
         </div>
       </div>
     </section>
@@ -179,31 +198,31 @@
          commits to, and what each commitment costs it. -->
     <section id="ledger" class="bg-surface border-b border-hairline-stroke" aria-labelledby="ledger-heading">
       <h2 id="ledger-heading" class="sr-only">What we commit and what it costs us</h2>
-      <div class="max-w-[1280px] mx-auto px-gutter py-16 md:py-20">
+      <div class="max-w-[1120px] mx-auto px-gutter py-16 md:py-20">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16">
-          <span class="font-label-technical text-technical-gray uppercase tracking-widest pb-4 border-b border-hairline-stroke">What we commit</span>
-          <span class="font-label-technical text-technical-gray uppercase tracking-widest pb-4 border-b border-hairline-stroke hidden md:block">What it costs us</span>
+          <span class="section-label uppercase pb-4 border-b border-hairline-stroke">What we commit</span>
+          <span class="section-label uppercase pb-4 border-b border-hairline-stroke hidden md:block">What it costs us</span>
         </div>
         <div>
           <div class="ledger-row grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-2 py-6 border-b border-hairline-stroke" data-ledger-row>
-            <p class="font-headline-lg-mobile text-[20px] font-semibold text-oxblood leading-snug self-center">We specify the system before we write a line of code.</p>
-            <p class="font-body-md text-on-surface-variant leading-relaxed self-center"><span class="font-index-marker text-technical-gray uppercase tracking-wider md:hidden block mb-1">Cost</span>We decline work that has to ship before that happens.</p>
+            <p class="self-center">We specify the system before we write a line of code.</p>
+            <p class="self-center"><span class="row-label uppercase md:hidden block mb-1">Cost</span>We decline work that has to ship before that happens.</p>
           </div>
           <div class="ledger-row grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-2 py-6 border-b border-hairline-stroke" data-ledger-row>
-            <p class="font-headline-lg-mobile text-[20px] font-semibold text-oxblood leading-snug self-center">The people who design your system build it.</p>
-            <p class="font-body-md text-on-surface-variant leading-relaxed self-center"><span class="font-index-marker text-technical-gray uppercase tracking-wider md:hidden block mb-1">Cost</span>We take on fewer engagements than we could fill.</p>
+            <p class="self-center">The people who design your system build it.</p>
+            <p class="self-center"><span class="row-label uppercase md:hidden block mb-1">Cost</span>We take on fewer engagements than we could fill.</p>
           </div>
           <div class="ledger-row grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-2 py-6 border-b border-hairline-stroke" data-ledger-row>
-            <p class="font-headline-lg-mobile text-[20px] font-semibold text-oxblood leading-snug self-center">We write code a stranger can audit.</p>
-            <p class="font-body-md text-on-surface-variant leading-relaxed self-center"><span class="font-index-marker text-technical-gray uppercase tracking-wider md:hidden block mb-1">Cost</span>Our first month moves slower than a vendor who starts typing on day one.</p>
+            <p class="self-center">We write code a stranger can audit.</p>
+            <p class="self-center"><span class="row-label uppercase md:hidden block mb-1">Cost</span>Our first month moves slower than a vendor who starts typing on day one.</p>
           </div>
           <div class="ledger-row grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-2 py-6 border-b border-hairline-stroke" data-ledger-row>
-            <p class="font-headline-lg-mobile text-[20px] font-semibold text-oxblood leading-snug self-center">We stay with a system after it ships.</p>
-            <p class="font-body-md text-on-surface-variant leading-relaxed self-center"><span class="font-index-marker text-technical-gray uppercase tracking-wider md:hidden block mb-1">Cost</span>We only take systems we are willing to maintain for years.</p>
+            <p class="self-center">We stay with a system after it ships.</p>
+            <p class="self-center"><span class="row-label uppercase md:hidden block mb-1">Cost</span>We only take systems we are willing to maintain for years.</p>
           </div>
           <div class="ledger-row grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-2 py-6 border-b border-hairline-stroke" data-ledger-row>
-            <p class="font-headline-lg-mobile text-[20px] font-semibold text-oxblood leading-snug self-center">We say what the audit finds, not what the engagement would prefer.</p>
-            <p class="font-body-md text-on-surface-variant leading-relaxed self-center"><span class="font-index-marker text-technical-gray uppercase tracking-wider md:hidden block mb-1">Cost</span>Sometimes the finding is that you should not build what you hired us to scope.</p>
+            <p class="self-center">We say what the audit finds, not what the engagement would prefer.</p>
+            <p class="self-center"><span class="row-label uppercase md:hidden block mb-1">Cost</span>Sometimes the finding is that you should not build what you hired us to scope.</p>
           </div>
         </div>
       </div>
@@ -211,183 +230,123 @@
 
     <!-- Work & Practice Areas -->
     <section id="work" class="py-16 border-b border-hairline-stroke scroll-mt-16" aria-labelledby="work-heading">
-      <div class="max-w-[1280px] mx-auto px-gutter mb-8">
+      <div class="max-w-[1120px] mx-auto px-gutter mb-8">
         <div class="flex flex-col gap-2">
-          <span class="font-label-technical text-technical-gray uppercase tracking-widest">01 / Practice Areas</span>
-          <h2 id="work-heading" class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-oxblood">What we do</h2>
+          <span class="section-label uppercase">01 / Practice Areas</span>
+          <h2 id="work-heading" class="md:font-headline-lg md:text-headline-lg">What we do</h2>
         </div>
-        <p class="font-body-md text-on-surface-variant max-w-2xl mt-3">
+        <p class="max-w-2xl mt-3">
           We build and maintain the systems that hold your records and move your money, along with the screens your operators use to run them.
         </p>
       </div>
 
       <div class="w-full border-t border-hairline-stroke">
-        <div class="max-w-[1280px] mx-auto">
+        <div class="max-w-[1120px] mx-auto">
           <article class="flex flex-col md:flex-row border-b border-hairline-stroke hover:bg-surface-container-low transition-colors group">
             <div class="w-full md:w-1/3 p-6 md:p-8 border-b md:border-b-0 md:border-r border-hairline-stroke flex flex-col justify-between">
-              <span class="font-index-marker text-technical-gray group-hover:text-oxblood transition-colors uppercase tracking-wider">Records</span>
-              <h3 class="font-headline-lg-mobile text-[22px] font-semibold text-oxblood mt-2">Records &amp; ledgers</h3>
+              <span class="row-label group-hover:text-oxblood transition-colors uppercase">Records</span>
+              <h3 class="mt-2">Records &amp; ledgers</h3>
             </div>
             <div class="w-full md:w-2/3 p-6 md:p-8 flex flex-col justify-center gap-2">
-              <p class="font-body-md text-on-surface-variant leading-relaxed">
+              <p class="">
                 Transaction logs, registries, and audit trails. We build the history your auditors read and your lawyers reach for when a customer disputes a charge, so a balance you query today matches the one you queried last quarter.
               </p>
-              <span class="font-label-technical text-technical-gray mt-1">Audit logs · Data registries · Double-entry ledgers</span>
+              <span class="section-label mt-1">Audit logs · Data registries · Double-entry ledgers</span>
             </div>
           </article>
 
           <article class="flex flex-col md:flex-row border-b border-hairline-stroke hover:bg-surface-container-low transition-colors group">
             <div class="w-full md:w-1/3 p-6 md:p-8 border-b md:border-b-0 md:border-r border-hairline-stroke flex flex-col justify-between">
-              <span class="font-index-marker text-technical-gray group-hover:text-oxblood transition-colors uppercase tracking-wider">Identity</span>
-              <h3 class="font-headline-lg-mobile text-[22px] font-semibold text-oxblood mt-2">Identity &amp; access</h3>
+              <span class="row-label group-hover:text-oxblood transition-colors uppercase">Identity</span>
+              <h3 class="mt-2">Identity &amp; access</h3>
             </div>
             <div class="w-full md:w-2/3 p-6 md:p-8 flex flex-col justify-center gap-2">
-              <p class="font-body-md text-on-surface-variant leading-relaxed">
+              <p class="">
                 Authentication, granular authorization, and credential lifecycles. We write the rules for who may touch what, then keep them readable by your compliance team without a translator.
               </p>
-              <span class="font-label-technical text-technical-gray mt-1">RBAC / ABAC · KYB against CAC and BVN · SSO &amp; mTLS</span>
+              <span class="section-label mt-1">RBAC / ABAC · KYB against CAC and BVN · SSO &amp; mTLS</span>
             </div>
           </article>
 
           <article class="flex flex-col md:flex-row border-b border-hairline-stroke hover:bg-surface-container-low transition-colors group">
             <div class="w-full md:w-1/3 p-6 md:p-8 border-b md:border-b-0 md:border-r border-hairline-stroke flex flex-col justify-between">
-              <span class="font-index-marker text-technical-gray group-hover:text-oxblood transition-colors uppercase tracking-wider">Settlement</span>
-              <h3 class="font-headline-lg-mobile text-[22px] font-semibold text-oxblood mt-2">Settlement systems</h3>
+              <span class="row-label group-hover:text-oxblood transition-colors uppercase">Settlement</span>
+              <h3 class="mt-2">Settlement systems</h3>
             </div>
             <div class="w-full md:w-2/3 p-6 md:p-8 flex flex-col justify-center gap-2">
-              <p class="font-body-md text-on-surface-variant leading-relaxed">
+              <p class="">
                 Reconciliation, financial reporting pipelines, and the middleware between commercial banks, processors, and your core ledger. We handle the duplicate postings and the half-finished transfers your team chases by hand today.
               </p>
-              <span class="font-label-technical text-technical-gray mt-1">Reconciliation engines · NIBSS and processor integrations · Clearing pipelines</span>
+              <span class="section-label mt-1">Reconciliation engines · NIBSS and processor integrations · Clearing pipelines</span>
             </div>
           </article>
 
           <article class="flex flex-col md:flex-row border-b border-hairline-stroke hover:bg-surface-container-low transition-colors group">
             <div class="w-full md:w-1/3 p-6 md:p-8 border-b md:border-b-0 md:border-r border-hairline-stroke flex flex-col justify-between">
-              <span class="font-index-marker text-technical-gray group-hover:text-oxblood transition-colors uppercase tracking-wider">Product</span>
-              <h3 class="font-headline-lg-mobile text-[22px] font-semibold text-oxblood mt-2">Operator-facing product</h3>
+              <span class="row-label group-hover:text-oxblood transition-colors uppercase">Product</span>
+              <h3 class="mt-2">Operator-facing product</h3>
             </div>
             <div class="w-full md:w-2/3 p-6 md:p-8 flex flex-col justify-center gap-2">
-              <p class="font-body-md text-on-surface-variant leading-relaxed">
+              <p class="">
                 The screens a trader uses on a phone to invoice a customer, take a payment, and see what is left in stock. We design the interface and the ledger under it, for the device that is the only computer the owner has.
               </p>
-              <span class="font-label-technical text-technical-gray mt-1">Native mobile · Offline-tolerant sync · Merchant onboarding</span>
+              <span class="section-label mt-1">Native mobile · Offline-tolerant sync · Merchant onboarding</span>
             </div>
           </article>
 
           <article class="flex flex-col md:flex-row border-b border-hairline-stroke hover:bg-surface-container-low transition-colors group">
             <div class="w-full md:w-1/3 p-6 md:p-8 border-b md:border-b-0 md:border-r border-hairline-stroke flex flex-col justify-between">
-              <span class="font-index-marker text-technical-gray group-hover:text-oxblood transition-colors uppercase tracking-wider">Research</span>
-              <h3 class="font-headline-lg-mobile text-[22px] font-semibold text-oxblood mt-2">Applied research</h3>
+              <span class="row-label group-hover:text-oxblood transition-colors uppercase">Research</span>
+              <h3 class="mt-2">Applied research</h3>
             </div>
             <div class="w-full md:w-2/3 p-6 md:p-8 flex flex-col justify-center gap-2">
-              <p class="font-body-md text-on-surface-variant leading-relaxed">
+              <p class="">
                 Document extraction, classification, and retrieval for institutions sitting on physical archives or decades of scanned PDFs. Where a score drives a decision, it ships with the documentation and audit trail a risk function needs to question it.
               </p>
-              <span class="font-label-technical text-technical-gray mt-1">Document parsing · Knowledge retrieval · Explainable scoring · Model documentation</span>
+              <span class="section-label mt-1">Document parsing · Knowledge retrieval · Explainable scoring · Model documentation</span>
             </div>
           </article>
         </div>
       </div>
 
-      <!-- How we work -->
-      <div class="max-w-[1280px] mx-auto px-gutter mt-12">
-        <div class="p-8 bg-surface border border-hairline-stroke flex flex-col md:flex-row gap-8 items-start">
-          <div class="w-full md:w-1/3">
-            <h3 class="font-label-technical text-technical-gray uppercase tracking-widest">How we work</h3>
-            <p class="font-headline-lg-mobile text-[20px] font-semibold text-oxblood mt-1">Deep domain engagement</p>
-          </div>
-          <div class="w-full md:w-2/3 flex flex-col gap-4 font-body-md text-on-surface-variant">
-            <p>We start by reading your existing codebase and sitting with the operators who run it. We prototype against your real data constraints.</p>
-            <p>Most of our engagements run long. We would rather learn one domain in depth.</p>
-          </div>
-        </div>
-      </div>
     </section>
 
-    <!-- Enterprise -->
+    <!-- A defined first engagement, followed by the delivery sequence. -->
     <section id="enterprise" class="py-16 border-b border-hairline-stroke scroll-mt-16" aria-labelledby="enterprise-heading">
-      <div class="max-w-[1280px] mx-auto px-gutter">
-        <div class="flex flex-col gap-2 mb-8">
-          <span class="font-label-technical text-technical-gray uppercase tracking-widest">02 / Enterprise</span>
-          <h2 id="enterprise-heading" class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-oxblood">For organizations</h2>
-          <p class="font-body-lg text-on-surface-variant max-w-2xl mt-2 leading-relaxed">
-            We embed with enterprise and government engineering teams to build infrastructure that outlasts the people who specified it.
-          </p>
-        </div>
-
-        <!-- Principles -->
-        <div class="border border-hairline-stroke mb-12 bg-surface">
-          <div class="p-6 border-b border-hairline-stroke bg-bone">
-            <span class="font-label-technical text-oxblood uppercase tracking-widest">Core Principles</span>
+      <div class="max-w-[1120px] mx-auto px-gutter">
+        <span class="section-label uppercase">02 / Engagements</span>
+        <h2 id="enterprise-heading" class="md:text-headline-lg mt-2">Start with a system review.</h2>
+        <p class="max-w-2xl mt-5">Bring us the system you need to build or the one your team needs to change. We agree the scope of a review before work begins.</p>
+        <div class="engagement-layout mt-10">
+          <div>
+            <h3 class="section-label uppercase">You bring</h3>
+            <p class="mt-4">The business problem, your current architecture or codebase, and access to the people who run the system.</p>
           </div>
-          <div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-hairline-stroke">
-            <div class="p-6 flex flex-col gap-3 hover:bg-surface-container-high transition-colors">
-              <h3 class="font-body-md font-bold text-ink-black">Start with what you have</h3>
-              <p class="text-on-surface-variant text-sm leading-relaxed">
-                We audit your databases, your APIs, and the spreadsheets your team relies on before we propose anything new. The bottleneck sits between your systems more often than inside any one of them.
-              </p>
-            </div>
-            <div class="p-6 flex flex-col gap-3 hover:bg-surface-container-high transition-colors">
-              <h3 class="font-body-md font-bold text-ink-black">Build for your environment</h3>
-              <p class="text-on-surface-variant text-sm leading-relaxed">
-                We design for the dropped connections and the server budget you actually have in West Africa.
-              </p>
-            </div>
-            <div class="p-6 flex flex-col gap-3 hover:bg-surface-container-high transition-colors">
-              <h3 class="font-body-md font-bold text-ink-black">Own the outcome</h3>
-              <p class="text-on-surface-variant text-sm leading-relaxed">
-                You keep the source, the documentation, and a handover plan your own engineers can act on. We do not hold your system hostage.
-              </p>
-            </div>
+          <div>
+            <h3 class="section-label uppercase">You receive</h3>
+            <p class="mt-4">A written assessment of the risks, the properties the system must preserve, and a proposed build scope. You can use it to decide the next step with your team.</p>
           </div>
         </div>
-
-        <!-- Engagement Process -->
-        <div class="bg-surface border border-hairline-stroke p-8 md:p-12">
-          <h3 class="font-headline-lg-mobile text-[24px] text-oxblood mb-8 font-semibold">How an engagement runs</h3>
-          <ol class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 list-none p-0 m-0">
-            <li class="flex flex-col gap-2">
-              <span class="font-index-marker text-oxblood uppercase text-lg font-bold">01</span>
-              <h4 class="font-body-md font-bold text-ink-black">Discovery</h4>
-              <p class="text-on-surface-variant text-sm leading-relaxed">We interview your operators, read your source, and map how data moves between teams.</p>
-            </li>
-            <li class="flex flex-col gap-2">
-              <span class="font-index-marker text-oxblood uppercase text-lg font-bold">02</span>
-              <h4 class="font-body-md font-bold text-ink-black">Design</h4>
-              <p class="text-on-surface-variant text-sm leading-relaxed">We specify a system simple enough that your team can hold it in their heads, and write down the invariants it has to hold.</p>
-            </li>
-            <li class="flex flex-col gap-2">
-              <span class="font-index-marker text-oxblood uppercase text-lg font-bold">03</span>
-              <h4 class="font-body-md font-bold text-ink-black">Build</h4>
-              <p class="text-on-surface-variant text-sm leading-relaxed">We ship production increments, each one backed by tests and an audit trail you can inspect.</p>
-            </li>
-            <li class="flex flex-col gap-2">
-              <span class="font-index-marker text-oxblood uppercase text-lg font-bold">04</span>
-              <h4 class="font-body-md font-bold text-ink-black">Handover</h4>
-              <p class="text-on-surface-variant text-sm leading-relaxed">We train your engineers, transfer the repository, and agree what support looks like afterwards.</p>
-            </li>
-          </ol>
-        </div>
+        <a href="mailto:build@miomirlabs.com?subject=System%20review" class="text-link mt-6">Discuss a system review <span aria-hidden="true">→</span></a>
+        <ol class="delivery-steps list-none p-0 mt-12">
+          <li><span class="row-label">01</span><h3>Review</h3><p>Read the existing system and map how data moves between teams.</p></li>
+          <li><span class="row-label">02</span><h3>Design</h3><p>Specify the architecture and the properties we will test.</p></li>
+          <li><span class="row-label">03</span><h3>Build</h3><p>Deliver increments with tests your engineers can inspect.</p></li>
+          <li><span class="row-label">04</span><h3>Handover</h3><p>Transfer the source and documentation, train your team, and agree support.</p></li>
+        </ol>
       </div>
     </section>
 
     <!-- Approach & Constraints -->
-    <section id="approach" class="py-16 bg-surface text-ink-black border-b border-hairline-stroke scroll-mt-16" aria-labelledby="approach-heading">
-      <div class="max-w-[1280px] mx-auto px-gutter">
+    <section id="approach" class="py-16 bg-surface border-b border-hairline-stroke scroll-mt-16" aria-labelledby="approach-heading">
+      <div class="max-w-[1120px] mx-auto px-gutter">
         <div class="flex flex-col gap-2 mb-6">
-          <span class="font-label-technical text-technical-gray uppercase tracking-widest">03 / Engineering Philosophy</span>
-          <h2 id="approach-heading" class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-oxblood">Build for the constraint</h2>
+          <span class="section-label uppercase">03 / Engineering Philosophy</span>
+          <h2 id="approach-heading" class="md:font-headline-lg md:text-headline-lg">Build for the constraint</h2>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 font-body-md text-on-surface-variant leading-relaxed">
-          <div class="flex flex-col gap-4">
-            <p>Systems here run under high latency and modest server budgets. They also run under the NDPA, the CBN open banking guidelines, and PCI DSS. We put consent capture, data residency, and card handling into the first architecture, because a compliance retrofit costs more than the design that avoids it.</p>
-            <p>We write code a stranger can audit. That stranger might be your next hire, your regulator, or one of us in three years with no memory of the decision.</p>
-          </div>
-          <div class="flex flex-col gap-4">
-            <p>We spend our hours deciding whether the code is right and proving it stays right as the system changes.</p>
-            <p>When we do applied research, we test against your real transactions and the feedback of the people who process them, rather than a benchmark that flatters the model.</p>
-          </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <p>We design for the connections, devices, and server budget your operators have. We agree how the system should behave through a dropped connection or a delayed response before choosing the architecture.</p>
+          <p>We map your consent, data retention, and access requirements at the start. For applied research, we evaluate against your records and the decisions your operators need to make.</p>
         </div>
       </div>
     </section>
@@ -395,91 +354,71 @@
     <!-- Notes: short technical writing. No client work is described; the reasoning
          itself is the checkable evidence this section exists to provide. -->
     <section id="notes" class="py-16 border-b border-hairline-stroke scroll-mt-16" aria-labelledby="notes-heading">
-      <div class="max-w-[1280px] mx-auto px-gutter mb-8">
+      <div class="max-w-[1120px] mx-auto px-gutter mb-8">
         <div class="flex flex-col gap-2">
-          <span class="font-label-technical text-technical-gray uppercase tracking-widest">04 / Notes</span>
-          <h2 id="notes-heading" class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-oxblood">Field notes</h2>
+          <span class="section-label uppercase">04 / Notes</span>
+          <h2 id="notes-heading" class="md:font-headline-lg md:text-headline-lg">Field notes</h2>
         </div>
-        <p class="font-body-md text-on-surface-variant max-w-2xl mt-3">
+        <p class="max-w-2xl mt-3">
           Short technical writing on the systems we work on.
         </p>
       </div>
-      <div class="max-w-[1280px] mx-auto px-gutter">
+      <div class="max-w-[1120px] mx-auto px-gutter">
         <div class="border-y border-hairline-stroke divide-y divide-hairline-stroke">
           <a href="notes/what-a-ledger-has-to-prove.html" class="group py-6 flex flex-col md:flex-row md:items-baseline gap-1 md:gap-8 hover:bg-surface-container-low transition-colors px-2 -mx-2">
-            <span class="font-index-marker text-technical-gray uppercase tracking-wider md:w-28 shrink-0">2026-10</span>
-            <span class="font-headline-lg-mobile text-[20px] font-semibold text-oxblood group-hover:underline underline-offset-4">What a ledger has to prove</span>
-            <span class="font-body-md text-on-surface-variant md:ml-auto md:max-w-sm md:text-right">The invariants we write down before any ledger code exists.</span>
+            <span class="row-label uppercase md:w-28 shrink-0">2026-10</span>
+            <span class="group-hover:underline underline-offset-4">What a ledger has to prove</span>
+            <span class="md:ml-auto md:max-w-sm md:text-right">The invariants we write down before any ledger code exists.</span>
           </a>
           <a href="notes/where-reconciliation-fails.html" class="group py-6 flex flex-col md:flex-row md:items-baseline gap-1 md:gap-8 hover:bg-surface-container-low transition-colors px-2 -mx-2">
-            <span class="font-index-marker text-technical-gray uppercase tracking-wider md:w-28 shrink-0">2026-10</span>
-            <span class="font-headline-lg-mobile text-[20px] font-semibold text-oxblood group-hover:underline underline-offset-4">Where reconciliation fails</span>
-            <span class="font-body-md text-on-surface-variant md:ml-auto md:max-w-sm md:text-right">The matching is the easy part. The residue is the product.</span>
+            <span class="row-label uppercase md:w-28 shrink-0">2026-10</span>
+            <span class="group-hover:underline underline-offset-4">Where reconciliation fails</span>
+            <span class="md:ml-auto md:max-w-sm md:text-right">Handling unmatched payments and the decisions that follow.</span>
           </a>
         </div>
       </div>
     </section>
-
-    <!-- Current status: uncomment and populate with real items only. The value of
-         this section is that every line is checkable, so name no clients and keep
-         states honest (in design / in build / in maintenance). Example row format:
-         <li><span>Settlement reconciliation engine</span><span>In build</span></li>
-    <section id="status" class="py-16 border-b border-hairline-stroke scroll-mt-16" aria-labelledby="status-heading">
-      <div class="max-w-[1280px] mx-auto px-gutter">
-        <div class="flex flex-col gap-2 mb-8">
-          <span class="font-label-technical text-technical-gray uppercase tracking-widest">05 / Current status</span>
-          <h2 id="status-heading" class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-oxblood">Work in progress</h2>
-        </div>
-        <ul class="border-y border-hairline-stroke divide-y divide-hairline-stroke list-none p-0 m-0">
-          <li class="py-5 flex items-baseline justify-between gap-6">
-            <span class="font-body-md text-ink-black">ITEM</span>
-            <span class="font-label-technical text-technical-gray uppercase">STATE</span>
-          </li>
-        </ul>
-      </div>
-    </section>
-    -->
 
     <!-- People -->
     <section id="team" class="py-16 border-b border-hairline-stroke scroll-mt-16" aria-labelledby="team-heading">
-      <div class="max-w-[1280px] mx-auto px-gutter">
+      <div class="max-w-[1120px] mx-auto px-gutter">
         <div class="flex flex-col gap-2 mb-10">
-          <span class="font-label-technical text-technical-gray uppercase tracking-widest">05 / People</span>
-          <h2 id="team-heading" class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-oxblood">Who does the work</h2>
+          <span class="section-label uppercase">05 / People</span>
+          <h2 id="team-heading" class="md:font-headline-lg md:text-headline-lg">Who does the work</h2>
         </div>
 
-        <div class="grid grid-cols-2 lg:grid-cols-4 gap-x-gutter gap-y-10">
+        <div class="team-grid">
           <article class="flex flex-col">
-            <img src="assets/images/team/tobi-lawson.jpg" alt="Tobi Lawson" width="640" height="800" loading="lazy" class="w-full h-auto">
-            <h3 class="font-headline-lg-mobile text-[20px] font-semibold text-oxblood mt-1">Tobi Lawson</h3>
-            <span class="font-label-technical text-technical-gray uppercase tracking-wider mt-1">Chief Executive</span>
-            <a href="https://tobilawson.com/" class="font-label-technical text-oxblood uppercase tracking-wider mt-1 hover:underline" target="_blank" rel="noopener">tobilawson.com ↗</a>
-            <p class="font-body-md text-on-surface-variant mt-3 leading-relaxed">Takes the first meeting and stays on the engagement through handover.</p>
+            <img src="assets/images/team/tobi-lawson.jpg" alt="Tobi Lawson" width="640" height="800" loading="lazy" class="team-portrait">
+            <h3 class="mt-1">Tobi Lawson</h3>
+            <span class="section-label uppercase mt-1">Chief Executive</span>
+            <p class="mt-3">Tobi leads client engagements, from the first review through handover. He works with your team to define the problem and agree the scope.</p>
+            <a href="https://tobilawson.com/" class="profile-link" target="_blank" rel="noopener" aria-label="Tobi Lawson’s personal website">tobilawson.com</a>
           </article>
           <article class="flex flex-col">
-            <img src="assets/images/team/emmanuel-modebelu.jpg" alt="Emmanuel Modebelu" width="640" height="800" loading="lazy" class="w-full h-auto">
-            <h3 class="font-headline-lg-mobile text-[20px] font-semibold text-oxblood mt-1">Emmanuel Modebelu</h3>
-            <span class="font-label-technical text-technical-gray uppercase tracking-wider mt-1">Chief Technology Officer</span>
+            <img src="assets/images/team/emmanuel-modebelu.jpg" alt="Emmanuel Modebelu" width="640" height="800" loading="lazy" class="team-portrait">
+            <h3 class="mt-1">Emmanuel Modebelu</h3>
+            <span class="section-label uppercase mt-1">Chief Technology Officer</span>
             <!-- Public profile link pending: add Emmanuel's LinkedIn/GitHub URL here
                  once confirmed, in the same style as Tobi's link above. -->
-            <p class="font-body-md text-on-surface-variant mt-3 leading-relaxed">Owns the architecture and the data model your system is built on.</p>
+            <p class="mt-3">Emmanuel leads the architecture and data model. He carries those decisions into the build and the handover to your engineers.</p>
           </article>
         </div>
 
-        <p class="font-body-md text-on-surface-variant mt-10 max-w-2xl leading-relaxed">
-          We hire slowly, and mostly by conversation. If the way this page talks about work is the way you want to work, write to <a href="mailto:build@miomirlabs.com" class="text-oxblood underline underline-offset-4 hover:text-ink-black">build@miomirlabs.com</a>.
+        <p class="mt-10 max-w-2xl">
+          Interested in working with us? Write to <a href="mailto:build@miomirlabs.com" class="underline underline-offset-4 hover:text-ink-black">build@miomirlabs.com</a>.
         </p>
       </div>
     </section>
 
     <!-- Contact & Inquiry -->
     <section id="contact" class="py-16 px-gutter scroll-mt-16" aria-labelledby="contact-heading">
-      <div class="max-w-[1280px] mx-auto">
+      <div class="max-w-[1120px] mx-auto">
         <div class="flex flex-col gap-2 mb-8">
-          <span class="font-label-technical text-technical-gray uppercase tracking-widest">06 / Contact</span>
-          <h2 id="contact-heading" class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-oxblood">Start a conversation</h2>
-          <p class="font-body-md text-on-surface-variant max-w-lg">
-            Tell us about your organization and what you are building. An engineer reads what you send and replies.
+          <span class="section-label uppercase">06 / Contact</span>
+          <h2 id="contact-heading" class="md:font-headline-lg md:text-headline-lg">Start a conversation</h2>
+          <p class="max-w-lg">
+            Tell us about the system, the problem you need to solve, and any deadline or constraint. An engineer reads your message and replies.
           </p>
         </div>
 
@@ -496,53 +435,52 @@
 
               <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div class="flex flex-col gap-2">
-                  <label class="font-label-technical text-on-surface-variant uppercase text-xs tracking-wider" for="name">Name *</label>
-                  <input class="bg-bone border border-hairline-stroke text-ink-black p-3.5 focus:outline-none focus:border-oxblood transition-colors w-full font-label-technical text-base md:text-sm" id="name" placeholder="Your name" type="text" name="name" autocomplete="name" required>
+                  <label class="section-label uppercase" for="name">Name *</label>
+                  <input class="bg-bone border border-hairline-stroke p-3.5 focus:outline-none focus:border-oxblood transition-colors w-full section-label md:text-sm" id="name" placeholder="Your name" type="text" name="name" autocomplete="name" required>
                 </div>
                 <div class="flex flex-col gap-2">
-                  <label class="font-label-technical text-on-surface-variant uppercase text-xs tracking-wider" for="email">Work Email *</label>
-                  <input class="bg-bone border border-hairline-stroke text-ink-black p-3.5 focus:outline-none focus:border-oxblood transition-colors w-full font-label-technical text-base md:text-sm" id="email" placeholder="you@organization.com" type="email" name="email" autocomplete="email" required>
+                  <label class="section-label uppercase" for="email">Work Email *</label>
+                  <input class="bg-bone border border-hairline-stroke p-3.5 focus:outline-none focus:border-oxblood transition-colors w-full section-label md:text-sm" id="email" placeholder="you@organization.com" type="email" name="email" autocomplete="email" required>
                 </div>
               </div>
               <div class="flex flex-col gap-2">
-                <label class="font-label-technical text-on-surface-variant uppercase text-xs tracking-wider" for="organization">Organization / Company</label>
-                <input class="bg-bone border border-hairline-stroke text-ink-black p-3.5 focus:outline-none focus:border-oxblood transition-colors w-full font-label-technical text-base md:text-sm" id="organization" placeholder="Organization name" type="text" name="organization" autocomplete="organization">
+                <label class="section-label uppercase" for="organization">Organization / Company</label>
+                <input class="bg-bone border border-hairline-stroke p-3.5 focus:outline-none focus:border-oxblood transition-colors w-full section-label md:text-sm" id="organization" placeholder="Organization name" type="text" name="organization" autocomplete="organization">
               </div>
               <div class="flex flex-col gap-2">
-                <label class="font-label-technical text-on-surface-variant uppercase text-xs tracking-wider" for="message">What are you building? *</label>
-                <textarea class="bg-bone border border-hairline-stroke text-ink-black p-3.5 focus:outline-none focus:border-oxblood transition-colors w-full resize-none font-label-technical text-base md:text-sm" id="message" name="message" rows="5" placeholder="A brief description of your project, constraints, or technical challenge..." required></textarea>
+                <label class="section-label uppercase" for="message">What are you building? *</label>
+                <textarea class="bg-bone border border-hairline-stroke p-3.5 focus:outline-none focus:border-oxblood transition-colors w-full resize-none section-label md:text-sm" id="message" name="message" rows="5" placeholder="A brief description of your project, constraints, or technical challenge..." required></textarea>
               </div>
               <div class="border-t border-hairline-stroke pt-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-                <span class="font-label-technical text-technical-gray text-xs">We read enquiries in the order they arrive.</span>
-                <button class="w-full sm:w-auto px-8 py-3.5 bg-oxblood text-bone font-label-technical uppercase tracking-widest hover:bg-ink-black transition-all active:scale-95 flex items-center justify-center gap-2 text-sm" type="submit">
+                <span class="section-label">We read enquiries in the order they arrive.</span>
+                <button class="w-full sm:w-auto px-8 py-3.5 bg-oxblood section-label uppercase hover:bg-ink-black transition-all active:scale-95 flex items-center justify-center gap-2" type="submit">
                   Send message →
                 </button>
               </div>
-              <p id="formStatus" role="status" aria-live="polite" class="font-label-technical text-sm text-oxblood hidden"></p>
+              <p id="formStatus" role="status" aria-live="polite" class="section-label hidden"></p>
             </form>
 
             <!-- Shown only if the Formspree endpoint is still a placeholder -->
             <div id="formFallback" class="bg-surface-container-highest p-6 md:p-8 border-t-4 border-oxblood border-x border-b border-hairline-stroke">
-              <h3 class="font-headline-lg-mobile text-[20px] font-semibold text-oxblood">Email us directly</h3>
-              <p class="font-body-md text-on-surface-variant mt-3 max-w-lg">
-                Tell us about your organization, the system you are working on, and the constraint that brought you here.
+              <h3 class="">Email us directly</h3>
+              <p class="mt-3 max-w-lg">
+                For a system review or a build, send a short description of the work. We will discuss the scope with you.
               </p>
-              <a href="mailto:build@miomirlabs.com" class="mt-5 inline-flex px-8 py-3.5 bg-oxblood text-bone font-label-technical uppercase tracking-widest hover:bg-ink-black transition-all">
+              <a href="mailto:build@miomirlabs.com" class="mt-5 inline-flex max-w-full break-all px-4 sm:px-8 py-3.5 sm:text-sm bg-oxblood section-label uppercase hover:bg-ink-black transition-all">
                 build@miomirlabs.com
               </a>
             </div>
           </div>
 
           <div class="lg:col-span-4 flex flex-col gap-6 p-6 bg-surface border border-hairline-stroke">
-            <h3 class="font-label-technical text-technical-gray uppercase tracking-widest">Direct Contact</h3>
+            <h3 class="section-label uppercase">Before we speak</h3>
             <div class="flex flex-col gap-3">
               <div>
-                <span class="font-label-technical text-technical-gray text-xs uppercase block">Email</span>
-                <a href="mailto:build@miomirlabs.com" class="font-body-lg text-oxblood hover:underline font-semibold break-all">build@miomirlabs.com</a>
+                <p class="">A description is enough for the first message. We can arrange a separate review of code and records once we agree access.</p>
               </div>
               <div class="border-t border-hairline-stroke pt-3 mt-1">
-                <span class="font-label-technical text-technical-gray text-xs uppercase block">Engagements</span>
-                <p class="font-body-md text-technical-gray text-sm">We take on a small number of engagements at a time. Write to ask about the current intake.</p>
+                <span class="section-label uppercase block">Engagements</span>
+                <p class="">We take on a small number of engagements at a time. Write to ask about the current intake.</p>
               </div>
             </div>
           </div>
@@ -553,21 +491,21 @@
   </main>
 
   <footer class="bg-bone border-t border-hairline-stroke py-10 px-gutter">
-    <div class="max-w-[1280px] mx-auto flex flex-col md:flex-row md:items-center justify-between gap-6">
+    <div class="max-w-[1120px] mx-auto flex flex-col md:flex-row md:items-center justify-between gap-6">
       <div class="flex items-center gap-2">
         <img src="assets/images/logo.svg" alt="" width="24" height="24" class="w-6 h-6 object-contain">
-        <span class="font-label-technical text-ink-black uppercase tracking-wider">Miomir Labs</span>
+        <span class="section-label uppercase">Miomir Labs</span>
       </div>
       <nav class="flex flex-wrap gap-6" aria-label="Footer">
-        <a href="#work" class="font-label-technical text-technical-gray hover:text-ink-black uppercase tracking-wider">Work</a>
-        <a href="#enterprise" class="font-label-technical text-technical-gray hover:text-ink-black uppercase tracking-wider">Enterprise</a>
-        <a href="#approach" class="font-label-technical text-technical-gray hover:text-ink-black uppercase tracking-wider">Approach</a>
-        <a href="#notes" class="font-label-technical text-technical-gray hover:text-ink-black uppercase tracking-wider">Notes</a>
-        <a href="#team" class="font-label-technical text-technical-gray hover:text-ink-black uppercase tracking-wider">Team</a>
-        <a href="#contact" class="font-label-technical text-technical-gray hover:text-ink-black uppercase tracking-wider">Contact</a>
+        <a href="#work" class="section-label hover:text-ink-black uppercase">Work</a>
+        <a href="#enterprise" class="section-label hover:text-ink-black uppercase">Engagements</a>
+        <a href="#approach" class="section-label hover:text-ink-black uppercase">Approach</a>
+        <a href="#notes" class="section-label hover:text-ink-black uppercase">Notes</a>
+        <a href="#team" class="section-label hover:text-ink-black uppercase">Team</a>
+        <a href="#contact" class="section-label hover:text-ink-black uppercase">Contact</a>
       </nav>
-      <div class="flex flex-col gap-1 font-label-technical text-technical-gray md:text-right text-xs">
-        <a href="mailto:build@miomirlabs.com" class="text-ink-black hover:underline font-semibold">build@miomirlabs.com</a>
+      <div class="flex flex-col gap-1 section-label md:text-right">
+        <a href="mailto:build@miomirlabs.com" class="hover:underline">build@miomirlabs.com</a>
         <span>RC 9812739 · Registered in Nigeria</span>
         <span>© 2026 Miomir Labs, Lagos, Nigeria</span>
       </div>

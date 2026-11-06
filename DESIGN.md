@@ -2,6 +2,18 @@
 
 This document is the single source of truth for the Miomir Labs website. It consolidates the original design brief, the chosen visual system, and the anti-slop rules that now govern copy and design.
 
+## Current website revision (2026-11-06)
+
+The founder approved a shorter introduction, less repeated process copy, and a defined first engagement. After asking for a stronger aesthetic connection to Pierre Computer Company, the founder approved moving toward its document-like presentation. The current site uses JetBrains Mono throughout, a neutral paper background (`#F7F7F5`), small headings, plain links, and a 760px column aligned near the left edge. Navigation sits under the company name and scrolls with the page. Oxblood remains a link accent. The commitments ledger stays, without reveal animation.
+
+- `#project` follows the hero. It presents Briclair as selected work and links to its public site and a ledger design note. Lead with the engineering work a client can evaluate. The founder rejected “We’re building Briclair” because it frames the section as a product roadmap. The founder confirmed ownership. The note draws on the local Briclair ledger schema, accepted decision 0020, and `supabase/tests/ledger_invariants.sql`. It states no customer, uptime, throughput, or production integration claim.
+- `#enterprise` remains the anchor for inbound links. Its navigation label is Engagements. A scoped system review offers a written risk assessment, required system properties, and a proposed build scope. Review, design, build, and handover follow as the delivery sequence.
+- The commitments ledger carries the standards. The former How we work block and enterprise principles cards are removed. Approach addresses operating conditions and requirements.
+- Team profiles describe existing responsibilities. Emmanuel’s public biography and profile link remain pending founder input. Do not invent credentials.
+- Main page content uses a 760px maximum width and a responsive left inset. Muted text uses `#68615E` for contrast. Team profiles use small grayscale portraits. Tobi’s personal website link belongs below his description, in 11px muted lowercase text, without an arrow. Notes share the document typography and alignment.
+
+This revision supersedes the older structure descriptions below where they differ. Prager and Prai remain excluded. Briclair is a separate project and its public demonstrations are not evidence of a production deployment.
+
 ## Identity
 
 Miomir Labs is an engineering and research house in Lagos. It builds systems of record for clients and does applied research on AI in production. It also builds products of its own, which stay off the site until they ship.
